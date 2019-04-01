@@ -19,10 +19,6 @@
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/portal.css' %}">
-
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -32,9 +28,5 @@
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/portal.js' %}"></script>
-
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-        {% endblock %}
     </body>
 </html>
