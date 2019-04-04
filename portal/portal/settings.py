@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+from django.utils.translation import gettext_lazy as _
+
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -20,12 +22,14 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
+SECRET_KEY = "Not a secret."
 
 # Application definition
 
 INSTALLED_APPS = [
     'home',
     'search',
+    'portal',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -58,9 +62,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+]
+
+LOCALE_PATH = [
+    os.path.join(PROJECT_DIR, 'locale'),
 ]
 
 ROOT_URLCONF = 'portal.urls'
@@ -91,8 +100,8 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myeqip_db',
     }
 }
 
@@ -119,7 +128,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('my', _('Myanmar'))
+]
 
 TIME_ZONE = 'UTC'
 
@@ -136,10 +150,6 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-]
-
-STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, 'static'),
 ]
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
@@ -161,3 +171,9 @@ WAGTAIL_SITE_NAME = "portal"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+# Import local_settings.
+try:
+    from .local_settings import *
+except ImportError:
+    pass
