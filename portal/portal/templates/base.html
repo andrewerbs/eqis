@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -24,6 +25,7 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        <h1>{% trans "Please translate this." %}</h1>
         {% block content %}{% endblock %}
 
         {# Global javascript #}
