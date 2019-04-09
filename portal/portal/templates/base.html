@@ -1,6 +1,8 @@
 {% load static wagtailuserbar %}
 {% load i18n %}
 
+{% load accordion_menu_helpers %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
@@ -25,8 +27,9 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
-        <h1>{% trans "Please translate this." %}</h1>
-        {% block content %}{% endblock %}
+        {% create_accordion_menu_from_site_map self %}
+        {% block content %}
+        {% endblock %}
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/portal.js' %}"></script>
