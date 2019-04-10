@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% load wagtailcore_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-{{ page.translated_title }}
-{{ page.description }}
+<h1>{{ page.translated_title }}</h1>
+{{ page.description | richtext }}
 {% endblock content %}
