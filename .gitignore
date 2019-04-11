@@ -16,9 +16,12 @@ eggs/
 .eggs/
 lib/
 lib64/
+node_modules/
 parts/
+.sass-cache/
 sdist/
 var/
+webpack-stats.json
 wheels/
 *.egg-info/
 .installed.cfg

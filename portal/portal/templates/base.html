@@ -1,5 +1,7 @@
 {% load static wagtailuserbar %}
+{% load staticfiles %}
 {% load i18n %}
+{% load render_bundle from webpack_loader %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -21,6 +23,7 @@
 
     {# Global stylesheets #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/portal.css' %}">
+    {% render_bundle 'main' %}
 </head>
 
 <body class="{% block body_class %}{% endblock %}">

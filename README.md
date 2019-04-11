@@ -3,7 +3,7 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
 
 
 
-## Setup
+## Set up the Wagtail Back-end
 
 1. Clone the "myeqip-portal" repository:
 
@@ -40,3 +40,24 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
    ```bash
    ./manage.py runserver
    ```
+
+## Set up the Front-end
+
+Building the front-end requires ["Yarn"](https://yarnpkg.com/en/). Install Yarn, navigate to the myeqip-portal's root directory, and run:
+
+```bash
+yarn
+```
+
+You can build Sass and JavaScript assets with:
+
+```bash
+yarn run build
+```
+
+Yarn can detect changes in these assets and rebuild them automatically. Use "watch":
+
+```
+yarn run watch
+```
+
