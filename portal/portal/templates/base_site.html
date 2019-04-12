@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load accordion_menu_helpers %}
+
+{% block page %}
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">login</a>
+    {% endif %}
+    {% create_accordion_menu_from_site_map self %}
+    {% block content %}
+    {% endblock content%}
+{% endblock page %}

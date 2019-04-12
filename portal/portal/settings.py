@@ -178,6 +178,9 @@ WAGTAIL_SITE_NAME = "portal"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 # Import local_settings.
 try:
     from .local_settings import *

@@ -1,8 +1,6 @@
 {% load static wagtailuserbar %}
 {% load i18n %}
 
-{% load accordion_menu_helpers %}
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -39,8 +37,8 @@
         {% endfor %}
     </form>
 
-    {% create_accordion_menu_from_site_map self %}
-    {% block content %}{% endblock %}
+    {% block page %}
+    {% endblock page %}
 
     {# Global javascript #}
     <script type="text/javascript" src="{% static 'js/portal.js' %}"></script>
