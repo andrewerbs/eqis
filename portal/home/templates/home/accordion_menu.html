@@ -1,28 +1,48 @@
 {% load wagtailcore_tags %}
 {% load accordion_menu_helpers %}
 
-<ol class="accordion-pages">
+<nav>
+    <ol class="top-menu">
+        {% for page in pages.children %}
+        <li active={{page|is_page_active:current_page}}>
+            <a href={{page.url}}>{{page}}</a>
+        </li>
+        {% endfor %}
+    </ol>
+
+    <ol class="accordion subpages">
     {% for page in pages.children %}
-    <li active={{page|is_page_active:current_page}}>
-        <a href={{page.url}}>{{page}}</a>
+
         {% if page.number_of_children %}
-        <ol class="accordion-subpages">
-            {% for subpage in page.children %}
-                <li active={{subpage|is_page_active:current_page}}>
-                    <a href={{subpage.url}}>{{subpage}}</a>
-                    {% if subpage.number_of_children %}
-                    <ol class="accordion-subsubpages">
-                        {% for subsubpage in subpage.children %}
-                            <li active={{subsubpage|is_page_active:current_page}}>
-                                <a href={{subsubpage.url}}>{{subsubpage}}</a>
+        {% for subpage in page.children %}
+        <li active={{subpage|is_page_active:current_page}}>
+            <a href={{subpage.url}}>{{subpage}}</a>
+
+            {% if subpage.number_of_children %}
+            <ol class="subsubpages">
+                {% for subsubpage in subpage.children %}
+                <li active={{subsubpage|is_page_active:current_page}}>
+                    <a href={{subsubpage.url}}>{{subsubpage}}</a>
+
+                    {% if subsubpage.number_of_children %}
+                        <ol class="subsubsubpages">
+                        {% for subsubsubpage in subsubpage.children %}
+                            <li active={{subsubsubpage|is_page_active:current_page}}>
+                                <a href={{subsubsubpage.url}}>{{subsubpage}}</a>
                             </li>
                         {% endfor %}
-                    </ol>
+                        </ol>
                     {% endif %}
+
                 </li>
-            {% endfor %}
-        </ol>
+                {% endfor %}
+            </ol>
+            {% endif %}
+
+        </li>
+        {% endfor %}
+
         {% endif %}
-    </li>
     {% endfor %}
-</ol>
+    </ol>
+</nav>
