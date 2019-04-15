@@ -4,6 +4,7 @@ from django.utils import translation
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
+from wagtail.search import index
 
 from portal.settings import GA_TAG
 
@@ -40,6 +41,13 @@ class HomePage(Page):
         FieldPanel('title_my'),
         FieldPanel('description_en'),
         FieldPanel('description_my'),
+    ]
+
+    search_fields = Page.search_fields + [
+        index.SearchField('title'),
+        index.SearchField('title_my'),
+        index.SearchField('description_en'),
+        index.SearchField('description_my'),
     ]
 
     def get_context(self, request):

@@ -8,6 +8,12 @@
     {% else %}
     <a href="{% url 'login' %}">login</a>
     {% endif %}
+
+    <form action="{% url 'search' %}" method="get">
+        <input type="text" name="query">
+        <input type="submit" value="Search" class="button">
+    </form>
+
     {% create_accordion_menu_from_site_map self %}
     {% block content %}
     {% endblock content%}
