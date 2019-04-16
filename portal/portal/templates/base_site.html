@@ -2,7 +2,7 @@
 
 {% load accordion_menu_helpers %}
 
-{% block page %}
+{% block content %}
     {% if user.is_authenticated %}
     <a href="{% url 'logout' %}">logout</a>
     {% else %}
@@ -15,6 +15,7 @@
     </form>
 
     {% create_accordion_menu_from_site_map self %}
-    {% block content %}
-    {% endblock content%}
-{% endblock page %}
+
+    {% block page %}
+    {% endblock page %}
+{% endblock content %}
