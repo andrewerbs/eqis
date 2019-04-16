@@ -11,7 +11,7 @@ module.exports = {
         'rules': [
             {
                 'test': /\.js$/,
-                'exclude': [ /node_modules/, /static_serve/ ],
+                'exclude': [ /node_modules/ ],
                 'use': {
                     'loader': 'babel-loader',
                     'options': {
@@ -21,7 +21,7 @@ module.exports = {
             },
             {
                 'test': /\.scss$/,
-                'exclude': [ /node_modules/, /static_serve/ ],
+                'exclude': [ /node_modules/ ],
                 'use': [
                     {
                         'loader': 'file-loader',
@@ -34,6 +34,13 @@ module.exports = {
                     { 'loader': 'sass-loader' }
                 ]
             },
+            {
+                'test': /\.svg$/,
+                'exclude': [ /node_modules/ ],
+                'use': {
+                    'loader': 'svg-url-loader'
+                }
+            }
         ]
     },
     'resolve': {
