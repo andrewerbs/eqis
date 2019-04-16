@@ -171,6 +171,7 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_DIR, 'sitewide_static_sources'),
     os.path.join(PROJECT_DIR, 'dist'),
 )
 
