@@ -1,19 +1,47 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
-const BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
-    output: {
-        path: path.resolve(__dirname, './dist/webpack_bundles/'),
-        filename: 'main.js'
+    'entry': path.resolve(__dirname, 'src', 'index.js'),
+    'output': {
+        'filename': 'main.js',
+        'publicPath': '/static/'
     },
-    module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-        }]
+    'module': {
+        'rules': [
+            {
+                'test': /\.js$/,
+                'exclude': [ /node_modules/, /static_serve/ ],
+                'use': {
+                    'loader': 'babel-loader',
+                    'options': {
+                        'presets': [ 'env' ]
+                    }
+                }
+            },
+            {
+                'test': /\.scss$/,
+                'exclude': [ /node_modules/, /static_serve/ ],
+                'use': [
+                    {
+                        'loader': 'file-loader',
+                        'options': {
+                            'name': '[name].css'
+                        }
+                    },
+                    { 'loader': 'extract-loader' },
+                    { 'loader': 'css-loader' },
+                    { 'loader': 'sass-loader' }
+                ]
+            },
+        ]
     },
-    plugins: [
-        new BundleTracker({filename: './webpack-stats.json'}),
-    ],
-    devtool: 'inline-source-map'
+    'resolve': {
+        'alias': {
+            'static': path.resolve('static'),
+        }
+    },
+    'plugins': [
+        new CleanWebpackPlugin()
+    ]
 };
