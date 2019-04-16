@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load staticfiles %}
 {% load i18n %}
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {# Global stylesheets #}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/portal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
@@ -41,7 +42,7 @@
     {% endblock content %}
 
     {# Global javascript #}
-    <script type="text/javascript" src="{% static 'js/portal.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
 
     {# Google Analytics #}
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
