@@ -1,0 +1,61 @@
+{% load static wagtailuserbar %}
+{% load staticfiles %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    {% wagtailuserbar %}
+    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+        <input type="radio" name="language" value="{{ language.code }}" onclick="this.form.submit()"
+            {% if language.code == LANGUAGE_CODE %}checked{% endif %}>
+        {{ language.name_local }} ({{ language.code }})
+        <br>
+        {% endfor %}
+    </form>
+
+    {% block content %}
+    {% endblock content %}
+
+    {# Global javascript #}
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+
+    {# Google Analytics #}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    {% if GA_TAG != '' %}
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ GA_TAG }}');
+    </script>
+    {% endif %}
+</body>
+</html>

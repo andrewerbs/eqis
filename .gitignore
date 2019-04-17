@@ -16,6 +16,7 @@ eggs/
 .eggs/
 lib/
 lib64/
+node_modules/
 parts/
 sdist/
 var/
@@ -55,6 +56,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+static/
 
 # Flask stuff:
 instance/
@@ -102,3 +104,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# IDE files
+.vscode/
