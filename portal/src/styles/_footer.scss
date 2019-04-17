@@ -1,10 +1,11 @@
-div.footer {
+footer {
     border-top: 1px solid #29BFB3;
     padding: 20px 0;
 
-    span.footer-item {
+    ul li.footer-item {
         white-space: nowrap;
         margin-right: 20px;
         margin-left: 20px;
+        display: inline;
     }
 }

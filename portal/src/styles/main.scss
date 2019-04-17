@@ -4,3 +4,11 @@
 
 // Vendor
 @import "~bootstrap/scss/bootstrap";
+
+// General styling
+html body {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+}
