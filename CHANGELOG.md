@@ -4,6 +4,8 @@
 
 ### Interface
 
+- [Footer content](https://github.com/catalpainternational/myeqip-portal/pull/31)
+
 ### QA
 
 ### Code
