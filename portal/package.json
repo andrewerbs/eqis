@@ -28,6 +28,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "popper.js": "^1.15.0",
     "sass-loader": "^7.1.0",
+    "svg-url-loader": "^2.3.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-merge": "^4.2.1"
