@@ -4,8 +4,7 @@ const path = require('path');
 module.exports = {
     'entry': path.resolve(__dirname, 'src', 'index.js'),
     'output': {
-        'filename': 'main.js',
-        'publicPath': '/static/'
+        'filename': 'main.js'
     },
     'module': {
         'rules': [
@@ -42,11 +41,6 @@ module.exports = {
                 }
             }
         ]
-    },
-    'resolve': {
-        'alias': {
-            'static': path.resolve('static'),
-        }
     },
     'plugins': [
         new CleanWebpackPlugin()
