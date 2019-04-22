@@ -8,12 +8,12 @@ register = template.Library()
 
 
 class AccordionMenuEntry:
-    def __init__(self, a_wagtail_page=None):
+    def __init__(self, a_wagtail_page, current_page):
         self._page_title = str(a_wagtail_page) or ""
-        self._page_url = a_wagtail_page.url or ""
-        self._active_page = False
+        self._page_url = a_wagtail_page.url if a_wagtail_page is not None else ""
         self._children = []
-        self._depth_first_copy(a_wagtail_page)
+        self._is_active = False
+        self._depth_first_copy(a_wagtail_page, current_page)
 
     @property
     def title(self):
@@ -27,21 +27,32 @@ class AccordionMenuEntry:
     def children(self):
         return self._children
 
+    @property
+    def active(self):
+        return self._is_active
+
     def number_of_children(self):
         return len(self.children)
 
     def add_child(self, child):
         self._children.append(child)
 
-    def __str__(self):
-        return self._page_title
+    def __repr__(self):
+        return f"<{self.title} is_active={self.active}>"
 
-    def _depth_first_copy(self, a_wagtail_page):
+    def _depth_first_copy(self, a_wagtail_page, current_page):
         if a_wagtail_page is None:
             return
+
+        if a_wagtail_page.url == current_page.url:
+            self._is_active = True
+
         if a_wagtail_page.numchild > 0:
-            for child in a_wagtail_page.get_children().live():
-                self.add_child(AccordionMenuEntry(child))
+            for child in a_wagtail_page.get_children().live().in_menu():
+                accordion_child = AccordionMenuEntry(child, current_page)
+                self._is_active = accordion_child.active
+                self.add_child(accordion_child)
+
 
 
 @register.filter
@@ -49,12 +60,10 @@ def is_page_active(accordion_entry, wagtail_page):
     return accordion_entry.title == str(wagtail_page)
 
 
-@register.inclusion_tag('home/accordion_menu.html')
-def create_accordion_menu_from_site_map(current_page):
-    all_live_pages = Page.objects.live()
-    # Accordion Menu starts at Home Page.
-    accordion_menu = AccordionMenuEntry(all_live_pages[1])
-
+@register.inclusion_tag('home/accordion_menu.html', takes_context=True)
+def create_accordion_menu_from_site_map(context, current_page):
+    wagtail_site_root = context['request'].site.root_page
+    accordion_menu = AccordionMenuEntry(wagtail_site_root, current_page)
     return {
         'current_page': current_page,
         'pages': accordion_menu,

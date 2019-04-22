@@ -4,31 +4,32 @@
 <nav>
     <ol class="top-menu">
         {% for page in pages.children %}
-        <li active={{page|is_page_active:current_page}}>
-            <a href={{page.url}}>{{page}}</a>
+        <li aria-expanded="{{page.active}}">
+            <a href={{page.url}}>{{page.title}}</a>
         </li>
         {% endfor %}
     </ol>
-
+</nav>
+<nav>
     <ol class="accordion subpages">
     {% for page in pages.children %}
 
         {% if page.number_of_children %}
         {% for subpage in page.children %}
-        <li active={{subpage|is_page_active:current_page}}>
-            <a href={{subpage.url}}>{{subpage}}</a>
+        <li aria-expanded="{{subpage.active}}">
+            <a href={{subpage.url}}>{{subpage.title}}</a>
 
             {% if subpage.number_of_children %}
             <ol class="subsubpages">
                 {% for subsubpage in subpage.children %}
-                <li active={{subsubpage|is_page_active:current_page}}>
-                    <a href={{subsubpage.url}}>{{subsubpage}}</a>
+                <li aria-expanded="{{subsubpage.active}}">
+                    <a href={{subsubpage.url}}>{{subsubpage.title}}</a>
 
                     {% if subsubpage.number_of_children %}
                         <ol class="subsubsubpages">
                         {% for subsubsubpage in subsubpage.children %}
-                            <li active={{subsubsubpage|is_page_active:current_page}}>
-                                <a href={{subsubsubpage.url}}>{{subsubpage}}</a>
+                            <li aria-expanded="{{subsubsubpage.active}}">
+                                <a href={{subsubsubpage.url}}>{{subsubpage.title}}</a>
                             </li>
                         {% endfor %}
                         </ol>
