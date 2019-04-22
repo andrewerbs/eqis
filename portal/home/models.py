@@ -1,14 +1,16 @@
 from django.db import models
-from django.utils import translation
+from django.utils.translation import get_language, gettext as _
 
 from portal.settings import GA_TAG
 from wagtail.admin.edit_handlers import (
     FieldPanel, StreamFieldPanel, TabbedInterface, ObjectList
 )
-from wagtail.core.blocks import RichTextBlock
+from wagtail.core.blocks import BlockQuoteBlock, RichTextBlock
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from wagtail.search import index
+
+from .blocks import QuoteWithAttributionBlock
 
 
 class TranslatedField:
@@ -17,7 +19,7 @@ class TranslatedField:
         self.my_field = my_field
 
     def __get__(self, instance, owner):
-        if translation.get_language() == 'my':
+        if get_language() == 'my':
             return getattr(instance, self.my_field)
         else:
             return getattr(instance, self.en_field)
@@ -25,32 +27,40 @@ class TranslatedField:
 
 class HomePage(Page):
     title_my = models.CharField(
-        max_length=255, blank=True, verbose_name="title")
+        max_length=255, blank=True, verbose_name=_("title"))
     translated_title = TranslatedField(
         'title',
         'title_my',
     )
 
-    # Our RichTextBlocks don't support <hr>.
     _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
-    _body_help_text = '''
+    _body_verbose_name = _('body')
+    _body_help_text = _('''
     You can create page content with "blocks". With the "RichText" block, you
     can write with headers, bold and italic text, lists, images, anchors,
     document links, and embed links.
-    '''
+    ''')
+    _rich_text_block_name = _('RichText')
+    _quote_block_name = _('Quote')
 
     body_en = StreamField(
-        [('RichText', RichTextBlock(features=_rich_text_features))],
+        [
+            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
+            (_quote_block_name, QuoteWithAttributionBlock()),
+        ],
         blank=True,
         help_text=_body_help_text,
-        verbose_name="body",
+        verbose_name=_body_verbose_name,
     )
     body_my = StreamField(
-        [('RichText', RichTextBlock(features=_rich_text_features))],
+        [
+            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
+            (_quote_block_name, QuoteWithAttributionBlock()),
+        ],
         blank=True,
         help_text=_body_help_text,
-        verbose_name="body",
+        verbose_name=_body_verbose_name,
     )
     body = TranslatedField(
         'body_en',
@@ -72,12 +82,12 @@ class HomePage(Page):
         StreamFieldPanel('body_my'),
     ]
     edit_handler = TabbedInterface([
-        ObjectList(en_content_panels, heading='Content - English'),
-        ObjectList(my_content_panels, heading='Content - Myanmar'),
-        ObjectList(Page.promote_panels, heading='Promote'),
+        ObjectList(en_content_panels, heading=_('Content - English')),
+        ObjectList(my_content_panels, heading=_('Content - Myanmar')),
+        ObjectList(Page.promote_panels, heading=_('Promote')),
         ObjectList(
             Page.settings_panels,
-            heading='Settings',
+            heading=_('Settings'),
             classname="settings"
         ),
     ])
