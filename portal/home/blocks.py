@@ -50,3 +50,13 @@ class PostcardBlock(StructBlock):
 
     class Meta:
         template = 'home/postcard_block.html'
+
+class TitleBlock(StructBlock):
+    _big_title_help_text = _('This title displays larger in the block.')
+    _small_title_help_text = _('This title displays smaller in the block.')
+
+    big_title = CharBlock(help_text=_big_title_help_text, max_length=255)
+    small_title = CharBlock(help_text=_small_title_help_text, max_length=255)
+
+    class Meta:
+        template = 'home/title_block.html'

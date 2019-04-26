@@ -10,7 +10,7 @@ from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from wagtail.search import index
 
-from .blocks import PostcardBlock, QuoteWithAttributionBlock
+from .blocks import PostcardBlock, QuoteWithAttributionBlock, TitleBlock
 
 
 class TranslatedField:
@@ -44,12 +44,14 @@ class HomePage(Page):
     _rich_text_block_name = _('RichText')
     _quote_block_name = _('Quote')
     _postcard_block_name = _('Postcard')
+    _title_block_name = _('Title')
 
     body_en = StreamField(
         [
-            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-            (_quote_block_name, QuoteWithAttributionBlock()),
             (_postcard_block_name, PostcardBlock()),
+            (_quote_block_name, QuoteWithAttributionBlock()),
+            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
+            (_title_block_name, TitleBlock()),
         ],
         blank=True,
         help_text=_body_help_text,
@@ -57,9 +59,10 @@ class HomePage(Page):
     )
     body_my = StreamField(
         [
-            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-            (_quote_block_name, QuoteWithAttributionBlock()),
             (_postcard_block_name, PostcardBlock()),
+            (_quote_block_name, QuoteWithAttributionBlock()),
+            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
+            (_title_block_name, TitleBlock()),
         ],
         blank=True,
         help_text=_body_help_text,
