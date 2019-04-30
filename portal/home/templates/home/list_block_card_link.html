@@ -1,0 +1,10 @@
+{% load wagtailcore_tags %}
+<ul class="container">
+    <div class="row">
+        {% for card_link_block in self %}
+        <li class="col-md-4">
+            {% include_block card_link_block %}
+        </li>
+        {% endfor %}
+    </div>
+</ul>

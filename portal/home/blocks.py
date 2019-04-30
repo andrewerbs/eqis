@@ -1,7 +1,7 @@
 from django.utils.translation import gettext as _
 
 from wagtail.core.blocks import (
-    BlockQuoteBlock, CharBlock, RichTextBlock, StructBlock,
+    BlockQuoteBlock, CharBlock, PageChooserBlock, RichTextBlock, StructBlock
 )
 from wagtail.images.blocks import ImageChooserBlock
 
@@ -72,3 +72,20 @@ class TitleBlock(StructBlock):
 
     class Meta:
         template = 'home/title_block.html'
+
+
+class CardLinkBlock(StructBlock):
+    _page_help_text = _('''
+    The CardLink will link to this page. The card displays the page's hero
+    image and description.
+    ''')
+
+    page = PageChooserBlock(
+        label=_('Choose a page'),
+        help_text=_page_help_text,
+        can_choose_root=False,
+        target_model="home.HomePage",
+    )
+
+    class Meta:
+        template = 'home/card_link_block.html'
