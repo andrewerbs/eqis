@@ -50,6 +50,16 @@ class HomePage(Page):
     _quote_block_name = _('Quote')
     _rich_text_block_name = _('RichText')
     _title_block_name = _('Title')
+    _block_list = [
+        (_card_link_blocks_name, ListBlock(
+            CardLinkBlock(),
+            template='home/list_block_card_link.html'
+        )),
+        (_postcard_block_name, PostcardBlock()),
+        (_quote_block_name, QuoteWithAttributionBlock()),
+        (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
+        (_title_block_name, TitleBlock()),
+    ]
 
     # Model Fields
     title_my = models.CharField(
@@ -74,28 +84,13 @@ class HomePage(Page):
     )
 
     body_en = StreamField(
-        [
-            (_card_link_blocks_name, ListBlock(
-                CardLinkBlock(),
-                template='home/list_block_card_link.html'
-            )),
-            (_postcard_block_name, PostcardBlock()),
-            (_quote_block_name, QuoteWithAttributionBlock()),
-            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-            (_title_block_name, TitleBlock()),
-        ],
+        _block_list,
         blank=True,
         help_text=_body_help_text,
         verbose_name=_body_verbose_name,
     )
     body_my = StreamField(
-        [
-            (_card_link_blocks_name, ListBlock(CardLinkBlock())),
-            (_postcard_block_name, PostcardBlock()),
-            (_quote_block_name, QuoteWithAttributionBlock()),
-            (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-            (_title_block_name, TitleBlock()),
-        ],
+        _block_list,
         blank=True,
         help_text=_body_help_text,
         verbose_name=_body_verbose_name,
