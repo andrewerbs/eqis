@@ -10,6 +10,9 @@
 - [QuoteBlock](https://github.com/catalpainternational/myeqip-portal/pull/40)
 - [PostcardBlock](https://github.com/catalpainternational/myeqip-portal/pull/42)
 - [Top and side navigation](https://github.com/catalpainternational/myeqip-portal/pull/46)
+- [Style rich text block](https://github.com/catalpainternational/myeqip-portal/pull/49)
+- [Style quote block](https://github.com/catalpainternational/myeqip-portal/pull/52)
+- [Style title block](https://github.com/catalpainternational/myeqip-portal/pull/57)
 
 ### QA
 

@@ -1,3 +1,6 @@
+// Vendor
+@import "~bootstrap/scss/bootstrap";
+
 // Base
 @import "variables";
 @import "images";
@@ -6,9 +9,7 @@
 @import "sidebar";
 @import "header";
 @import "footer";
-
-// Vendor
-@import "~bootstrap/scss/bootstrap";
+@import "blocks";
 
 // General styling
 html {
@@ -46,6 +47,11 @@ html {
 @media screen and (max-width: 575.98px) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-mobile});
+
+        div.content {
+            padding-right: $padding-sm;
+            padding-left: $padding-sm;
+        }
     }
 }
 
@@ -53,5 +59,10 @@ html {
 @media screen and (min-width: 576px) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-desktop});
+
+        div.content {
+            padding-right: $padding-lg;
+            padding-left: $padding-lg;
+        }
     }
 }
