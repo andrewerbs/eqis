@@ -1,0 +1,82 @@
+div.sidebar {
+    border-right: 1px solid $dark-gray;
+    background-color: $white;
+    padding-top: 25px;
+    overflow: auto;
+
+    ul {
+        list-style-type: none;
+        margin-left: -15px;
+
+        li {
+            padding: $padding 0;
+
+            a {
+                padding-left: 40px;
+                font-weight: bold;
+                color: $black;
+                height: 40px;
+            }
+
+            &[aria-expanded="true"] > a {
+                border-bottom-right-radius: 100px;
+                border-top-right-radius: 100px;
+                background-color: $light-green;
+                color: $dark-green;
+            }
+
+            ul {
+                padding-left: 40px;
+                margin-left: 0;
+
+                li {
+                    padding: 10px 0;
+
+                    a {
+                        font-weight: normal;
+                        padding-left: 10px;
+                        font-size: .9em;
+                        height: unset;
+                    }
+
+                    &[aria-expanded="true"] > a {
+                        border-left: 3px solid $green;
+                        background-color: unset;
+                        color: $green;
+                    }
+
+                    ul {
+                        padding-left: 10px;
+
+                        li a {
+                            font-size: .8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Portrait tablets and down
+@media screen and (max-width: 991.98px) {
+    div.sidebar, div.transparent-box {
+        height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
+        position: fixed;
+        z-index: 1;
+        top: 120px;
+    }
+
+    div.transparent-box {
+        background-color: $dark-green;
+        opacity: 0.8;
+        right: 0;
+    }
+}
+
+// Portrait mobile
+@media screen and (max-width: 575.98px) {
+    div.sidebar, div.transparent-box {
+        height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
+    }
+}

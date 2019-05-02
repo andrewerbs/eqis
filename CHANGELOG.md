@@ -9,6 +9,7 @@
 - [Splits menu into two `nav`s.](https://github.com/catalpainternational/myeqip-portal/pull/38)
 - [QuoteBlock](https://github.com/catalpainternational/myeqip-portal/pull/40)
 - [PostcardBlock](https://github.com/catalpainternational/myeqip-portal/pull/42)
+- [Top and side navigation](https://github.com/catalpainternational/myeqip-portal/pull/46)
 
 ### QA
 

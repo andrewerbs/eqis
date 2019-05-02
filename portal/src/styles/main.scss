@@ -1,14 +1,57 @@
-// Components
-@import "footer";
+// Base
+@import "variables";
 @import "images";
+
+// Components
+@import "sidebar";
+@import "header";
+@import "footer";
 
 // Vendor
 @import "~bootstrap/scss/bootstrap";
 
 // General styling
-html body {
-    ul {
-        padding: 0;
-        margin: 0;
+html {
+    height: 100%;
+
+    body {
+        padding-top: $top-menu-height;
+        padding-right: $padding;
+        padding-left: $padding;
+        height: 100%;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+        }
+
+        div.body {
+            div.content {
+                overflow: auto;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// Portrait mobile
+@media screen and (max-width: 575.98px) {
+    html body div.body {
+        min-height: calc(100% - #{$bottom-menu-height-mobile});
+    }
+}
+
+// Landscape mobile and up
+@media screen and (min-width: 576px) {
+    html body div.body {
+        min-height: calc(100% - #{$bottom-menu-height-desktop});
     }
 }
