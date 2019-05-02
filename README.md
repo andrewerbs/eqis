@@ -10,7 +10,7 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
    git clone git@github.com:catalpainternational/myeqip-portal.git
    ```
 
-2. Create a Python virtual envionment. myeqip-portal uses Python 3.5.7:
+2. Create a Python virtual envionment. myeqip-portal uses Python 3.6.7:
 
    ```bash
    python3 -m venv virtualenv
@@ -19,7 +19,7 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
    or
 
    ```bash
-   pyenv virtualenv 3.5.7 myeqip
+   pyenv virtualenv 3.6.7 myeqip
    pyenv local myeqip
    ```
 

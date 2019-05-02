@@ -1,21 +1,126 @@
 {% extends 'base.html' %}
 
 {% load accordion_menu_helpers %}
+{% load i18n %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-    <a href="{% url 'logout' %}">logout</a>
-    {% else %}
-    <a href="{% url 'login' %}">login</a>
-    {% endif %}
 
-    <form action="{% url 'search' %}" method="get">
-        <input type="text" name="query">
-        <input type="submit" value="Search" class="button">
-    </form>
+{% get_accordion_menu self as menu %}
 
-    {% create_accordion_menu_from_site_map self %}
+<header class="align-items-center d-flex fixed-top row">
+    <div class="col-3 col-md-2">
+        <a href="/">
+            <span class="app-logo"></span>
+        </a>
+    </div>
+    <div class="col-9 col-md-10 d-flex flex-row text-center text-md-left">
+        <nav class="col-6 d-none d-lg-flex">
+            <ul class="d-flex">
+                {% for top_level_page in menu.tree.children %}
+                <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
+                    <a class="align-items-center d-flex" href="{{ top_level_page.url }}">{{ top_level_page.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
 
-    {% block page %}
-    {% endblock page %}
+        <form class="col-md-7 col-lg-2 d-none d-md-block search-box" action="{% url 'search' %}" method="get">
+            <span class="magnifier"></span>
+            <input type="text" name="query" placeholder="search">
+        </form>
+
+        <div class="authentication col-4 col-md-2 text-center">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">login</a>
+            {% endif %}
+        </div>
+
+        <form class="col-5 col-md-2 language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+            <input id="language-{{ language.code }}" type="radio" name="language" value="{{ language.code }}" onclick="this.form.submit()" {% if language.code == LANGUAGE_CODE %}checked{% endif %}>
+            <label for="language-{{ language.code }}">{{ language.code }}</label>
+            <span>-</span>
+            {% endfor %}
+        </form>
+
+        <div class="burger-menu col-3 col-md-1 d-flex d-md-block d-lg-none">
+            <span class="burger d-flex" onclick="myeqip.toggle_sidebar()"></span>
+        </div>
+    </div>
+</header>
+
+<header class="d-none d-lg-none on-mobile row">
+    <nav class="d-flex">
+        <ul class="col-12 d-flex justify-content-center">
+            {% for top_level_page in menu.tree.children %}
+            <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
+                <a class="align-items-center d-flex" href="{{ top_level_page.url }}">{{ top_level_page.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
+
+<div class="body row">
+    <div class="col-8 col-md-4 col-lg-2 d-none d-lg-block sidebar">
+        <ul>
+            {% for top_level_page in menu.tree.children %}
+
+            {% if top_level_page.number_of_children %}
+
+            {% for second_level_page in top_level_page.children %}
+
+            <li aria-expanded="{{ second_level_page.active | lower }}">
+                <a class="align-items-center d-flex" href="{{ second_level_page.url }}">{{ second_level_page.title }}</a>
+                {% if second_level_page.number_of_children %}
+                <ul>
+                    {% for third_level_page in second_level_page.children %}
+                    <li aria-expanded="{{ third_level_page.active | lower }}">
+                        <a class="align-items-center d-flex" href="{{ third_level_page.url }}">{{ third_level_page.title }}</a>
+                        {% if third_level_page.number_of_children %}
+                        <ul>
+                            {% for fourth_level_page in third_level_page.children %}
+                            <li aria-expanded="{{ fourth_level_page.active | lower }}">
+                                <a class="align-items-center d-flex" href="{{ fourth_level_page.url }}">{{ fourth_level_page.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-4 col-md-8 d-none d-lg-none transparent-box"></div>
+    <div class="col-12 col-lg-10 content">
+        {% block page %}
+        {% endblock page %}
+    </div>
+</div>
+
+<footer class="align-items-center d-flex row">
+    <div class="col-12 col-md-2">
+        <span class="ministry-logo"></span>
+    </div>
+    <div class="col-12 col-md-10 text-center text-md-left">
+        <ul>
+            <li class="footer-item">Footer Item 1</li>
+            <li class="footer-item">Footer Item 2</li>
+            <li class="footer-item">Footer Item 3</li>
+            <li class="footer-item">Footer Item 4</li>
+            <li class="footer-item">Footer Item 5</li>
+            <li class="footer-item">Footer Item 6</li>
+        </ul>
+    </div>
+</footer>
 {% endblock content %}

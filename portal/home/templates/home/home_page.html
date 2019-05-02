@@ -5,6 +5,5 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block page %}
-<h1>{{ page.translated_title }}</h1>
-{{ page.description | richtext }}
+{{ page.body }}
 {% endblock page %}

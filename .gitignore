@@ -16,6 +16,7 @@ eggs/
 .eggs/
 lib/
 lib64/
+media/
 node_modules/
 parts/
 sdist/
@@ -107,3 +108,6 @@ venv.bak/
 
 # IDE files
 .vscode/
+
+# MacOS
+.DS_Store
