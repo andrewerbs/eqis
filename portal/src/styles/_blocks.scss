@@ -14,6 +14,7 @@ h3 {
 }
 
 h4 {
+    word-break: break-word;
     font-size: 1em;
     color: $black;
 }
@@ -104,6 +105,7 @@ div.block-CardLinks {
                 border-radius: $radius;
                 box-shadow: $shadow;
                 padding: $padding;
+                width: 100%;
 
                 h4 {
                     font-weight: bold;
