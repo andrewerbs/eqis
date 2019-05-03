@@ -120,9 +120,30 @@ div.block-CardLinks {
     }
 }
 
+div.block-Postcard {
+    margin-right: calc(-#{$padding} / 2);
+    margin-left: calc(-#{$padding} / 2);
+    background-color: $white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: $padding;
+
+    h4 {
+        font-weight: bold;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    img {
+        height: 100%;
+    }
+}
+
 // Portrait mobile
 @media screen and (max-width: 575.98px) {
-    div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
         margin-bottom: $padding-sm;
     }
 
@@ -151,7 +172,7 @@ div.block-CardLinks {
 
 // Landscape mobile and up
 @media screen and (min-width: 576px) {
-    div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
         margin-bottom: $padding-lg;
     }
 
