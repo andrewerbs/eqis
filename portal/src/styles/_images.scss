@@ -30,3 +30,11 @@ span.burger {
     height: 18px;
     width: 28px;
 }
+
+span.clip-art {
+    background-image: url(../images/clip_art.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    height: 132px;
+}
