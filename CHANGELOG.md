@@ -15,6 +15,7 @@
 - [Style rich text block](https://github.com/catalpainternational/myeqip-portal/pull/49)
 - [Style quote block](https://github.com/catalpainternational/myeqip-portal/pull/52)
 - [Style title block](https://github.com/catalpainternational/myeqip-portal/pull/57)
+- [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 
 ### QA
 
