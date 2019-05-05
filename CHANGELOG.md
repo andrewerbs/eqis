@@ -2,6 +2,11 @@
 
 ## 0.0.3
 
+### Interface
+
+- [Style card link block](https://github.com/catalpainternational/myeqip-portal/pull/64)
+- [Style postcard block](https://github.com/catalpainternational/myeqip-portal/pull/77)
+
 ## 0.0.2
 
 ### Interface

@@ -27,8 +27,8 @@ header {
 }
 
 header:not(.on-mobile) {
-    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
     background-color: $white;
+    box-shadow: $shadow;
     padding: $padding;
 
     form.search-box {
