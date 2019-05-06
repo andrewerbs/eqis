@@ -9,6 +9,10 @@
 - [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 - [UI hotfixes](https://github.com/catalpainternational/myeqip-portal/pull/80)
 
+### Code
+
+- [Rename `HomePage` to `WebPage`](https://github.com/catalpainternational/myeqip-portal/pull/51)
+
 ## 0.0.2
 
 ### Interface
