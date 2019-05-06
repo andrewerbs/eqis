@@ -24,6 +24,10 @@ urlpatterns += i18n_patterns(
     url(r'', include(wagtail_urls)),
 )
 
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        url(r'^rosetta/', include('rosetta.urls'))
+    ]
 
 if settings.DEBUG:
     from django.conf.urls.static import static
