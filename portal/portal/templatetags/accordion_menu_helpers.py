@@ -6,7 +6,7 @@ register = template.Library()
 
 class AccordionMenuEntry:
     def __init__(self, a_wagtail_page, current_page):
-        self._page_title = str(a_wagtail_page.homepage.translated_title) or ""
+        self._page_title = str(a_wagtail_page.webpage.translated_title) or ""
         self._page_url = a_wagtail_page.url if a_wagtail_page is not None else ""
         self._children = []
         self._is_active = False
