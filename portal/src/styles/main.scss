@@ -20,9 +20,9 @@ html {
     height: 100%;
 
     body {
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
         padding-top: $top-menu-height;
-        padding-right: $padding;
-        padding-left: $padding;
         height: 100%;
 
         ul {
@@ -53,8 +53,8 @@ html {
         min-height: calc(100% - #{$bottom-menu-height-mobile});
 
         div.content {
-            padding-right: $padding-sm;
-            padding-left: $padding-sm;
+            padding-right: $outer-space-sm;
+            padding-left: $outer-space-sm;
         }
     }
 }
@@ -65,8 +65,8 @@ html {
         min-height: calc(100% - #{$bottom-menu-height-desktop});
 
         div.content {
-            padding-right: $padding-lg;
-            padding-left: $padding-lg;
+            padding-right: $outer-space-lg;
+            padding-left: $outer-space-lg;
         }
     }
 }
