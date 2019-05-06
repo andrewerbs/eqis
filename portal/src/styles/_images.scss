@@ -34,6 +34,7 @@ span.burger {
 span.clip-art {
     background-image: url(../images/clip_art.svg);
     background-repeat: no-repeat;
+    border-radius: $radius;
     background-size: 100%;
     display: block;
     height: 132px;

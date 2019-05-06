@@ -1,6 +1,6 @@
 header {
+    padding: $inline-space-sm;
     height: $top-menu-height;
-    padding: $padding;
 
 
     ul {
@@ -27,9 +27,9 @@ header {
 }
 
 header:not(.on-mobile) {
+    padding: $inline-space-sm;
     background-color: $white;
     box-shadow: $shadow;
-    padding: $padding;
 
     form.search-box {
         border-right: 1px solid $dark-gray;
@@ -87,7 +87,7 @@ header:not(.on-mobile) {
 
 header.on-mobile {
     background-color: $light-gray;
-    padding: $padding 0;
+    padding: $inline-space-sm 0;
     position: fixed;
     width: 100%;
     z-index: 1;

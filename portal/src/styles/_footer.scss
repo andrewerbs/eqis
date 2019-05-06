@@ -1,11 +1,11 @@
 footer {
     border-top: 1px solid $green;
+    padding: $inline-space-sm 0;
     background-color: $white;
-    padding: $padding;
 
     ul li.footer-item {
-        margin-right: $padding;
-        margin-left: $padding;
+        margin-right: $inline-space-sm;
+        margin-left: $inline-space-sm;
         white-space: nowrap;
         display: inline;
         color: $black;

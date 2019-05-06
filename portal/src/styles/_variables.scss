@@ -12,9 +12,10 @@ $white: #FFFFFF;
 
 // Layout
 
-$padding: 15px;
-$padding-lg: 80px;
-$padding-sm: 40px;
+$inline-space-sm: 15px;
+$inline-space-lg: calc(#{$inline-space-sm} * 2);
+$outer-space-sm: 40px;
+$outer-space-lg: calc(#{$outer-space-sm} * 2);
 
 $radius: 5px;
 
