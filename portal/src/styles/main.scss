@@ -6,14 +6,11 @@
 @import "images";
 
 // Components
+@import "authentication";
 @import "sidebar";
 @import "header";
 @import "footer";
 @import "blocks";
-@import "authentication";
-
-// Vendor
-@import "~bootstrap/scss/bootstrap";
 
 // General styling
 html {
