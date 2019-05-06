@@ -8,6 +8,10 @@
 - [Style postcard block](https://github.com/catalpainternational/myeqip-portal/pull/77)
 - [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 
+### Code
+
+- [Rename `HomePage` to `WebPage`](https://github.com/catalpainternational/myeqip-portal/pull/51)
+
 ## 0.0.2
 
 ### Interface
