@@ -28,7 +28,7 @@ class TranslatedField:
             return getattr(instance, self.en_field)
 
 
-class HomePage(Page):
+class WebPage(Page):
     # Model Field Verbose Names
     _hero_image_verbose_name = _("Hero Image")
     _description_verbose_name = _("Description")
