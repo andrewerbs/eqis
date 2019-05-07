@@ -146,6 +146,8 @@ LANGUAGES = [
     ('my', _('Myanmar'))
 ]
 
+WAGTAIL_PERMITTED_LANGUAGES = LANGUAGES
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
