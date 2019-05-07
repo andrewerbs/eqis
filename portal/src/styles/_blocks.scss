@@ -71,7 +71,7 @@ div.block-RichText div.rich-text {
         padding-bottom: 0 !important;
 
         iframe {
-            max-width: 100%;
+            width: 100%;
         }
     }
 }
@@ -154,7 +154,7 @@ div.block-Postcard {
 
         div.responsive-object iframe {
             margin-left: calc(#{$outer-space-sm} * -1);
-            max-width: calc(100% + #{$outer-space-lg});
+            width: calc(100% + #{$outer-space-lg});
         }
     }
 
