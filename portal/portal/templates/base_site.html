@@ -25,7 +25,7 @@
         </nav>
 
         <form class="col-6 col-md-7 col-lg-2 search-box" action="{% url 'search' %}" method="get">
-            <span class="magnifier"></span>
+            <span class="magnifier" onclick="myeqip.toggle_search_bar()"></span>
             <input class="d-none d-md-inline-block" type="text" name="query" placeholder="search">
         </form>
 
