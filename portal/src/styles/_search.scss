@@ -1,0 +1,34 @@
+nav.search-results {
+    margin-bottom: $outer-space-sm;
+    padding-top: $outer-space-sm;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            margin-bottom: $inline-space-sm;
+
+            a {
+                padding: $inline-space-sm;
+                background-color: $white;
+                border-radius: $radius;
+                box-shadow: $shadow;
+                display: block;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+div.pagination {
+    a {
+        padding: 5px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
