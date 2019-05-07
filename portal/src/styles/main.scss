@@ -33,6 +33,16 @@ html {
             text-decoration: none;
         }
 
+        input {
+            border-radius: $radius;
+            color: $dark-gray;
+
+            &::-webkit-input-placeholder { color: $dark-gray; } /* Chrome/Opera/Safari */
+            &:-ms-input-placeholder { color: $dark-gray; } /* IE 10+ */
+            &::-moz-placeholder { color: $dark-gray; } /* Firefox 19+ */
+            &:-moz-placeholder { color: $dark-gray; } /* Firefox 18- */
+        }
+
         input[type="text"]:focus {
             outline: none;
         }
