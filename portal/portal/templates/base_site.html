@@ -8,12 +8,12 @@
 {% get_accordion_menu self as menu %}
 
 <header class="align-items-center d-flex fixed-top row">
-    <div class="col-3 col-md-2">
+    <div class="col-6 col-md-2">
         <a href="/">
             <span class="app-logo"></span>
         </a>
     </div>
-    <div class="col-9 col-md-10 d-flex flex-row text-center text-md-left">
+    <div class="col-6 col-md-10 d-flex flex-row text-center text-md-left">
         <nav class="col-6 d-none d-lg-flex">
             <ul class="d-flex">
                 {% for top_level_page in menu.tree.children %}
@@ -24,12 +24,12 @@
             </ul>
         </nav>
 
-        <form class="col-md-7 col-lg-2 d-none d-md-block search-box" action="{% url 'search' %}" method="get">
+        <form class="col-6 col-md-7 col-lg-2 search-box" action="{% url 'search' %}" method="get">
             <span class="magnifier"></span>
-            <input type="text" name="query" placeholder="search">
+            <input class="d-none d-md-inline-block" type="text" name="query" placeholder="search">
         </form>
 
-        <div class="authentication col-4 col-md-2 text-center">
+        <div class="authentication col-md-2 d-none d-md-block text-center">
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
@@ -37,7 +37,7 @@
             {% endif %}
         </div>
 
-        <form class="col-5 col-md-2 language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <form class="col-md-2 d-none d-md-block language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
@@ -48,7 +48,7 @@
             {% endfor %}
         </form>
 
-        <div class="burger-menu col-3 col-md-1 d-flex d-md-block d-lg-none">
+        <div class="burger-menu col-6 col-md-1 d-flex d-md-block d-lg-none justify-content-center">
             <span class="burger d-flex" onclick="myeqip.toggle_sidebar()"></span>
         </div>
     </div>
