@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-07 00:54+0000\n"
-"PO-Revision-Date: 2019-05-07 00:48+0000\n"
+"POT-Creation-Date: 2019-05-07 03:30+0000\n"
+"PO-Revision-Date: 2019-05-07 04:03+0000\n"
 "Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,59 +21,59 @@ msgstr ""
 
 #: home/blocks.py:10
 msgid "The quote's body text."
-msgstr ""
+msgstr "Il testo della citazione"
 
 #: home/blocks.py:11
 msgid "Whom or what the text quotes."
-msgstr ""
+msgstr "Chi o cosa il testo cita"
 
 #: home/blocks.py:14
 msgid "Quote Text"
-msgstr ""
+msgstr "Testo della citazione"
 
 #: home/blocks.py:18
 msgid "Attribution"
-msgstr ""
+msgstr "attribuzione"
 
 #: home/blocks.py:29
 msgid "The description's title."
-msgstr ""
+msgstr "Il titolo della descrizione"
 
 #: home/blocks.py:30
 msgid "An image that the description will accompany."
-msgstr ""
+msgstr "un immagine che la descrizione accompagnerà"
 
 #: home/blocks.py:31
 msgid "Text that describes or accompanies the image."
-msgstr ""
+msgstr "Un testo che descrive o accompagna l'immagine"
 
 #: home/blocks.py:36 home/models.py:52
 msgid "Title"
-msgstr "ခေါင်းစဥ်"
+msgstr "Titolo"
 
 #: home/blocks.py:42
 msgid "Image"
-msgstr ""
+msgstr "Immagine"
 
 #: home/blocks.py:46 home/models.py:34
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #: home/blocks.py:56
 msgid "This title displays larger in the block."
-msgstr ""
+msgstr "Questo titolo è il più grande nel blocco"
 
 #: home/blocks.py:57
 msgid "This title displays smaller in the block."
-msgstr ""
+msgstr "Questo titolo è il più piccolo nel blocco"
 
 #: home/blocks.py:59
 msgid "The Big Title"
-msgstr ""
+msgstr "Il titolo grande"
 
 #: home/blocks.py:60
 msgid "The Small Title"
-msgstr ""
+msgstr "il titolo piccolo"
 
 #: home/blocks.py:78
 msgid ""
@@ -85,7 +85,7 @@ msgstr ""
 
 #: home/blocks.py:84
 msgid "Choose a page"
-msgstr ""
+msgstr "Sceglia una pagina"
 
 #: home/models.py:33
 msgid "Hero Image"
@@ -93,7 +93,7 @@ msgstr ""
 
 #: home/models.py:35
 msgid "body"
-msgstr ""
+msgstr "Il corpo della pagina"
 
 #: home/models.py:38
 msgid "This image displays at the top of the page."
@@ -102,8 +102,7 @@ msgstr ""
 #: home/models.py:39
 msgid ""
 "\n"
-"    You can create page content with \"blocks\". With the \"RichText\" "
-"block, you\n"
+"    You can create page content with \"blocks\". With the \"RichText\" block, you\n"
 "    can write with headers, bold and italic text, lists, images, anchors,\n"
 "    document links, and embed links.\n"
 "    "
@@ -127,20 +126,20 @@ msgstr ""
 
 #: home/models.py:68
 msgid "title"
-msgstr ""
+msgstr "Titolo"
 
 #: home/models.py:139
 msgid "Content - English"
-msgstr ""
+msgstr "Contenuto - Inglese"
 
 #: home/models.py:140
 msgid "Content - Myanmar"
-msgstr ""
+msgstr "Contenuto - Myanmar"
 
 #: home/models.py:141
 msgid "Promote"
-msgstr ""
+msgstr "Pubblicizza"
 
 #: home/models.py:144
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
