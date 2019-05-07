@@ -54,8 +54,8 @@
     </div>
 </header>
 
-<header class="d-none d-lg-none on-mobile row">
-    <nav class="d-flex">
+<header class="d-none d-lg-none mobile-header row">
+    <nav class="d-none top-pages">
         <ul class="col-12 d-flex justify-content-center">
             {% for top_level_page in menu.tree.children %}
             <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
@@ -64,10 +64,13 @@
             {% endfor %}
         </ul>
     </nav>
+    <form class="col-12 d-none search-bar" action="{% url 'search' %}" method="get">
+        <input class="d-flex justify-content-center" type="text" name="query" placeholder="search">
+    </form>
 </header>
 
 <div class="body row">
-    <div class="col-8 col-md-4 col-lg-2 d-none d-lg-block sidebar">
+    <div class="col-10 col-md-4 col-lg-2 d-none d-lg-block sidebar">
         <ul>
             {% for top_level_page in menu.tree.children %}
 
@@ -101,12 +104,13 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="col-4 col-md-8 d-none d-lg-none transparent-box"></div>
     <div class="col-12 col-lg-10 content">
         {% block page %}
         {% endblock page %}
     </div>
 </div>
+
+<div class="col-12 d-none d-lg-none background"></div>
 
 <footer class="align-items-center d-flex row">
     <div class="col-12 col-md-2">
