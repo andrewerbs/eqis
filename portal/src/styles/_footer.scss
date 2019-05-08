@@ -11,3 +11,10 @@ footer {
         color: $black;
     }
 }
+
+// Portrait mobile
+@media screen and (max-width: 575.98px) {
+    footer div:last-child {
+        margin-top: $inline-space-sm;
+    }
+}
