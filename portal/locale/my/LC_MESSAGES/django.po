@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-07 03:30+0000\n"
-"PO-Revision-Date: 2019-05-07 04:03+0000\n"
+"POT-Creation-Date: 2019-05-08 02:22+0000\n"
+"PO-Revision-Date: 2019-05-08 02:23+0000\n"
 "Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -47,7 +47,7 @@ msgstr "un immagine che la descrizione accompagnerà"
 msgid "Text that describes or accompanies the image."
 msgstr "Un testo che descrive o accompagna l'immagine"
 
-#: home/blocks.py:36 home/models.py:52
+#: home/blocks.py:36 home/models.py:53
 msgid "Title"
 msgstr "Titolo"
 
@@ -108,38 +108,40 @@ msgid ""
 "    "
 msgstr ""
 
-#: home/models.py:48
-msgid "CardLinks"
-msgstr ""
-
 #: home/models.py:49
-msgid "Postcard"
-msgstr ""
+msgid "Card Links"
+msgstr "Carta Link"
 
 #: home/models.py:50
-msgid "Quote"
-msgstr ""
+msgid "Postcard"
+msgstr "Cartolina"
 
 #: home/models.py:51
-msgid "RichText"
-msgstr ""
+#, fuzzy
+#| msgid "Quote Text"
+msgid "Quote"
+msgstr "Citazione"
 
-#: home/models.py:68
+#: home/models.py:52
+msgid "Rich-text"
+msgstr "Testo Ricco"
+
+#: home/models.py:88
 msgid "title"
 msgstr "Titolo"
 
-#: home/models.py:139
+#: home/models.py:159
 msgid "Content - English"
 msgstr "Contenuto - Inglese"
 
-#: home/models.py:140
+#: home/models.py:160
 msgid "Content - Myanmar"
 msgstr "Contenuto - Myanmar"
 
-#: home/models.py:141
+#: home/models.py:161
 msgid "Promote"
 msgstr "Pubblicizza"
 
-#: home/models.py:144
+#: home/models.py:164
 msgid "Settings"
 msgstr "Impostazioni"

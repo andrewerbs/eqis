@@ -45,20 +45,40 @@ class WebPage(Page):
     # Values that help Streamfield Blocks.
     _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
-    _card_link_blocks_name = _('CardLinks')
-    _postcard_block_name = _('Postcard')
-    _quote_block_name = _('Quote')
-    _rich_text_block_name = _('RichText')
-    _title_block_name = _('Title')
+
+    _cardlinks_label = _('Card Links')
+    _postcard_label = _('Postcard')
+    _quote_label = _('Quote')
+    _rich_text_label = _('Rich-text')
+    _title_label = _('Title')
+
     _block_list = [
-        (_card_link_blocks_name, ListBlock(
-            CardLinkBlock(),
-            template='home/list_block_card_link.html'
-        )),
-        (_postcard_block_name, PostcardBlock()),
-        (_quote_block_name, QuoteWithAttributionBlock()),
-        (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-        (_title_block_name, TitleBlock()),
+        (
+            'title',
+            TitleBlock(label=_title_label),
+        ),
+        (
+            'richtext',
+            RichTextBlock(
+                label=_rich_text_label,
+                features=_rich_text_features,
+            )
+        ),
+        (
+            'cardlinks',
+            ListBlock(
+                CardLinkBlock(label=_cardlinks_label),
+                template='home/list_block_card_link.html'
+            ),
+        ),
+        (
+            'postcard',
+            PostcardBlock(label=_postcard_label)
+        ),
+        (
+            'quote',
+            QuoteWithAttributionBlock(label=_quote_label)
+        ),
     ]
 
     # Model Fields

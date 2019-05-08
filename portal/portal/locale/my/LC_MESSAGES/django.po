@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-07 03:30+0000\n"
-"PO-Revision-Date: 2019-05-07 04:00+0000\n"
+"POT-Creation-Date: 2019-05-08 02:22+0000\n"
+"PO-Revision-Date: 2019-05-07 06:48+0000\n"
 "Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -26,3 +26,7 @@ msgstr "Inglese"
 #: portal/settings.py:146
 msgid "Myanmar"
 msgstr "Myanmar"
+
+#: portal/templates/base_site.html:107
+msgid "Hello!"
+msgstr "Ciao!"

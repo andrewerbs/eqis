@@ -78,7 +78,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
-LOCALE_PATH = [
+LOCALE_PATHS = [
     os.path.join(PROJECT_DIR, 'locale'),
 ]
 
