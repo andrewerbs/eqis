@@ -56,6 +56,11 @@ div.sidebar {
             }
         }
     }
+
+    div.widgets {
+        background-color: $light-gray;
+        height: $top-menu-height;
+    }
 }
 
 // Portrait tablets and down

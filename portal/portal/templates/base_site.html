@@ -100,6 +100,27 @@
             {% endif %}
             {% endfor %}
         </ul>
+
+        <div class="col-8 d-md-none d-flex fixed-bottom widgets">
+            <div class="authentication col-6 text-center">
+                {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">logout</a>
+                {% else %}
+                <a href="{% url 'login' %}">login</a>
+                {% endif %}
+            </div>
+
+            <form class="col-6 language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <input id="language-{{ language.code }}" type="radio" name="language" value="{{ language.code }}" onclick="this.form.submit()" {% if language.code == LANGUAGE_CODE %}checked{% endif %}>
+                <label for="language-{{ language.code }}">{{ language.code }}</label>
+                <span>-</span>
+                {% endfor %}
+            </form>
+        </div>
     </div>
     <div class="col-4 col-md-8 d-none d-lg-none transparent-box"></div>
     <div class="col-12 col-lg-10 content">
