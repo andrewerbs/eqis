@@ -154,6 +154,11 @@ div.block-Postcard {
             margin-left: calc(#{$outer-space-sm} * -1);
             width: calc(100% + #{$outer-space-lg});
         }
+
+        // Instagram embed
+        iframe.instagram-media.instagram-media-rendered {
+            min-width: unset !important; // hack instagram embed content width on mobile screens
+        }
     }
 
     div.block-Title {
