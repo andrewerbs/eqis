@@ -1,5 +1,4 @@
 div.sidebar {
-    border-right: 1px solid $dark-gray;
     background-color: $white;
     padding-top: 25px;
     overflow: auto;
@@ -83,5 +82,12 @@ div.sidebar {
 @media screen and (max-width: 575.98px) {
     div.sidebar, div.transparent-box {
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
+    }
+}
+
+// Landscape tablet and up
+@media screen and (min-width: 992px) {
+    div.sidebar {
+        border-right: 1px solid $dark-gray;
     }
 }
