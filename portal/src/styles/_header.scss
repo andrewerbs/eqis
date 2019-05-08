@@ -49,37 +49,6 @@ header:not(.on-mobile) {
         }
     }
 
-    div.authentication {
-        border-right: 1px solid $dark-gray;
-        line-height: 30px;
-        margin: auto 0;
-        height: 30px;
-
-        a {
-            color: $dark-gray;
-        }
-    }
-
-    form.language-selector {
-        margin: auto 0;
-
-        input[type="radio"] {
-            display: none;
-
-            &:checked + label {
-                color: $green;
-            }
-        }
-
-        label {
-            text-transform: uppercase;
-            margin-bottom: 0;
-            color: $black;
-        }
-
-        span:last-of-type { display: none; }
-    }
-
     div.burger-menu {
         margin: auto 0;
     }
