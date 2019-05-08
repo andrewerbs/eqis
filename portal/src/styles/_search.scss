@@ -1,10 +1,6 @@
 div.search-results {
     padding-top: $outer-space-sm;
 
-    h3 {
-        margin-bottom: $inline-space-lg;
-    }
-
     nav ul {
         list-style-type: none;
 
@@ -46,6 +42,10 @@ div.search-results {
 @media screen and (max-width: 575.98px) {
     div.search-results {
         margin-bottom: $outer-space-sm;
+
+        h2 {
+            margin-bottom: $outer-space-sm;
+        }
     }
 }
 
@@ -53,5 +53,9 @@ div.search-results {
 @media screen and (min-width: 576px) {
     div.search-results {
         margin-bottom: $outer-space-lg;
+
+        h2 {
+            margin-bottom: $outer-space-lg;
+        }
     }
 }

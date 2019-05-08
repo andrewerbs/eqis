@@ -7,10 +7,9 @@
 
 {% block page %}
 <div class="search-results">
-    <h3>Search results</h3>
-
+    {% if search_results %}
+    <h2>Results for "{{ search_query|urlencode }}"</h2>
     <nav class="search-results">
-        {% if search_results %}
         <ul>
             {% for result in search_results %}
             <li>
@@ -23,10 +22,10 @@
             </li>
             {% endfor %}
         </ul>
-        {% elif search_query %}
-        <p>No results found</p>
-        {% endif %}
     </nav>
+    {% elif search_query %}
+    <h2>No results found for "{{ search_query|urlencode }}"</h2>
+    {% endif %}
 
     <div class="d-flex justify-content-between pagination">
         {% if search_results.has_previous %}
