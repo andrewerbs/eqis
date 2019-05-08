@@ -171,7 +171,7 @@ div.block-Postcard {
 
             img {
                 margin-left: calc(#{$outer-space-sm} * -1);
-                width: calc(100% + #{$outer-space-lg});
+                width: calc(100% + #{$outer-space-sm});
             }
 
             // Instagram embed
