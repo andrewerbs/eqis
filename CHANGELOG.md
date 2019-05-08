@@ -8,8 +8,8 @@
 - [Style postcard block](https://github.com/catalpainternational/myeqip-portal/pull/77)
 - [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 - [UI hotfixes](https://github.com/catalpainternational/myeqip-portal/pull/80)
-- [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 - [Center align quote attribution](https://github.com/catalpainternational/myeqip-portal/pull/87)
+- [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 
 ### Code
 
@@ -29,10 +29,6 @@
 - [Style quote block](https://github.com/catalpainternational/myeqip-portal/pull/52)
 - [Style title block](https://github.com/catalpainternational/myeqip-portal/pull/57)
 
-### QA
-
-### Code
-
 ## 0.0.1
 
 ### Interface
@@ -40,8 +36,6 @@
 - [Support for multiple languages](https://github.com/catalpainternational/myeqip-portal/pull/15)
 - [Log in and log out support](https://github.com/catalpainternational/myeqip-portal/pull/17)
 - [Search bar](https://github.com/catalpainternational/myeqip-portal/pull/21)
-
-### QA
 
 ### Code
 
