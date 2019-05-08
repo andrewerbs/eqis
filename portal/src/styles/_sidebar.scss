@@ -80,6 +80,12 @@ div.sidebar {
 
 // Portrait mobile
 @media screen and (max-width: 575.98px) {
+    div.sidebar {
+        & > ul {
+            padding-bottom: $top-menu-height;
+        }
+    }
+
     div.sidebar, div.transparent-box {
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
     }
