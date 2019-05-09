@@ -14,7 +14,7 @@
         </a>
     </div>
     <div class="col-6 col-md-10 d-flex flex-row text-center text-md-left">
-        <nav class="col-6 d-none d-lg-flex">
+        <nav class="d-none col-lg-6 d-lg-flex">
             <ul class="d-flex">
                 {% for top_level_page in menu.tree.children %}
                 <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
@@ -24,12 +24,12 @@
             </ul>
         </nav>
 
-        <form class="col-6 col-md-7 col-lg-2 search-box" action="{% url 'search' %}" method="get">
+        <form class="align-items-center justify-content-center col-6 d-flex col-md-2 offset-md-8 col-lg-2 offset-lg-0 search-box" action="{% url 'search' %}" method="get">
             <span class="magnifier" onclick="myeqip.toggle_search_bar()"></span>
-            <input class="d-none d-md-inline-block" type="text" name="query" placeholder="search">
+            <input class="d-none d-lg-inline-block" type="text" name="query" placeholder="search">
         </form>
 
-        <div class="authentication col-md-2 d-none d-md-block text-center">
+        <div class="authentication d-none col-lg-2 d-lg-block text-center">
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
@@ -37,7 +37,7 @@
             {% endif %}
         </div>
 
-        <form class="col-md-2 d-none d-md-block language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <form class="d-none col-lg-2 d-lg-block language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
@@ -48,7 +48,7 @@
             {% endfor %}
         </form>
 
-        <div class="burger-menu col-6 col-md-1 d-flex d-md-block d-lg-none justify-content-center">
+        <div class="burger-menu col-6 col-md-2 d-flex d-lg-none justify-content-center">
             <span class="burger d-flex" onclick="myeqip.toggle_sidebar()"></span>
         </div>
     </div>
@@ -103,6 +103,27 @@
             {% endif %}
             {% endfor %}
         </ul>
+
+        <div class="col-10 col-md-4 d-flex d-lg-none fixed-bottom widgets">
+            <div class="authentication col-6 text-center">
+                {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">logout</a>
+                {% else %}
+                <a href="{% url 'login' %}">login</a>
+                {% endif %}
+            </div>
+
+            <form class="col-6 language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <input id="language-{{ language.code }}" type="radio" name="language" value="{{ language.code }}" onclick="this.form.submit()" {% if language.code == LANGUAGE_CODE %}checked{% endif %}>
+                <label for="language-{{ language.code }}">{{ language.code }}</label>
+                <span>-</span>
+                {% endfor %}
+            </form>
+        </div>
     </div>
     <div class="col-12 col-lg-10 content">
         {% block page %}
