@@ -19,6 +19,16 @@ h4 {
     color: $black;
 }
 
+h5 {
+    font-size: 0.8em;
+    color: $black;
+}
+
+h6 {
+    font-size: 0.5em;
+    color: $black;
+}
+
 p {
     word-break: break-word;
     font-size: 1em;
@@ -67,12 +77,14 @@ div.block-RichText div.rich-text {
         margin-bottom: $inline-space-lg;
     }
 
+    // Video (e.g. YouTube) embed
     div.responsive-object {
-        padding-bottom: 0 !important;
-        height: 270px; // Wagtail iframe default height
+        position: relative;
 
         iframe {
-            max-width: 100%;
+            position: absolute;
+            height: 100%;
+            width: 100%;
         }
     }
 }
@@ -149,15 +161,25 @@ div.block-Postcard {
         margin-bottom: $outer-space-sm;
     }
 
-    div.block-RichText div.rich-text {
-        img {
-            margin-left: calc(#{$outer-space-sm} * -1);
-            width: calc(100% + #{$outer-space-lg});
-        }
+    div.block-RichText {
+        margin-right: calc(#{$outer-space-sm} * -1);
+        margin-left: calc(#{$outer-space-sm} * -1);
 
-        div.responsive-object iframe {
-            margin-left: calc(#{$outer-space-sm} * -1);
-            max-width: calc(100% + #{$outer-space-lg});
+        div.rich-text {
+            h1, h2, h3, h4, h5, h6, ol, ul, p, div:not(.responsive-object) {
+                margin-right: #{$outer-space-sm};
+                margin-left: #{$outer-space-sm};
+            }
+
+            img {
+                margin-left: calc(#{$outer-space-sm} * -1);
+                width: calc(100% + #{$outer-space-sm});
+            }
+
+            // Instagram embed
+            iframe.instagram-media.instagram-media-rendered {
+                min-width: unset !important; // hack instagram embed content width on mobile screens
+            }
         }
     }
 
