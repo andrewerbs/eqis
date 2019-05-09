@@ -8,20 +8,17 @@ div.search-results {
             margin-bottom: $inline-space-sm;
 
             a {
-                padding: $inline-space-sm;
-                background-color: $white;
-                border-radius: $radius;
-                box-shadow: $shadow;
-                display: block;
-
-                h4 {
-                    font-weight: bold;
-                }
-
-                p {
-                    margin-bottom: 0;
-                }
+                font-weight: bold;
+                color: $green;
             }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        hr:last-child {
+            display: none;
         }
     }
 
