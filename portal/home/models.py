@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.translation import get_language, gettext as _
 
-from portal.settings import GA_TAG
 from wagtail.admin.edit_handlers import (
     FieldPanel, ObjectList, StreamFieldPanel, TabbedInterface
 )
@@ -145,10 +144,3 @@ class WebPage(Page):
             classname="settings"
         ),
     ])
-
-    def get_context(self, request):
-        context = super().get_context(request)
-        context.update({
-            'GA_TAG': GA_TAG,
-        })
-        return context
