@@ -64,16 +64,20 @@ div.sidebar {
 
 // Portrait tablets and down
 @media screen and (max-width: 991.98px) {
-    div.sidebar, div.transparent-box {
+    div.sidebar, div.background {
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
         position: fixed;
-        z-index: 1;
         top: 120px;
     }
 
-    div.transparent-box {
+    div.sidebar {
+        z-index: 2;
+    }
+
+    div.background {
         background-color: $dark-green;
         opacity: 0.8;
+        z-index: 1;
         right: 0;
     }
 }
@@ -86,7 +90,7 @@ div.sidebar {
         }
     }
 
-    div.sidebar, div.transparent-box {
+    div.sidebar, div.background {
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
     }
 }
