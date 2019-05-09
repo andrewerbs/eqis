@@ -3,17 +3,16 @@
 
 // Base
 @import "variables";
+@import "buttons";
 @import "images";
 
 // Components
+@import "authentication";
 @import "sidebar";
 @import "header";
 @import "footer";
 @import "blocks";
-@import "authentication";
-
-// Vendor
-@import "~bootstrap/scss/bootstrap";
+@import "search";
 
 // General styling
 html {
@@ -25,6 +24,10 @@ html {
         padding-top: $top-menu-height;
         height: 100%;
 
+        p.text-sm {
+            font-size: 0.8em;
+        }
+
         ul {
             padding: 0;
             margin: 0;
@@ -34,8 +37,23 @@ html {
             text-decoration: none;
         }
 
+        input {
+            border-radius: $radius;
+            color: $dark-gray;
+
+            &::-webkit-input-placeholder { color: $dark-gray; } /* Chrome/Opera/Safari */
+            &:-ms-input-placeholder { color: $dark-gray; } /* IE 10+ */
+            &::-moz-placeholder { color: $dark-gray; } /* Firefox 19+ */
+            &:-moz-placeholder { color: $dark-gray; } /* Firefox 18- */
+        }
+
         input[type="text"]:focus {
             outline: none;
+        }
+
+        hr {
+            border-color: $light-green;
+            margin: $inline-space-lg 0;
         }
 
         div.body {
