@@ -13,13 +13,12 @@
         <ul>
             {% for result in search_results %}
             <li>
-                <a href="{% pageurl result %}">
-                    <h4>{{ result }}</h4>
-                    {% if result.search_description %}
-                    <p>{{ result.search_description }}</p>
-                    {% endif %}
-                </a>
+                <a href="{% pageurl result %}">{{ result }}</a>
+                {% if result.search_description %}
+                <p class="text-sm">{{ result.search_description }}</p>
+                {% endif %}
             </li>
+            <hr>
             {% endfor %}
         </ul>
     </nav>
