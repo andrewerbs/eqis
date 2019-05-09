@@ -9,6 +9,7 @@
 - [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 - [UI hotfixes](https://github.com/catalpainternational/myeqip-portal/pull/80)
 - [Style search results](https://github.com/catalpainternational/myeqip-portal/pull/84)
+- [Fix embed margins](https://github.com/catalpainternational/myeqip-portal/pull/85)
 - [Center align quote attribution](https://github.com/catalpainternational/myeqip-portal/pull/87)
 - [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 - [Log in/out and switch language on mobile screens](https://github.com/catalpainternational/myeqip-portal/pull/89)
