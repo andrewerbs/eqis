@@ -78,15 +78,17 @@ div.block-RichText div.rich-text {
 }
 
 div.block-Quote {
+    p {
+        text-align: center;
+    }
+
     p:first-child {
         margin-bottom: 10px;
-        text-align: center;
         font-size: 1.6em;
     }
 
     p:last-child {
         color: $dark-gray !important;
-        text-align: right;
         font-size: 0.8em;
     }
 }

@@ -9,6 +9,8 @@
 - [Style login, logout, and "Change my password"](https://github.com/catalpainternational/myeqip-portal/pull/58)
 - [UI hotfixes](https://github.com/catalpainternational/myeqip-portal/pull/80)
 - [Style search results](https://github.com/catalpainternational/myeqip-portal/pull/84)
+- [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
+- [Center align quote attribution](https://github.com/catalpainternational/myeqip-portal/pull/87)
 
 ### Code
 
