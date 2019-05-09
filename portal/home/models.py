@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import get_language, gettext as _
+from django.utils.translation import get_language, gettext_lazy as _
 
 from portal.settings import GA_TAG
 from wagtail.admin.edit_handlers import (
@@ -32,10 +32,8 @@ class WebPage(Page):
     # Model Field Verbose Names
     _hero_image_verbose_name = _("Hero Image")
     _description_verbose_name = _("Description")
-    _body_verbose_name = _('body')
 
     # Model Field Help Text.
-    _hero_image_help_text = _("This image displays at the top of the page.")
     _body_help_text = _('''
     You can create page content with "blocks". With the "RichText" block, you
     can write with headers, bold and italic text, lists, images, anchors,
@@ -106,14 +104,22 @@ class WebPage(Page):
     body_en = StreamField(
         _block_list,
         blank=True,
-        help_text=_body_help_text,
-        verbose_name=_body_verbose_name,
+        help_text=_('''
+    You can create page content with "blocks". With the "RichText" block, you
+    can write with headers, bold and italic text, lists, images, anchors,
+    document links, and embed links.
+    '''),
+        verbose_name=_('body'),
     )
     body_my = StreamField(
         _block_list,
         blank=True,
-        help_text=_body_help_text,
-        verbose_name=_body_verbose_name,
+        help_text=_('''
+    You can create page content with "blocks". With the "RichText" block, you
+    can write with headers, bold and italic text, lists, images, anchors,
+    document links, and embed links.
+    '''),
+        verbose_name=_('body'),
     )
 
     # Translatable fields.

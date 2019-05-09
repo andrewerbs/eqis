@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-from django.utils.translation import gettext_lazy as _
-
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -64,13 +62,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
@@ -78,9 +76,6 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
-LOCALE_PATHS = [
-    os.path.join(PROJECT_DIR, 'locale'),
-]
 
 ROOT_URLCONF = 'portal.urls'
 
@@ -142,8 +137,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('my', _('Myanmar'))
+    ('en', 'English'),
+    ('my', 'Myanmar')
 ]
 
 WAGTAILADMIN_PERMITTED_LANGUAGES = LANGUAGES
