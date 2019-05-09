@@ -31,7 +31,6 @@ GA_TAG = ''
 INSTALLED_APPS = [
     'home',
     'search',
-    'portal',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -152,7 +151,7 @@ USE_L10N = True
 USE_TZ = True
 
 # Rosetta
-ROSETTA_WSGI_AUTO_RELOAD = False
+ROSETTA_UWSGI_AUTO_RELOAD = False
 
 
 # Static files (CSS, JavaScript, Images)
