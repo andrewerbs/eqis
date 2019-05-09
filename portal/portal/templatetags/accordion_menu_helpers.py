@@ -41,7 +41,7 @@ class AccordionMenuEntry:
         if a_wagtail_page is None:
             return
 
-        if a_wagtail_page.url == current_page.url:
+        if current_page and a_wagtail_page.url == current_page.url:
             self._is_active = True
 
         if a_wagtail_page.numchild > 0:
