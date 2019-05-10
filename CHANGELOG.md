@@ -13,6 +13,7 @@
 - [Center align quote attribution](https://github.com/catalpainternational/myeqip-portal/pull/87)
 - [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 - [Log in/out and switch language on mobile screens](https://github.com/catalpainternational/myeqip-portal/pull/89)
+- [Add official font family](https://github.com/catalpainternational/myeqip-portal/pull/93)
 
 ### Code
 
