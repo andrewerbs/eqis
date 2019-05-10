@@ -5,9 +5,8 @@
 
 {% block content %}
 
-{% get_site_root as site_root %}
 {% on_home_or_search_page self as side_menu_is_hidden %}
-{% get_accordion_menu site_root self as menu_tree %}
+{% get_accordion_menu self as menu_tree %}
 
 <header class="align-items-center d-flex fixed-top row">
     <div class="col-6 col-md-2">

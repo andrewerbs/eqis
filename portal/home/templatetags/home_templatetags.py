@@ -11,14 +11,13 @@ def are_same_page(page1, page2):
     return False
 
 
+def get_site_root(context):
+    return context['request'].site.root_page
+
+
 @register.simple_tag
 def get_google_analytics_tag():
     return GA_TAG
-
-
-@register.simple_tag(takes_context=True)
-def get_site_root(context):
-    return context['request'].site.root_page
 
 
 @register.simple_tag(takes_context=True)
@@ -29,9 +28,10 @@ def on_home_or_search_page(context, current_page):
     return False
 
 
-@register.simple_tag
-def get_accordion_menu(site_root, current_page):
-    accordion_menu = AccordionMenuEntry(site_root, current_page)
+@register.simple_tag(takes_context=True)
+def get_accordion_menu(context, current_page):
+    root_page = get_site_root(context)
+    accordion_menu = AccordionMenuEntry(root_page, current_page)
     return accordion_menu
 
 
