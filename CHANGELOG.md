@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.0
+
+- [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+
 ## 0.0.3
 
 ### Interface
@@ -13,7 +17,7 @@
 - [Center align quote attribution](https://github.com/catalpainternational/myeqip-portal/pull/87)
 - [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 - [Log in/out and switch language on mobile screens](https://github.com/catalpainternational/myeqip-portal/pull/89)
-- [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+- [Add official font family](https://github.com/catalpainternational/myeqip-portal/pull/93)
 
 ### Code
 
