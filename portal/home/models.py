@@ -77,18 +77,18 @@ class WebPage(Page):
             )
         ),
         (
-            'cardlinks',
+            'CardLinks',
             ListBlock(
                 CardLinkBlock(label=_cardlinks_label),
                 template='home/list_block_card_link.html'
             ),
         ),
         (
-            'postcard',
+            'Postcard',
             PostcardBlock(label=_postcard_label)
         ),
         (
-            'quote',
+            'Quote',
             QuoteWithAttributionBlock(label=_quote_label)
         ),
     ]
