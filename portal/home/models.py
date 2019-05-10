@@ -21,11 +21,7 @@ class TranslatedField:
         self.my_field = my_field
 
     def _get_translated_field_or_fallback(self, local_language, fallback):
-<<<<<<< HEAD
         return local_language if len(local_language) > 0 else fallback
-=======
-        return local_language if local_language != '' else fallback
->>>>>>> UI text uses whichever translation is available.
 
     def __get__(self, instance, owner):
         in_myanmar = getattr(instance, self.my_field)
