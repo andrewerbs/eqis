@@ -41,7 +41,17 @@ module.exports = {
                 'use': {
                     'loader': 'svg-url-loader'
                 }
-            }
+            },
+            {
+                'test': /\.(ttf|woff2)$/,
+                'exclude': [ /node_modules/ ],
+                'use': {
+                    'loader': 'file-loader',
+                    'options': {
+                        'name': '[name].[ext]'
+                    }
+                }
+            },
         ]
     },
     'plugins': [
