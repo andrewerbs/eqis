@@ -4,6 +4,8 @@
 
 ### Interface
 
+* [WebPage and Blocks have help texts](https://github.com/catalpainternational/myeqip-portal/pull/99)
+
 ### Code
 
 ## 0.0.3
@@ -20,7 +22,6 @@
 - [Remove dummy footer content items](https://github.com/catalpainternational/myeqip-portal/pull/88)
 - [Log in/out and switch language on mobile screens](https://github.com/catalpainternational/myeqip-portal/pull/89)
 - [Add official font family](https://github.com/catalpainternational/myeqip-portal/pull/93)
-- [WebPage and Blocks have help texts](https://github.com/catalpainternational/myeqip-portal/pull/99)
 
 ### Code
 
