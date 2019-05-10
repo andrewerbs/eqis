@@ -1,7 +1,31 @@
 from django import template
 
+from portal.settings import GA_TAG
 
 register = template.Library()
+
+
+@register.simple_tag
+def get_google_analytics_tag():
+    return GA_TAG
+
+
+@register.simple_tag(takes_context=True)
+def get_site_root(context):
+    return context['request'].site.root_page
+
+
+@register.simple_tag
+def are_same_page(page1, page2):
+    if hasattr(page1, 'url') and hasattr(page2, 'url'):
+        return page1.url == page2.url
+    return False
+
+
+@register.simple_tag
+def get_accordion_menu(site_root, current_page):
+    accordion_menu = AccordionMenuEntry(site_root, current_page)
+    return accordion_menu
 
 
 class AccordionMenuEntry:
@@ -41,7 +65,7 @@ class AccordionMenuEntry:
         if a_wagtail_page is None:
             return
 
-        if a_wagtail_page.url == current_page.url:
+        if are_same_page(a_wagtail_page, current_page):
             self._is_active = True
 
         if a_wagtail_page.numchild > 0:
@@ -49,13 +73,3 @@ class AccordionMenuEntry:
                 accordion_child = AccordionMenuEntry(child, current_page)
                 self._is_active = self.active or accordion_child.active
                 self.add_child(accordion_child)
-
-
-@register.simple_tag(takes_context=True)
-def get_accordion_menu(context, current_page):
-    wagtail_site_root = context['request'].site.root_page
-    accordion_menu = AccordionMenuEntry(wagtail_site_root, current_page)
-    return {
-        'current_page': current_page,
-        'tree': accordion_menu,
-    }

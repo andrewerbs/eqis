@@ -165,10 +165,3 @@ class WebPage(Page):
             classname="settings"
         ),
     ])
-
-    def get_context(self, request):
-        context = super().get_context(request)
-        context.update({
-            'GA_TAG': settings.GA_TAG,
-        })
-        return context

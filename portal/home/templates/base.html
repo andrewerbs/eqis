@@ -1,5 +1,6 @@
 {% load static wagtailuserbar %}
 {% load staticfiles %}
+{% load home_templatetags %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -34,6 +35,8 @@
 
     {# Google Analytics #}
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+
+    {% get_google_analytics_tag as GA_TAG %}
     {% if GA_TAG != '' %}
     <script>
         window.dataLayer = window.dataLayer || [];
