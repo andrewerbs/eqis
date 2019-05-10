@@ -66,7 +66,7 @@ class WebPage(Page):
 
     _block_list = [
         (
-            'title',
+            'Title',
             TitleBlock(label=_title_label),
         ),
         (
