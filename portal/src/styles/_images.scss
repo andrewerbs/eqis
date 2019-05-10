@@ -30,3 +30,21 @@ span.burger {
     height: 18px;
     width: 28px;
 }
+
+span.clip-art {
+    background-image: url(../images/clip_art.svg);
+    background-repeat: no-repeat;
+    border-radius: $radius;
+    background-size: 100%;
+    display: block;
+    height: 132px;
+}
+
+span.love {
+    background-image: url(../images/love.svg);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    height: 12px;
+    width: 15px;
+}

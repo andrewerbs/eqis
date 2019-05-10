@@ -1,11 +1,11 @@
 from django.db import models
-from django.utils.translation import get_language, gettext as _
+from django.utils.translation import get_language, gettext_lazy as _
+from django.conf import settings
 
-from portal.settings import GA_TAG
 from wagtail.admin.edit_handlers import (
     FieldPanel, ObjectList, StreamFieldPanel, TabbedInterface
 )
-from wagtail.core.blocks import BlockQuoteBlock, ListBlock, RichTextBlock
+from wagtail.core.blocks import ListBlock, RichTextBlock
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from wagtail.images.edit_handlers import ImageChooserPanel
@@ -21,14 +21,26 @@ class TranslatedField:
         self.en_field = en_field
         self.my_field = my_field
 
+    def _get_translated_field_or_fallback(self, local_language, fallback):
+        return local_language if len(local_language) > 0 else fallback
+
     def __get__(self, instance, owner):
+        in_myanmar = getattr(instance, self.my_field)
+        in_english = getattr(instance, self.en_field)
+
         if get_language() == 'my':
-            return getattr(instance, self.my_field)
+            return self._get_translated_field_or_fallback(
+                local_language=in_myanmar,
+                fallback=in_english
+            )
         else:
-            return getattr(instance, self.en_field)
+            return self._get_translated_field_or_fallback(
+                local_language=in_english,
+                fallback=in_myanmar
+            )
 
 
-class HomePage(Page):
+class WebPage(Page):
     # Model Field Verbose Names
     _hero_image_verbose_name = _("Hero Image")
     _description_verbose_name = _("Description")
@@ -45,20 +57,40 @@ class HomePage(Page):
     # Values that help Streamfield Blocks.
     _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
-    _card_link_blocks_name = _('CardLinks')
-    _postcard_block_name = _('Postcard')
-    _quote_block_name = _('Quote')
-    _rich_text_block_name = _('RichText')
-    _title_block_name = _('Title')
+
+    _cardlinks_label = _('Card Links')
+    _postcard_label = _('Postcard')
+    _quote_label = _('Quote')
+    _rich_text_label = _('Rich-text')
+    _title_label = _('Title')
+
     _block_list = [
-        (_card_link_blocks_name, ListBlock(
-            CardLinkBlock(),
-            template='home/list_block_card_link.html'
-        )),
-        (_postcard_block_name, PostcardBlock()),
-        (_quote_block_name, QuoteWithAttributionBlock()),
-        (_rich_text_block_name, RichTextBlock(features=_rich_text_features)),
-        (_title_block_name, TitleBlock()),
+        (
+            'Title',
+            TitleBlock(label=_title_label),
+        ),
+        (
+            'RichText',
+            RichTextBlock(
+                label=_rich_text_label,
+                features=_rich_text_features,
+            )
+        ),
+        (
+            'CardLinks',
+            ListBlock(
+                CardLinkBlock(label=_cardlinks_label),
+                template='home/list_block_card_link.html'
+            ),
+        ),
+        (
+            'Postcard',
+            PostcardBlock(label=_postcard_label)
+        ),
+        (
+            'Quote',
+            QuoteWithAttributionBlock(label=_quote_label)
+        ),
     ]
 
     # Model Fields
@@ -136,19 +168,12 @@ class HomePage(Page):
 
     # Sets the Wagtail Admin Interface's tabs.
     edit_handler = TabbedInterface([
-        ObjectList(en_content_panels, heading=_('Content - English')),
-        ObjectList(my_content_panels, heading=_('Content - Myanmar')),
-        ObjectList(promote_panels, heading=_('Promote')),
+        ObjectList(en_content_panels, heading=_('Content - English'), classname='en_content'),
+        ObjectList(my_content_panels, heading=_('Content - Myanmar'), classname='my_content'),
+        ObjectList(promote_panels, heading=_('Promote'), classname='promote'),
         ObjectList(
             Page.settings_panels,
             heading=_('Settings'),
             classname="settings"
         ),
     ])
-
-    def get_context(self, request):
-        context = super().get_context(request)
-        context.update({
-            'GA_TAG': GA_TAG,
-        })
-        return context

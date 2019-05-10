@@ -1,31 +1,39 @@
 {% extends "base_site.html" %}
-{% load static wagtailcore_tags %}
+{% load wagtailcore_tags %}
 
 {% block body_class %}template-searchresults{% endblock %}
 
 {% block title %}Search{% endblock %}
 
-{% block content %}
+{% block page %}
+<div class="search-results">
     {% if search_results %}
+    <h2>Results for "{{ search_query|urlencode }}"</h2>
+    <nav class="search-results">
         <ul>
             {% for result in search_results %}
-                <li>
-                    <h4><a href="{% pageurl result %}">{{ result }}</a></h4>
-                    {% if result.search_description %}
-                        {{ result.search_description }}
-                    {% endif %}
-                </li>
+            <li>
+                <a href="{% pageurl result %}">{{ result }}</a>
+                {% if result.search_description %}
+                <p class="text-sm">{{ result.search_description }}</p>
+                {% endif %}
+            </li>
+            <hr>
             {% endfor %}
         </ul>
+    </nav>
+    {% elif search_query %}
+    <h2>No results found for "{{ search_query|urlencode }}"</h2>
+    {% endif %}
 
+    <div class="d-flex justify-content-between pagination">
         {% if search_results.has_previous %}
-            <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>
+        <a class="button-primary" href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}">Previous</a>
         {% endif %}
 
         {% if search_results.has_next %}
-            <a href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
+        <a class="button-primary" href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
         {% endif %}
-    {% elif search_query %}
-        No results found
-    {% endif %}
-{% endblock %}
+    </div>
+</div>
+{% endblock page %}

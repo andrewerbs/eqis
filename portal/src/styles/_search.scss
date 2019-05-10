@@ -1,0 +1,55 @@
+div.search-results {
+    padding-top: $outer-space-sm;
+
+    h2 {
+        margin-bottom: $outer-space-sm;
+    }
+
+    nav ul {
+        list-style-type: none;
+
+        li {
+            margin-bottom: $inline-space-sm;
+
+            a {
+                margin-bottom: $inline-space-sm;
+                display: block;
+                color: $green;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        hr:last-child {
+            display: none;
+        }
+    }
+
+    div.pagination {
+        margin-top: $inline-space-lg;
+
+        a {
+            padding: 5px;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+// Portrait mobile
+@media screen and (max-width: 575.98px) {
+    div.search-results {
+        margin-bottom: $outer-space-sm;
+    }
+}
+
+// Landscape mobile and up
+@media screen and (min-width: 576px) {
+    div.search-results {
+        margin-bottom: $outer-space-lg;
+    }
+}

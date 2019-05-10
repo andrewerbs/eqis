@@ -12,15 +12,20 @@ $white: #FFFFFF;
 
 // Layout
 
-$padding: 15px;
-$padding-lg: 80px;
-$padding-sm: 40px;
+$inline-space-sm: 15px;
+$inline-space-lg: calc(#{$inline-space-sm} * 2);
+$outer-space-sm: 40px;
+$outer-space-lg: calc(#{$outer-space-sm} * 2);
+
+$radius: 5px;
+
+$shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 
 // Components
 
 $top-menu-height: 60px;
 
 $bottom-menu-height-desktop: 86px;
-$bottom-menu-height-mobile: 158px;
+$bottom-menu-height-mobile: 125px;
 
 $body-top-padding: $top-menu-height;

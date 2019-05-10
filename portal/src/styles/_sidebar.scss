@@ -1,5 +1,4 @@
 div.sidebar {
-    border-right: 1px solid $dark-gray;
     background-color: $white;
     padding-top: 25px;
     overflow: auto;
@@ -9,11 +8,10 @@ div.sidebar {
         margin-left: -15px;
 
         li {
-            padding: $padding 0;
+            padding: $inline-space-sm 0;
 
             a {
                 padding-left: 40px;
-                font-weight: bold;
                 color: $black;
                 height: 40px;
             }
@@ -33,7 +31,6 @@ div.sidebar {
                     padding: 10px 0;
 
                     a {
-                        font-weight: normal;
                         padding-left: 10px;
                         font-size: .9em;
                         height: unset;
@@ -56,27 +53,38 @@ div.sidebar {
             }
         }
     }
+
+    div.widgets {
+        background-color: $light-gray;
+        height: $top-menu-height;
+    }
 }
 
 // Portrait tablets and down
 @media screen and (max-width: 991.98px) {
-    div.sidebar, div.transparent-box {
-        height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
+    div.sidebar, div.background {
         position: fixed;
-        z-index: 1;
         top: 120px;
     }
 
-    div.transparent-box {
+    div.sidebar {
+        // subtract ($top-menu-height) 3 times due to header, header mobile and widgets height.
+        height: calc(100% - #{$top-menu-height} - #{$top-menu-height} - #{$top-menu-height});
+        z-index: 2;
+    }
+
+    div.background {
         background-color: $dark-green;
         opacity: 0.8;
+        height: 100%;
+        z-index: 1;
         right: 0;
     }
 }
 
-// Portrait mobile
-@media screen and (max-width: 575.98px) {
-    div.sidebar, div.transparent-box {
-        height: calc(100% - #{$top-menu-height} - #{$top-menu-height});
+// Landscape tablet and up
+@media screen and (min-width: 992px) {
+    div.sidebar {
+        border-right: 1px solid $dark-gray;
     }
 }

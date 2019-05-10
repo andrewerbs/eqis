@@ -1,34 +1,9 @@
-h1 {
-    font-size: 2.3em;
-    color: $black;
-}
-
-h2 {
-    font-size: 1.6em;
-    color: $black;
-}
-
-h3 {
-    font-size: 1.3em;
-    color: $black;
-}
-
-h4 {
-    font-size: 1em;
-    color: $black;
-}
-
-
-p {
-    font-size: 1em;
-    color: $black;
-}
-
 p:empty, br:empty {
     display: none;
 }
 
 img {
+    border-radius: $radius;
     object-fit: cover;
     width: 100%;
 
@@ -58,61 +33,147 @@ div.block-RichText div.rich-text {
     }
 
     & > :not(:empty) {
-        margin-bottom: 30px;
+        margin-bottom: $inline-space-lg;
     }
 
     & > :last-child {
-        margin-bottom: 30px;
+        margin-bottom: $inline-space-lg;
     }
 
+    // Video (e.g. YouTube) embed
     div.responsive-object {
-        padding-bottom: 0 !important;
-        height: 270px; // Wagtail iframe default height
+        position: relative;
 
         iframe {
-            max-width: 100%;
+            position: absolute;
+            height: 100%;
+            width: 100%;
         }
     }
 }
 
 div.block-Quote {
+    p {
+        text-align: center;
+    }
+
     p:first-child {
         margin-bottom: 10px;
-        text-align: center;
         font-size: 1.6em;
     }
 
     p:last-child {
         color: $dark-gray !important;
-        text-align: right;
         font-size: 0.8em;
+    }
+}
+
+div.block-CardLinks {
+    ul {
+        list-style-type: none;
+
+        li {
+            padding-right: calc(#{$inline-space-sm} / 2);
+            padding-left: calc(#{$inline-space-sm} / 2);
+            min-height: 221px;
+
+            a {
+                padding: $inline-space-sm;
+                background-color: $white;
+                border-radius: $radius;
+                box-shadow: $shadow;
+                width: 100%;
+
+                h4 {
+                    margin-top: $inline-space-sm;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+div.block-Postcard {
+    margin-right: calc((#{$inline-space-sm} * -1) / 2);
+    margin-left: calc((#{$inline-space-sm} * -1) / 2);
+    padding: $inline-space-sm;
+    background-color: $white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    img {
+        height: 100%;
     }
 }
 
 // Portrait mobile
 @media screen and (max-width: 575.98px) {
-    div.block-Title, div.block-RichText, div.block-Quote {
-        margin-bottom: $padding-sm;
+    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+        margin-bottom: $outer-space-sm;
+    }
+
+    div.block-RichText {
+        margin-right: calc(#{$outer-space-sm} * -1);
+        margin-left: calc(#{$outer-space-sm} * -1);
+
+        div.rich-text {
+            h1, h2, h3, h4, h5, h6, ol, ul, p, div:not(.responsive-object) {
+                margin-right: #{$outer-space-sm};
+                margin-left: #{$outer-space-sm};
+            }
+
+            img {
+                margin-left: calc(#{$outer-space-sm} * -1);
+                width: calc(100% + #{$outer-space-sm});
+            }
+
+            // Instagram embed
+            iframe.instagram-media.instagram-media-rendered {
+                min-width: unset !important; // hack instagram embed content width on mobile screens
+            }
+        }
     }
 
     div.block-Title {
-        margin-right: -#{$padding-sm};
-        margin-left: -#{$padding-sm};
-        padding-right: $padding-sm;
-        padding-left: $padding-sm;
+        margin-right: calc(#{$outer-space-sm} * -1);
+        margin-left: calc(#{$outer-space-sm} * -1);
+        padding-right: $outer-space-sm;
+        padding-left: $outer-space-sm;
+    }
+
+    div.block-CardLinks {
+        ul li {
+            padding-bottom: calc(#{$inline-space-sm} / 2);
+            padding-top: calc(#{$inline-space-sm} / 2);
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
 // Landscape mobile and up
 @media screen and (min-width: 576px) {
-    div.block-Title, div.block-RichText, div.block-Quote {
-        margin-bottom: $padding-lg;
+    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+        margin-bottom: $outer-space-lg;
     }
 
     div.block-Title {
-        margin-right: -#{$padding-lg};
-        margin-left: -#{$padding-lg};
-        padding-right: $padding-lg;
-        padding-left: $padding-lg;
+        margin-right: calc(#{$outer-space-lg} * -1);
+        margin-left: calc(#{$outer-space-lg} * -1);
+        padding-right: $outer-space-lg;
+        padding-left: $outer-space-lg;
     }
 }

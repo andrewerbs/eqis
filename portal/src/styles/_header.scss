@@ -1,6 +1,6 @@
 header {
+    padding: $inline-space-sm;
     height: $top-menu-height;
-    padding: $padding;
 
 
     ul {
@@ -26,58 +26,21 @@ header {
     }
 }
 
-header:not(.on-mobile) {
-    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+header:not(.mobile-header) {
+    padding: $inline-space-sm;
     background-color: $white;
-    padding: $padding;
+    box-shadow: $shadow;
 
     form.search-box {
         border-right: 1px solid $dark-gray;
-        margin: auto 0;
+        height: 30px;
 
         input[type="text"] {
             width: calc(100% - 5px - 15px - 5px);
-            color: $dark-gray;
             margin-left: 5px;
             height: 30px;
             border: 0;
-
-            &::-webkit-input-placeholder { color: $dark-gray; } /* Chrome/Opera/Safari */
-            &:-ms-input-placeholder { color: $dark-gray; } /* IE 10+ */
-            &::-moz-placeholder { color: $dark-gray; } /* Firefox 19+ */
-            &:-moz-placeholder { color: $dark-gray; } /* Firefox 18- */
         }
-    }
-
-    div.authentication {
-        border-right: 1px solid $dark-gray;
-        line-height: 30px;
-        margin: auto 0;
-        height: 30px;
-
-        a {
-            color: $dark-gray;
-        }
-    }
-
-    form.language-selector {
-        margin: auto 0;
-
-        input[type="radio"] {
-            display: none;
-
-            &:checked + label {
-                color: $green;
-            }
-        }
-
-        label {
-            text-transform: uppercase;
-            margin-bottom: 0;
-            color: $black;
-        }
-
-        span:last-of-type { display: none; }
     }
 
     div.burger-menu {
@@ -85,14 +48,21 @@ header:not(.on-mobile) {
     }
 }
 
-header.on-mobile {
+header.mobile-header {
     background-color: $light-gray;
-    padding: $padding 0;
+    padding: $inline-space-sm 0;
     position: fixed;
     width: 100%;
     z-index: 1;
 
     nav {
         width: 100%;
+    }
+
+    input {
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
+        width: 100%;
+        border: 0;
     }
 }

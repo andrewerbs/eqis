@@ -84,7 +84,7 @@ class CardLinkBlock(StructBlock):
         label=_('Choose a page'),
         help_text=_page_help_text,
         can_choose_root=False,
-        target_model="home.HomePage",
+        target_model="home.WebPage",
     )
 
     class Meta:

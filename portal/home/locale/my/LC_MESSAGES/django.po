@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: My-EQIP Portal\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-08 08:12+0000\n"
+"PO-Revision-Date: 2019-05-10 01:08+0000\n"
+"Last-Translator: b'  <peter@catalp.io>'\n"
+"Language-Team: Catalpa International\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: home/blocks.py:10
+msgid "The quote's body text."
+msgstr " မြန်မာဘာ scascascasc"
+
+#: home/blocks.py:11
+msgid "Whom or what the text quotes."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:14
+msgid "Quote Text"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:18
+msgid "Attribution"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:29
+msgid "The description's title."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:30
+msgid "An image that the description will accompany."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:31
+msgid "Text that describes or accompanies the image."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:36 home/models.py:53
+msgid "Title"
+msgstr " မြန်မာဘာ ascascas"
+
+#: home/blocks.py:42
+msgid "Image"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:46 home/models.py:34
+msgid "Description"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:56
+msgid "This title displays larger in the block."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:57
+msgid "This title displays smaller in the block."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:59
+msgid "The Big Title"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:60
+msgid "The Small Title"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks.py:78
+msgid ""
+"\n"
+"    The CardLink will link to this page. The card displays the page's hero\n"
+"    image and description.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာသာ"
+
+#: home/blocks.py:84
+msgid "Choose a page"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:33
+msgid "Hero Image"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:35
+msgid "body"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:38
+msgid "This image displays at the top of the page."
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:39
+msgid ""
+"\n"
+"    You can create page content with \"blocks\". With the \"RichText\" block, you\n"
+"    can write with headers, bold and italic text, lists, images, anchors,\n"
+"    document links, and embed links.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာသာ"
+
+#: home/models.py:49
+msgid "Card Links"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:50
+msgid "Postcard"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:51
+msgid "Quote"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:52
+msgid "Rich-text"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:88
+msgid "title"
+msgstr " မြန်မာဘာ"
+
+#: home/models.py:159
+msgid "Content - English"
+msgstr "a မြန်မာဘာ"
+
+#: home/models.py:160
+msgid "Content - Myanmar"
+msgstr "b မြန်မာဘာ"
+
+#: home/models.py:161
+msgid "Promote"
+msgstr "c မြန်မာဘာ"
+
+#: home/models.py:164
+msgid "Settings"
+msgstr "d မြန်မာဘာ"

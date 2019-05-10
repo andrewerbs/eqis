@@ -1,0 +1,21 @@
+form.language-selector {
+    margin: auto 0;
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked + label {
+            color: $green;
+        }
+    }
+
+    label {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: $black;
+    }
+
+    span:last-of-type {
+        display: none;
+    }
+}
