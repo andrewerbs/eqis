@@ -21,11 +21,23 @@ class TranslatedField:
         self.en_field = en_field
         self.my_field = my_field
 
+    def _get_translated_field_or_fallback(self, local_language, fallback):
+        return local_language if len(local_language) > 0 else fallback
+
     def __get__(self, instance, owner):
+        in_myanmar = getattr(instance, self.my_field)
+        in_english = getattr(instance, self.en_field)
+
         if get_language() == 'my':
-            return getattr(instance, self.my_field)
+            return self._get_translated_field_or_fallback(
+                local_language=in_myanmar,
+                fallback=in_english
+            )
         else:
-            return getattr(instance, self.en_field)
+            return self._get_translated_field_or_fallback(
+                local_language=in_english,
+                fallback=in_myanmar
+            )
 
 
 class WebPage(Page):
