@@ -70,7 +70,7 @@ class WebPage(Page):
             TitleBlock(label=_title_label),
         ),
         (
-            'richtext',
+            'RichText',
             RichTextBlock(
                 label=_rich_text_label,
                 features=_rich_text_features,
