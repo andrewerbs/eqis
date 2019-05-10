@@ -21,14 +21,11 @@ html {
     height: 100%;
 
     body {
+        font-family: Pyidaungsu-Regular;
         padding-right: $inline-space-sm;
         padding-left: $inline-space-sm;
         padding-top: $top-menu-height;
         height: 100%;
-
-        p.text-sm {
-            font-size: 0.8em;
-        }
 
         ul, ol {
             list-style-position: inside;
