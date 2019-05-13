@@ -115,8 +115,9 @@ div.block-Postcard {
 
 // Portrait mobile
 @media screen and (max-width: 575.98px) {
-    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-CardLinks, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-sm;
+        margin-top: $outer-space-sm;
     }
 
     div.block-RichText {
@@ -144,6 +145,7 @@ div.block-Postcard {
     div.block-Title {
         margin-right: calc(#{$outer-space-sm} * -1);
         margin-left: calc(#{$outer-space-sm} * -1);
+        margin-bottom: $outer-space-sm;
         padding-right: $outer-space-sm;
         padding-left: $outer-space-sm;
     }
@@ -166,13 +168,15 @@ div.block-Postcard {
 
 // Landscape mobile and up
 @media screen and (min-width: 576px) {
-    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-CardLinks, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-lg;
+        margin-top: $outer-space-lg;
     }
 
     div.block-Title {
         margin-right: calc(#{$outer-space-lg} * -1);
         margin-left: calc(#{$outer-space-lg} * -1);
+        margin-bottom: $outer-space-lg;
         padding-right: $outer-space-lg;
         padding-left: $outer-space-lg;
     }
