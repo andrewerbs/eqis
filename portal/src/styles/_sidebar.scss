@@ -19,6 +19,7 @@ div.sidebar {
 
             a {
                 margin-bottom: $inline-space-sm;
+                font-family: Pyidaungsu-Bold;
                 padding-left: 40px;
                 color: $black;
             }
@@ -37,6 +38,7 @@ div.sidebar {
                     }
 
                     a {
+                        font-family: Pyidaungsu-Regular;
                         padding-left: 10px;
                         font-size: .9em;
                         height: unset;
