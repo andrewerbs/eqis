@@ -4,6 +4,8 @@
 
 ### Interface
 
+- [Ministry logo is a link](https://github.com/catalpainternational/myeqip-portal/pull/101)
+
 ### Code
 
 ## 0.0.3
