@@ -1,7 +1,9 @@
+from django.utils.html import mark_safe
 from django.utils.translation import gettext as _
 
 from wagtail.core.blocks import (
-    BlockQuoteBlock, CharBlock, PageChooserBlock, RichTextBlock, StructBlock
+    BlockQuoteBlock, CharBlock, PageChooserBlock, RichTextBlock, StaticBlock,
+    StructBlock
 )
 from wagtail.images.blocks import ImageChooserBlock
 
@@ -89,3 +91,8 @@ class CardLinkBlock(StructBlock):
 
     class Meta:
         template = 'home/card_link_block.html'
+
+
+class LineBlock(StaticBlock):
+    class Meta:
+        template = 'home/line_block.html'

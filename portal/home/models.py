@@ -12,7 +12,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 from .blocks import (
-    CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock
+    CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock, LineBlock
 )
 
 
@@ -63,6 +63,7 @@ class WebPage(Page):
     _quote_label = _('Quote')
     _rich_text_label = _('Rich-text')
     _title_label = _('Title')
+    _line_label = _('Line')
 
     _block_list = [
         (
@@ -90,6 +91,10 @@ class WebPage(Page):
         (
             'Quote',
             QuoteWithAttributionBlock(label=_quote_label)
+        ),
+        (
+            'Line',
+            LineBlock(label=_line_label)
         ),
     ]
 
