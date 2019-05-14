@@ -8,6 +8,8 @@
 
 ### Code
 
+- [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+
 ## 0.0.3
 
 ### Interface
