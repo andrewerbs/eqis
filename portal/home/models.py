@@ -50,7 +50,7 @@ class WebPage(Page):
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
     _block_list = [
         (
-            'cardlink',
+            'CardLinks',
             ListBlock(
                 CardLinkBlock(
                     label=_BlockNames.cardlink,
@@ -60,21 +60,21 @@ class WebPage(Page):
             ),
         ),
         (
-            'postcard',
+            'Postcard',
             PostcardBlock(
                 label=_BlockNames.postcard,
                 help_text=_StreamfieldHelpTexts.postcard,
             ),
         ),
         (
-            'quote',
+            'Quote',
             QuoteWithAttributionBlock(
                 label=_BlockNames.quote,
                 help_text=_StreamfieldHelpTexts.quote,
             ),
          ),
         (
-            'rich_text',
+            'RichText',
             RichTextBlock(
                 features=_rich_text_features,
                 label=_BlockNames.rich_text,
@@ -82,7 +82,7 @@ class WebPage(Page):
             ),
         ),
         (
-            'title',
+            'Title',
             TitleBlock(
                 label=_BlockNames.title,
                 help_text=_StreamfieldHelpTexts.title_block,
