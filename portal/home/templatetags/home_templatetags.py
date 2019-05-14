@@ -5,26 +5,35 @@ from portal.settings import GA_TAG
 register = template.Library()
 
 
-@register.simple_tag
-def get_google_analytics_tag():
-    return GA_TAG
-
-
-@register.simple_tag(takes_context=True)
-def get_site_root(context):
-    return context['request'].site.root_page
-
-
-@register.simple_tag
 def are_same_page(page1, page2):
     if hasattr(page1, 'url') and hasattr(page2, 'url'):
         return page1.url == page2.url
     return False
 
 
+def get_site_root(context):
+    return context['request'].site.root_page
+
+
 @register.simple_tag
-def get_accordion_menu(site_root, current_page):
-    accordion_menu = AccordionMenuEntry(site_root, current_page)
+def get_google_analytics_tag():
+    return GA_TAG
+
+
+@register.simple_tag(takes_context=True)
+def on_home_or_search_page(context, current_page):
+    root_page = get_site_root(context)
+    # search results page is not a "WebPage" therefore
+    # current_page is an empty string.
+    if are_same_page(root_page, current_page) or not current_page:
+        return True
+    return False
+
+
+@register.simple_tag(takes_context=True)
+def get_accordion_menu(context, current_page):
+    root_page = get_site_root(context)
+    accordion_menu = AccordionMenuEntry(root_page, current_page)
     return accordion_menu
 
 
