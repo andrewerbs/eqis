@@ -5,10 +5,9 @@
 {% if self.page %}
 <a href="{% pageurl self.page %}">
     {% if self.page.hero_image %}
-    <!-- <img src="{{self.page.hero_image.url}}" width="200" /> -->
     {% image self.page.hero_image fill-200x400 %}
     {% else %}
-    <span class="clip-art"></span>
+    <div class="default-background"></div>
     {% endif %}
     <h4>{{self.page.translated_title}}</h4>
     <p>{{self.page.description}}</p>

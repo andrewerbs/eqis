@@ -85,6 +85,11 @@ div.block-CardLinks {
                 box-shadow: $shadow;
                 width: 100%;
 
+                div.default-background {
+                    background-color: $light-green;
+                    height: 175px;
+                }
+
                 h4 {
                     margin-top: $inline-space-sm;
                 }
