@@ -114,8 +114,8 @@ div.block-Postcard {
     }
 }
 
-// Portrait mobile
-@media screen and (max-width: 575.98px) {
+// Landscape phones and down
+@media screen and (max-width: 767.98px) {
     div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-sm;
     }
@@ -156,9 +156,9 @@ div.block-Postcard {
     }
 }
 
-// Landscape mobile and up
-@media screen and (min-width: 576px) {
-    div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
+// Portrait tablets and up
+@media screen and (min-width: 768px) {
+    div.block-Postcard, div.block-Title, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-lg;
     }
 

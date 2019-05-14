@@ -65,8 +65,8 @@ html {
     }
 }
 
-// Portrait mobile
-@media screen and (max-width: 575.98px) {
+// Landscape phones and down
+@media screen and (max-width: 767.98px) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-mobile});
 
@@ -77,8 +77,8 @@ html {
     }
 }
 
-// Landscape mobile and up
-@media screen and (min-width: 576px) {
+// Portrait tablets and up
+@media screen and (min-width: 768px) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-desktop});
 
