@@ -10,7 +10,7 @@ import wagtail.images.blocks
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0002_initial_database_rc003'),
+        ('home', '0003_model_help_texts'),
     ]
 
     operations = [
