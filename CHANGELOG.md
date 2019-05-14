@@ -5,6 +5,7 @@
 ### Interface
 
 - [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+- [Side menu inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/113)
 
 ## 0.0.3
 
