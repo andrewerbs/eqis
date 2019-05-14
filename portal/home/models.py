@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils.translation import get_language, gettext_lazy as _
-from django.conf import settings
+from django.utils.translation import get_language
 
 from wagtail.admin.edit_handlers import (
     FieldPanel, ObjectList, StreamFieldPanel, TabbedInterface
@@ -13,6 +12,10 @@ from wagtail.search import index
 
 from .blocks import (
     CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock, LineBlock
+)
+from .models_ui_text import (
+    _english_panel, _myanmar_panel, _promote_panel, _settings_panel,
+    _BlockNames, _ModelHelpTexts, _StreamfieldHelpTexts, _ModelVerboseNames
 )
 
 
@@ -41,60 +44,55 @@ class TranslatedField:
 
 
 class WebPage(Page):
-    # Model Field Verbose Names
-    _hero_image_verbose_name = _("Hero Image")
-    _description_verbose_name = _("Description")
-    _body_verbose_name = _('body')
-
-    # Model Field Help Text.
-    _hero_image_help_text = _("This image displays at the top of the page.")
-    _body_help_text = _('''
-    You can create page content with "blocks". With the "RichText" block, you
-    can write with headers, bold and italic text, lists, images, anchors,
-    document links, and embed links.
-    ''')
 
     # Values that help Streamfield Blocks.
     _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
-
-    _cardlinks_label = _('Card Links')
-    _postcard_label = _('Postcard')
-    _quote_label = _('Quote')
-    _rich_text_label = _('Rich-text')
-    _title_label = _('Title')
-    _line_label = _('Line')
-
     _block_list = [
         (
-            'Title',
-            TitleBlock(label=_title_label),
-        ),
-        (
-            'RichText',
-            RichTextBlock(
-                label=_rich_text_label,
-                features=_rich_text_features,
-            )
-        ),
-        (
-            'CardLinks',
+            'cardlink',
             ListBlock(
-                CardLinkBlock(label=_cardlinks_label),
-                template='home/list_block_card_link.html'
+                CardLinkBlock(
+                    label=_BlockNames.cardlink,
+                    help_text=_StreamfieldHelpTexts.cardlink,
+                ),
+                template='home/list_block_card_link.html',
             ),
         ),
         (
-            'Postcard',
-            PostcardBlock(label=_postcard_label)
+            'postcard',
+            PostcardBlock(
+                label=_BlockNames.postcard,
+                help_text=_StreamfieldHelpTexts.postcard,
+            ),
         ),
         (
-            'Quote',
-            QuoteWithAttributionBlock(label=_quote_label)
+            'quote',
+            QuoteWithAttributionBlock(
+                label=_BlockNames.quote,
+                help_text=_StreamfieldHelpTexts.quote,
+            ),
+         ),
+        (
+            'rich_text',
+            RichTextBlock(
+                features=_rich_text_features,
+                label=_BlockNames.rich_text,
+                help_text=_StreamfieldHelpTexts.rich_text,
+            ),
+        ),
+        (
+            'title',
+            TitleBlock(
+                label=_BlockNames.title,
+                help_text=_StreamfieldHelpTexts.title_block,
+            ),
         ),
         (
             'Line',
-            LineBlock(label=_line_label)
+            LineBlock(
+                label=_BlockNames.line
+            )
         ),
     ]
 
@@ -102,35 +100,40 @@ class WebPage(Page):
     title_my = models.CharField(
         max_length=255,
         blank=True,
-        verbose_name=_("title")
+        verbose_name=_ModelVerboseNames.title,
+        help_text=_ModelHelpTexts.title,
     )
     hero_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+'
+        related_name='+',
+        verbose_name=_ModelVerboseNames.hero_image,
+        help_text=_ModelHelpTexts.hero_image,
     )
     description_en = models.TextField(
         blank=True,
-        verbose_name=_description_verbose_name
+        verbose_name=_ModelVerboseNames.description,
+        help_text=_ModelHelpTexts.description,
     )
     description_my = models.TextField(
         blank=True,
-        verbose_name=_description_verbose_name
+        verbose_name=_ModelVerboseNames.description,
+        help_text=_ModelHelpTexts.description,
     )
 
     body_en = StreamField(
         _block_list,
         blank=True,
-        help_text=_body_help_text,
-        verbose_name=_body_verbose_name,
+        help_text=_ModelHelpTexts.body,
+        verbose_name=_ModelVerboseNames.body,
     )
     body_my = StreamField(
         _block_list,
         blank=True,
-        help_text=_body_help_text,
-        verbose_name=_body_verbose_name,
+        help_text=_ModelHelpTexts.body,
+        verbose_name=_ModelVerboseNames.body,
     )
 
     # Translatable fields.
@@ -173,12 +176,12 @@ class WebPage(Page):
 
     # Sets the Wagtail Admin Interface's tabs.
     edit_handler = TabbedInterface([
-        ObjectList(en_content_panels, heading=_('Content - English'), classname='en_content'),
-        ObjectList(my_content_panels, heading=_('Content - Myanmar'), classname='my_content'),
-        ObjectList(promote_panels, heading=_('Promote'), classname='promote'),
+        ObjectList(en_content_panels, heading=_english_panel),
+        ObjectList(my_content_panels, heading=_myanmar_panel),
+        ObjectList(promote_panels, heading=_promote_panel),
         ObjectList(
             Page.settings_panels,
-            heading=_('Settings'),
+            heading=_settings_panel,
             classname="settings"
         ),
     ])

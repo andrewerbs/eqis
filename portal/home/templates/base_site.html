@@ -5,9 +5,8 @@
 
 {% block content %}
 
-{% get_site_root as site_root %}
-{% are_same_page site_root self as side_menu_is_hidden %}
-{% get_accordion_menu site_root self as menu_tree %}
+{% on_home_or_search_page self as side_menu_is_hidden %}
+{% get_accordion_menu self as menu_tree %}
 
 <header class="align-items-center d-flex fixed-top row">
     <div class="col-6 col-md-2">
@@ -72,7 +71,7 @@
 </header>
 
 <div class="body row">
-    <div class="col-10 col-md-4 col-lg-2 d-none {% if not side_menu_is_hidden %}d-lg-block{% endif %} sidebar">
+    <div class="{% if not side_menu_is_hidden %}col-10 col-md-4 col-lg-2 d-lg-block{% endif %} d-none sidebar">
         <ul>
             {% for top_level_page in menu_tree.children %}
 
@@ -105,8 +104,7 @@
             {% endif %}
             {% endfor %}
         </ul>
-
-        <div class="col-10 col-md-4 d-flex d-lg-none fixed-bottom widgets">
+        <div class="{% if side_menu_is_hidden %}col-12{% endif %} col-10 col-md-4 d-flex d-lg-none fixed-bottom widgets">
             <div class="authentication col-6 text-center">
                 {% if user.is_authenticated %}
                 <a href="{% url 'logout' %}">logout</a>
@@ -137,7 +135,9 @@
 
 <footer class="align-items-center d-flex row">
     <div class="col-12 col-md-2">
-        <span class="ministry-logo"></span>
+        <a href="https://www.moe.edu.mm/" target="_blank">
+            <span class="ministry-logo"></span>
+        </a>
     </div>
     <div class="col-12 col-md-10 text-center">
         <ul>
