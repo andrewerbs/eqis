@@ -23,6 +23,8 @@ def get_google_analytics_tag():
 @register.simple_tag(takes_context=True)
 def on_home_or_search_page(context, current_page):
     root_page = get_site_root(context)
+    # search results page is not a "WebPage" therefore
+    # current_page is an empty string.
     if are_same_page(root_page, current_page) or not current_page:
         return True
     return False
