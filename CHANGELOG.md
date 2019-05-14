@@ -5,6 +5,7 @@
 ### Interface
 
 - [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+- [Update site borders color](https://github.com/catalpainternational/myeqip-portal/pull/114)
 
 ## 0.0.3
 
