@@ -17,6 +17,10 @@ div.sidebar {
                 min-height: 40px;
             }
 
+            & > a {
+                min-height: 40px;
+            }
+
             a {
                 margin-bottom: $inline-space-sm;
                 font-family: Pyidaungsu-Bold;
