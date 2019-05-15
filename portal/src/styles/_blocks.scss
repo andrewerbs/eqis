@@ -32,12 +32,14 @@ div.block-RichText div.rich-text {
         color: $green;
     }
 
-    & > :not(:empty) {
+    img, & > :not(:empty), & > :last-child {
         margin-bottom: $inline-space-lg;
     }
 
-    & > :last-child {
-        margin-bottom: $inline-space-lg;
+    img {
+        max-height: 576px; // for a 1024px wide screen and 16:9 images
+        display: block;
+        height: 100%;
     }
 
     // Video (e.g. YouTube) embed
