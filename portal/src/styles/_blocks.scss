@@ -40,6 +40,25 @@ div.block-RichText div.rich-text {
         max-height: 576px; // for a 1024px wide screen and 16:9 images
         display: block;
         height: 100%;
+
+        &.right {
+            padding-left: $inline-space-sm;
+            float: right;
+            width: 50%;
+        }
+
+        &.left {
+            padding-right: $inline-space-sm;
+            float: left;
+            width: 50%;
+        }
+
+        // Clearfix hack
+        & ~ p::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
     }
 
     // Video (e.g. YouTube) embed
