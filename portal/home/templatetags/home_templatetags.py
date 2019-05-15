@@ -1,6 +1,6 @@
 from django import template
+from django.conf import settings
 
-from portal.settings import GA_TAG
 
 register = template.Library()
 
@@ -17,7 +17,7 @@ def get_site_root(context):
 
 @register.simple_tag
 def get_google_analytics_tag():
-    return GA_TAG
+    return settings.GA_TAG
 
 
 @register.simple_tag(takes_context=True)

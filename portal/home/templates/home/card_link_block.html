@@ -1,6 +1,8 @@
 {% load static %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
+
+{% if self.page %}
 <a href="{% pageurl self.page %}">
     {% if self.page.hero_image %}
     <!-- <img src="{{self.page.hero_image.url}}" width="200" /> -->
@@ -11,3 +13,4 @@
     <h4>{{self.page.translated_title}}</h4>
     <p>{{self.page.description}}</p>
 </a>
+{% endif %}

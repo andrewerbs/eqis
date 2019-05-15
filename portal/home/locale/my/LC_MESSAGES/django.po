@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: My-EQIP Portal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 08:12+0000\n"
-"PO-Revision-Date: 2019-05-10 01:08+0000\n"
-"Last-Translator: b'  <peter@catalp.io>'\n"
+"POT-Creation-Date: 2019-05-13 01:21+0000\n"
+"PO-Revision-Date: 2019-05-13 01:22+0000\n"
+"Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: Catalpa International\n"
 "Language: my\n"
 "MIME-Version: 1.0\n"
@@ -19,63 +19,82 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.9.3\n"
 
-#: home/blocks.py:10
-msgid "The quote's body text."
-msgstr " မြန်မာဘာ scascascasc"
-
-#: home/blocks.py:11
-msgid "Whom or what the text quotes."
-msgstr " မြန်မာဘာ"
-
-#: home/blocks.py:14
+#: home/blocks_ui_text.py:8
 msgid "Quote Text"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:18
+#: home/blocks_ui_text.py:9
+msgid "The quote's body text."
+msgstr " မြန်မာဘာ scascascasc"
+
+#: home/blocks_ui_text.py:10
 msgid "Attribution"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:29
-msgid "The description's title."
+#: home/blocks_ui_text.py:11
+msgid "Whom or what the text quotes."
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:30
-msgid "An image that the description will accompany."
-msgstr " မြန်မာဘာ"
-
-#: home/blocks.py:31
-msgid "Text that describes or accompanies the image."
-msgstr " မြန်မာဘာ"
-
-#: home/blocks.py:36 home/models.py:53
+#: home/blocks_ui_text.py:16 home/models_ui_text.py:8
+#: home/models_ui_text.py:37
 msgid "Title"
 msgstr " မြန်မာဘာ ascascas"
 
-#: home/blocks.py:42
+#: home/blocks_ui_text.py:17
+msgid "The Postcard's title sits above the \"description\"."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks_ui_text.py:18
 msgid "Image"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:46 home/models.py:34
+#: home/blocks_ui_text.py:19
+#, fuzzy
+#| msgid "Text that describes or accompanies the image."
+msgid "The description accompanies this image."
+msgstr " မြန်မာဘာ"
+
+#: home/blocks_ui_text.py:20 home/models_ui_text.py:9
 msgid "Description"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:56
-msgid "This title displays larger in the block."
+#: home/blocks_ui_text.py:21
+#, fuzzy
+#| msgid "Text that describes or accompanies the image."
+msgid "Text that accompanies the image."
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:57
-msgid "This title displays smaller in the block."
-msgstr " မြန်မာဘာ"
+#: home/blocks_ui_text.py:26
+msgid ""
+"\n"
+"    This shows below the Small Title. It has bigger text.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
 
-#: home/blocks.py:59
+#: home/blocks_ui_text.py:29
+msgid ""
+"\n"
+"    'This shows above the Big Title. It has smaller text.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
+
+#: home/blocks_ui_text.py:32
 msgid "The Big Title"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:60
+#: home/blocks_ui_text.py:33
 msgid "The Small Title"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks.py:78
+#: home/blocks_ui_text.py:38
+msgid "Choose a page"
+msgstr " မြန်မာဘာ"
+
+#: home/blocks_ui_text.py:39
 msgid ""
 "\n"
 "    The CardLink will link to this page. The card displays the page's hero\n"
@@ -85,65 +104,197 @@ msgstr ""
 "\n"
 " မြန်မာဘာသာ"
 
-#: home/blocks.py:84
-msgid "Choose a page"
-msgstr " မြန်မာဘာ"
-
-#: home/models.py:33
+#: home/models_ui_text.py:10
 msgid "Hero Image"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:35
-msgid "body"
+#: home/models_ui_text.py:11
+msgid "Body"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:38
-msgid "This image displays at the top of the page."
-msgstr " မြန်မာဘာ"
-
-#: home/models.py:39
+#: home/models_ui_text.py:16
 msgid ""
 "\n"
-"    You can create page content with \"blocks\". With the \"RichText\" block, you\n"
-"    can write with headers, bold and italic text, lists, images, anchors,\n"
-"    document links, and embed links.\n"
+"    This title displays in browser tab headings, CardLinks, and searches.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
+
+#: home/models_ui_text.py:19
+msgid ""
+"\n"
+"    A short description of the web page. CardLinks display the description.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
+
+#: home/models_ui_text.py:22
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    The CardLink will link to this page. The card displays the page's hero\n"
+#| "    image and description.\n"
+#| "    "
+msgid ""
+"\n"
+"        When CardLinks link to this web page, they show this image.\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာသာ"
 
-#: home/models.py:49
-msgid "Card Links"
+#: home/models_ui_text.py:25
+msgid ""
+"\n"
+"    The web page's contents. Pages define content as \"blocks\". Content blocks\n"
+"    are: Titles; RichTexts; Postcards; CardLinks; or Quotes.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
+
+#: home/models_ui_text.py:33
+#, fuzzy
+#| msgid "Card Links"
+msgid "CardLinks"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:50
+#: home/models_ui_text.py:34
 msgid "Postcard"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:51
+#: home/models_ui_text.py:35
 msgid "Quote"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:52
-msgid "Rich-text"
+#: home/models_ui_text.py:36
+#, fuzzy
+#| msgid "Rich-text"
+msgid "RichText"
 msgstr " မြန်မာဘာ"
 
-#: home/models.py:88
-msgid "title"
-msgstr " မြန်မာဘာ"
+#: home/models_ui_text.py:42
+msgid ""
+"\n"
+"    A title that displays full-width. The WebPage's body should start with this\n"
+"    title. The \"Small Title\" shows above the \"Big Title\".\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
 
-#: home/models.py:159
-msgid "Content - English"
-msgstr "a မြန်မာဘာ"
+#: home/models_ui_text.py:46
+msgid ""
+"\n"
+"    Text that allows rich-formatted content: headers; bold and italic text;\n"
+"    numbered and bulleted lists; hyperlinks; images; linked documents; and\n"
+"    embedded web content.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
 
-#: home/models.py:160
-msgid "Content - Myanmar"
-msgstr "b မြန်မာဘာ"
+#: home/models_ui_text.py:51
+msgid ""
+"\n"
+"    A card, resembling a postcard, that shows an image, a title, and a short\n"
+"    text. The image covers half the card; the title and text cover the other\n"
+"    half.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
 
-#: home/models.py:161
-msgid "Promote"
-msgstr "c မြန်မာဘာ"
+#: home/models_ui_text.py:56
+msgid ""
+"\n"
+"    A quotation displayed in full width. The quotation shows its attribution\n"
+"    below.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
 
-#: home/models.py:164
-msgid "Settings"
-msgstr "d မြန်မာဘာ"
+#: home/models_ui_text.py:60
+msgid ""
+"\n"
+"    A richly styled link to an internal webpage. The link displays as a card that\n"
+"    shows the linked-to website's hero image, title, and description. Many\n"
+"    CardLinks can display in a responsive grid.\n"
+"    "
+msgstr ""
+"\n"
+" မြန်မာဘာ"
+
+#: home/models_ui_text.py:68
+#, fuzzy
+#| msgid "Content - English"
+msgid ""
+"\n"
+"Content - English\n"
+msgstr ""
+"\n"
+"a မြန်မာဘာ\n"
+
+#: home/models_ui_text.py:71
+#, fuzzy
+#| msgid "Content - Myanmar"
+msgid ""
+"\n"
+"Content - Myanmar\n"
+msgstr ""
+"\n"
+"b မြန်မာဘာ\n"
+
+#: home/models_ui_text.py:74
+#, fuzzy
+#| msgid "Promote"
+msgid ""
+"\n"
+"Promote\n"
+msgstr ""
+"\n"
+"c မြန်မာဘာ\n"
+
+#: home/models_ui_text.py:77
+#, fuzzy
+#| msgid "Settings"
+msgid ""
+"\n"
+"Settings\n"
+msgstr ""
+"\n"
+"d မြန်မာဘာ\n"
+
+#~ msgid "The description's title."
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid "An image that the description will accompany."
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid "This title displays larger in the block."
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid "This title displays smaller in the block."
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid "body"
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid "This image displays at the top of the page."
+#~ msgstr " မြန်မာဘာ"
+
+#~ msgid ""
+#~ "\n"
+#~ "    You can create page content with \"blocks\". With the \"RichText\" block, you\n"
+#~ "    can write with headers, bold and italic text, lists, images, anchors,\n"
+#~ "    document links, and embed links.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ " မြန်မာဘာသာ"
+
+#~ msgid "title"
+#~ msgstr " မြန်မာဘာ"
