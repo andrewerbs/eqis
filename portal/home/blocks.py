@@ -5,20 +5,22 @@ from wagtail.core.blocks import (
 )
 from wagtail.images.blocks import ImageChooserBlock
 
+from .blocks_ui_text import (
+    _PostcardStrings, _TitleStrings, _CardLinkStrings, _QuoteStrings
+)
+
 
 class QuoteWithAttributionBlock(StructBlock):
-    _quote_help_text = _("The quote's body text.")
-    _attribution_help_text = _('Whom or what the text quotes.')
 
     quote = BlockQuoteBlock(
-        label=_('Quote Text'),
-        help_text=_quote_help_text,
+        label=_QuoteStrings.quote_label,
+        help_text=_QuoteStrings.quote_help_text,
     )
     attribution = CharBlock(
-        label=_('Attribution'),
+        label=_QuoteStrings.attribution_label,
         required=False,
         max_length=255,
-        help_text=_attribution_help_text,
+        help_text=_QuoteStrings.attribution_help_text,
     )
 
     class Meta:
@@ -26,26 +28,23 @@ class QuoteWithAttributionBlock(StructBlock):
 
 
 class PostcardBlock(StructBlock):
-    _title_help_text = _("The description's title.")
-    _image_help_text = _('An image that the description will accompany.')
-    _description_help_text = _('Text that describes or accompanies the image.')
 
     _rich_text_features = ['bold', 'italic', 'link']
 
     title = CharBlock(
-        label=_('Title'),
+        label=_PostcardStrings.title_label,
         max_length=255,
         required=False,
-        help_text=_title_help_text,
+        help_text=_PostcardStrings.title_help_text,
     )
     image = ImageChooserBlock(
-        label=_('Image'),
-        help_text=_image_help_text,
+        label=_PostcardStrings.image_label,
+        help_text=_PostcardStrings.image_help_text,
     )
     description = RichTextBlock(
-        label=_('Description'),
+        label=_PostcardStrings.description_label,
         features=_rich_text_features,
-        help_text=_description_help_text,
+        help_text=_PostcardStrings.description_help_text,
     )
 
     class Meta:
@@ -53,20 +52,14 @@ class PostcardBlock(StructBlock):
 
 
 class TitleBlock(StructBlock):
-    _big_title_help_text = _('This title displays larger in the block.')
-    _small_title_help_text = _('This title displays smaller in the block.')
-
-    _big_title_label = _('The Big Title')
-    _small_title_label = _('The Small Title')
-
     big_title = CharBlock(
-        label=_big_title_label,
-        help_text=_big_title_help_text,
+        label=_TitleStrings.big_title_label,
+        help_text=_TitleStrings.big_title_help_text,
         max_length=255,
     )
     small_title = CharBlock(
-        label=_small_title_label,
-        help_text=_small_title_help_text,
+        label=_TitleStrings.small_title_label,
+        help_text=_TitleStrings.small_title_help_text,
         max_length=255,
     )
 
@@ -75,14 +68,9 @@ class TitleBlock(StructBlock):
 
 
 class CardLinkBlock(StructBlock):
-    _page_help_text = _('''
-    The CardLink will link to this page. The card displays the page's hero
-    image and description.
-    ''')
-
     page = PageChooserBlock(
-        label=_('Choose a page'),
-        help_text=_page_help_text,
+        label=_CardLinkStrings.page_chooser_label,
+        help_text=_CardLinkStrings.page_chooser_help_text,
         can_choose_root=False,
         target_model="home.WebPage",
     )
