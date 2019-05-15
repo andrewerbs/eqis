@@ -7,7 +7,7 @@
 - [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
 - [WebPage and Blocks have help texts](https://github.com/catalpainternational/myeqip-portal/pull/99)
 - [Ministry logo is a link](https://github.com/catalpainternational/myeqip-portal/pull/101)
-
+- [Scale images](https://github.com/catalpainternational/myeqip-portal/pull/117)
 
 ## 0.0.3
 
