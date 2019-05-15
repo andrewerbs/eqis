@@ -1,6 +1,5 @@
 div.sidebar {
     background-color: $white;
-    padding-top: 25px;
     overflow: auto;
 
     ul {
@@ -8,19 +7,24 @@ div.sidebar {
         margin-left: -15px;
 
         li {
-            padding: $inline-space-sm 0;
-
-            a {
-                padding-left: 40px;
-                color: $black;
-                height: 40px;
-            }
-
             &[aria-expanded="true"] > a {
                 border-bottom-right-radius: 100px;
                 border-top-right-radius: 100px;
                 background-color: $light-green;
+                padding-bottom: 5px;
                 color: $dark-green;
+                padding-top: 5px;
+            }
+
+            & > a {
+                min-height: 40px;
+            }
+
+            a {
+                margin-bottom: $inline-space-sm;
+                font-family: Pyidaungsu-Bold;
+                padding-left: 40px;
+                color: $black;
             }
 
             ul {
@@ -28,18 +32,19 @@ div.sidebar {
                 margin-left: 0;
 
                 li {
-                    padding: 10px 0;
-
-                    a {
-                        padding-left: 10px;
-                        font-size: .9em;
-                        height: unset;
-                    }
-
                     &[aria-expanded="true"] > a {
                         border-left: 3px solid $green;
                         background-color: unset;
+                        padding-bottom: 0;
+                        padding-top: 0;
                         color: $green;
+                    }
+
+                    a {
+                        font-family: Pyidaungsu-Regular;
+                        padding-left: 10px;
+                        font-size: .9em;
+                        height: unset;
                     }
 
                     ul {
@@ -70,6 +75,7 @@ div.sidebar {
     div.sidebar {
         // subtract ($top-menu-height) 3 times due to header, header mobile and widgets height.
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height} - #{$top-menu-height});
+        padding-top: $outer-space-sm;
         z-index: 2;
     }
 
@@ -86,5 +92,6 @@ div.sidebar {
 @media screen and (min-width: 992px) {
     div.sidebar {
         border-right: 1px solid $gray;
+        padding-top: $outer-space-lg;
     }
 }
