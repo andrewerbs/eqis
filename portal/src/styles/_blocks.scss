@@ -3,7 +3,6 @@ p:empty, br:empty {
 }
 
 img {
-    border-radius: $radius;
     object-fit: cover;
     width: 100%;
 
@@ -32,23 +31,17 @@ div.block-RichText div.rich-text {
         color: $green;
     }
 
-    img, & > :not(:empty), & > :last-child {
-        margin-bottom: $inline-space-lg;
-    }
-
     img {
         max-height: 576px; // for a 1024px wide screen and 16:9 images
         display: block;
         height: 100%;
 
         &.right {
-            padding-left: $inline-space-sm;
             float: right;
             width: 50%;
         }
 
         &.left {
-            padding-right: $inline-space-sm;
             float: left;
             width: 50%;
         }
@@ -150,9 +143,18 @@ div.block-Postcard {
                 margin-left: #{$outer-space-sm};
             }
 
+            img, & > :not(:empty), & > :last-child {
+                margin-bottom: $inline-space-sm;
+            }
+
             img {
-                margin-left: calc(#{$outer-space-sm} * -1);
-                width: calc(100% + #{$outer-space-sm});
+                &.right {
+                    padding-left: calc(#{$inline-space-sm} / 2);
+                }
+
+                &.left {
+                    padding-right: calc(#{$inline-space-sm} / 2);
+                }
             }
 
             // Instagram embed
@@ -189,6 +191,24 @@ div.block-Postcard {
 @media screen and (min-width: 576px) {
     div.block-Postcard, div.block-CardLinks, div.block-Title, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-lg;
+    }
+
+    div.block-RichText div.rich-text {
+        img, & > :not(:empty), & > :last-child {
+            margin-bottom: $inline-space-lg;
+        }
+
+        img {
+            border-radius: $radius;
+
+            &.right {
+                padding-left: $inline-space-sm;
+            }
+
+            &.left {
+                padding-right: $inline-space-sm;
+            }
+        }
     }
 
     div.block-Title {
