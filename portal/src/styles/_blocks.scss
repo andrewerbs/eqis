@@ -139,11 +139,38 @@ div.block-Postcard {
     }
 }
 
+// Portrait tablets and up
+@media screen and (min-width: 768px) {
+    div.block-Postcard, div.block-RichText, div.block-Quote {
+        margin-bottom: $outer-space-lg;
+        margin-top: $outer-space-lg;
+    }
+
+    div.block-CardLinks {
+        margin-bottom: calc(#{$outer-space-lg} - #{$inline-space-lg});
+        margin-top: $outer-space-lg;
+    }
+
+    div.block-Title {
+        margin-right: calc(#{$outer-space-lg} * -1);
+        margin-left: calc(#{$outer-space-lg} * -1);
+        margin-bottom: $outer-space-lg;
+        padding-right: $outer-space-lg;
+        padding-left: $outer-space-lg;
+    }
+}
+
 // Landscape phones and down
 @media screen and (max-width: 767.98px) {
-    div.block-Postcard, div.block-CardLinks, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
+    }
+
+    div.block-CardLinks {
+        ul li {
+            margin-bottom: $inline-space-sm;
+        }
     }
 
     div.block-RichText {
@@ -175,30 +202,22 @@ div.block-Postcard {
         padding-right: $outer-space-sm;
         padding-left: $outer-space-sm;
     }
+}
 
+// Landscape phones and tablets
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
     div.block-CardLinks {
-        ul li:last-child {
-            margin-bottom: 0;
-        }
+        margin-bottom: calc(#{$outer-space-sm} - #{$inline-space-sm});
     }
 }
 
-// Portrait tablets and up
-@media screen and (min-width: 768px) {
-    div.block-Postcard, div.block-RichText, div.block-Quote {
-        margin-bottom: $outer-space-lg;
-        margin-top: $outer-space-lg;
-    }
-
+// Portrait phones
+@media screen and (max-width: 575.98px) {
     div.block-CardLinks {
-        margin-bottom: calc(#{$outer-space-lg} - #{$inline-space-lg});
-    }
+        margin-bottom: $outer-space-sm;
 
-    div.block-Title {
-        margin-right: calc(#{$outer-space-lg} * -1);
-        margin-left: calc(#{$outer-space-lg} * -1);
-        margin-bottom: $outer-space-lg;
-        padding-right: $outer-space-lg;
-        padding-left: $outer-space-lg;
+        ul li:last-child {
+            margin-bottom: 0;
+        }
     }
 }
