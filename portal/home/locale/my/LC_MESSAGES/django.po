@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: My-EQIP Portal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 01:21+0000\n"
+"POT-Creation-Date: 2019-05-16 02:26+0000\n"
 "PO-Revision-Date: 2019-05-13 01:22+0000\n"
 "Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: Catalpa International\n"
@@ -35,8 +35,7 @@ msgstr " မြန်မာဘာ"
 msgid "Whom or what the text quotes."
 msgstr " မြန်မာဘာ"
 
-#: home/blocks_ui_text.py:16 home/models_ui_text.py:8
-#: home/models_ui_text.py:37
+#: home/blocks_ui_text.py:16 home/models_ui_text.py:8 home/models_ui_text.py:37
 msgid "Title"
 msgstr " မြန်မာဘာ ascascas"
 
@@ -134,7 +133,8 @@ msgstr ""
 #, fuzzy
 #| msgid ""
 #| "\n"
-#| "    The CardLink will link to this page. The card displays the page's hero\n"
+#| "    The CardLink will link to this page. The card displays the page's "
+#| "hero\n"
 #| "    image and description.\n"
 #| "    "
 msgid ""
@@ -148,7 +148,8 @@ msgstr ""
 #: home/models_ui_text.py:25
 msgid ""
 "\n"
-"    The web page's contents. Pages define content as \"blocks\". Content blocks\n"
+"    The web page's contents. Pages define content as \"blocks\". Content "
+"blocks\n"
 "    are: Titles; RichTexts; Postcards; CardLinks; or Quotes.\n"
 "    "
 msgstr ""
@@ -175,17 +176,22 @@ msgstr " မြန်မာဘာ"
 msgid "RichText"
 msgstr " မြန်မာဘာ"
 
-#: home/models_ui_text.py:42
+#: home/models_ui_text.py:38
+msgid "Line"
+msgstr ""
+
+#: home/models_ui_text.py:43
 msgid ""
 "\n"
-"    A title that displays full-width. The WebPage's body should start with this\n"
+"    A title that displays full-width. The WebPage's body should start with "
+"this\n"
 "    title. The \"Small Title\" shows above the \"Big Title\".\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:46
+#: home/models_ui_text.py:47
 msgid ""
 "\n"
 "    Text that allows rich-formatted content: headers; bold and italic text;\n"
@@ -196,39 +202,60 @@ msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:51
+#: home/models_ui_text.py:52
 msgid ""
 "\n"
-"    A card, resembling a postcard, that shows an image, a title, and a short\n"
-"    text. The image covers half the card; the title and text cover the other\n"
+"    A card, resembling a postcard, that shows an image, a title, and a "
+"short\n"
+"    text. The image covers half the card; the title and text cover the "
+"other\n"
 "    half.\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:56
+#: home/models_ui_text.py:57
 msgid ""
 "\n"
-"    A quotation displayed in full width. The quotation shows its attribution\n"
+"    A quotation displayed in full width. The quotation shows its "
+"attribution\n"
 "    below.\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:60
+#: home/models_ui_text.py:61
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    A richly styled link to an internal webpage. The link displays as a "
+#| "card that\n"
+#| "    shows the linked-to website's hero image, title, and description. "
+#| "Many\n"
+#| "    CardLinks can display in a responsive grid.\n"
+#| "    "
 msgid ""
 "\n"
-"    A richly styled link to an internal webpage. The link displays as a card that\n"
-"    shows the linked-to website's hero image, title, and description. Many\n"
-"    CardLinks can display in a responsive grid.\n"
+"    A richly styled link to an internal webpage. The link displays as a "
+"card\n"
+"    that shows the linked-to website's hero image, title, and description.\n"
+"    Many CardLinks can display in a responsive grid.\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:68
+#: home/models_ui_text.py:66
+msgid ""
+"\n"
+"    A full-width line that separates blocks of content and that shows as a\n"
+"    green line in the web page.\n"
+"    "
+msgstr ""
+
+#: home/models_ui_text.py:73
 #, fuzzy
 #| msgid "Content - English"
 msgid ""
@@ -238,7 +265,7 @@ msgstr ""
 "\n"
 "a မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:71
+#: home/models_ui_text.py:76
 #, fuzzy
 #| msgid "Content - Myanmar"
 msgid ""
@@ -248,7 +275,7 @@ msgstr ""
 "\n"
 "b မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:74
+#: home/models_ui_text.py:79
 #, fuzzy
 #| msgid "Promote"
 msgid ""
@@ -258,7 +285,7 @@ msgstr ""
 "\n"
 "c မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:77
+#: home/models_ui_text.py:82
 #, fuzzy
 #| msgid "Settings"
 msgid ""
@@ -288,8 +315,10 @@ msgstr ""
 
 #~ msgid ""
 #~ "\n"
-#~ "    You can create page content with \"blocks\". With the \"RichText\" block, you\n"
-#~ "    can write with headers, bold and italic text, lists, images, anchors,\n"
+#~ "    You can create page content with \"blocks\". With the \"RichText\" "
+#~ "block, you\n"
+#~ "    can write with headers, bold and italic text, lists, images, "
+#~ "anchors,\n"
 #~ "    document links, and embed links.\n"
 #~ "    "
 #~ msgstr ""
