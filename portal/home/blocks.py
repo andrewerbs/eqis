@@ -1,6 +1,3 @@
-from django.utils.html import mark_safe
-from django.utils.translation import gettext as _
-
 from wagtail.core.blocks import (
     BlockQuoteBlock, CharBlock, PageChooserBlock, RichTextBlock, StaticBlock,
     StructBlock
