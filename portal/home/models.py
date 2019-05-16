@@ -91,7 +91,8 @@ class WebPage(Page):
         (
             'Line',
             LineBlock(
-                label=_BlockNames.line
+                label=_BlockNames.line,
+                help_text=_StreamfieldHelpTexts.line_block,
             )
         ),
     ]

@@ -59,9 +59,13 @@ class _StreamfieldHelpTexts:
     below.
     ''')
     cardlink = _('''
-    A richly styled link to an internal webpage. The link displays as a card that
-    shows the linked-to website's hero image, title, and description. Many
-    CardLinks can display in a responsive grid.
+    A richly styled link to an internal webpage. The link displays as a card
+    that shows the linked-to website's hero image, title, and description.
+    Many CardLinks can display in a responsive grid.
+    ''')
+    line_block = _('''
+    A full-width line that separates blocks of content and that shows as a
+    green line in the web page.
     ''')
 
 
