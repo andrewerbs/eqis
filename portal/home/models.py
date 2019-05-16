@@ -1,5 +1,4 @@
 from django.db import models
-from django.conf import settings
 from django.utils.translation import get_language
 
 from wagtail.admin.edit_handlers import (
@@ -12,7 +11,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 from .blocks import (
-    CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock
+    CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock, LineBlock
 )
 from .models_ui_text import (
     _english_panel, _myanmar_panel, _promote_panel, _settings_panel,
@@ -50,7 +49,8 @@ class WebPage(Page):
     _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
                            'ol', 'ul', 'link', 'document-link', 'image', 'embed']
     _block_list = [
-        ('cardlink',
+        (
+            'CardLinks',
             ListBlock(
                 CardLinkBlock(
                     label=_BlockNames.cardlink,
@@ -59,31 +59,42 @@ class WebPage(Page):
                 template='home/list_block_card_link.html',
             ),
         ),
-        ('postcard',
+        (
+            'Postcard',
             PostcardBlock(
                 label=_BlockNames.postcard,
                 help_text=_StreamfieldHelpTexts.postcard,
             ),
         ),
-        ('quote',
+        (
+            'Quote',
             QuoteWithAttributionBlock(
                 label=_BlockNames.quote,
                 help_text=_StreamfieldHelpTexts.quote,
             ),
          ),
-        ('rich_text',
+        (
+            'RichText',
             RichTextBlock(
                 features=_rich_text_features,
                 label=_BlockNames.rich_text,
                 help_text=_StreamfieldHelpTexts.rich_text,
             ),
         ),
-        ('title',
+        (
+            'Title',
             TitleBlock(
                 label=_BlockNames.title,
                 help_text=_StreamfieldHelpTexts.title_block,
             ),
-         ),
+        ),
+        (
+            'Line',
+            LineBlock(
+                label=_BlockNames.line,
+                help_text=_StreamfieldHelpTexts.line_block,
+            )
+        ),
     ]
 
     # Model Fields
