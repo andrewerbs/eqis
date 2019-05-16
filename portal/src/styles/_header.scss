@@ -32,7 +32,7 @@ header:not(.mobile-header) {
     box-shadow: $shadow;
 
     form.search-box {
-        border-right: 1px solid $dark-gray;
+        border-right: 1px solid $gray;
         height: 30px;
 
         input[type="text"] {

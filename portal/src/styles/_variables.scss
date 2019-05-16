@@ -5,6 +5,7 @@ $green: #29BFB3;
 $dark-green: #00503D;
 
 $light-gray: #F5F4F4;
+$gray: #DBDBDB;
 $dark-gray: #979797;
 
 $black: #232A30;
@@ -21,11 +22,13 @@ $radius: 5px;
 
 $shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 
+$ratio-16-9: 56.25%;
+
 // Components
 
 $top-menu-height: 60px;
 
 $bottom-menu-height-desktop: 86px;
-$bottom-menu-height-mobile: 125px;
+$bottom-menu-height-mobile: 110px;
 
 $body-top-padding: $top-menu-height;
