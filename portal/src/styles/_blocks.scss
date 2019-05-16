@@ -6,15 +6,12 @@ img {
     object-fit: cover;
     width: 100%;
 
-    & + p {
+    & + p > a {
+        color: $dark-gray !important;
+        margin-top: -25px;
         text-align: right;
+        font-size: 0.8em;
         display: block;
-
-        & > a {
-            color: $dark-gray !important;
-            font-size: 0.8em;
-            margin-top: 5px;
-        }
     }
 }
 
