@@ -7,8 +7,10 @@
 - [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
 - [WebPage and Blocks have help texts](https://github.com/catalpainternational/myeqip-portal/pull/99)
 - [Ministry logo is a link](https://github.com/catalpainternational/myeqip-portal/pull/101)
+- [Line block](https://github.com/catalpainternational/myeqip-portal/pull/103)
 - [Side menu inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/113)
 - [Update site borders color](https://github.com/catalpainternational/myeqip-portal/pull/114)
+- [Responsive card links layout](https://github.com/catalpainternational/myeqip-portal/pull/116)
 - [Update top nav inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/118)
 
 ## 0.0.3
