@@ -11,7 +11,6 @@ span.app-logo {
     background-image: url(../images/app_logo.svg);
     background-repeat: no-repeat;
     display: block;
-    margin: 0 auto;
     height: 25px;
     width: 72px;
 }
@@ -48,4 +47,18 @@ span.love {
     display: inline-block;
     height: 12px;
     width: 15px;
+}
+
+// Tablets and down
+@media screen and (min-width: 992px) {
+    span.app-logo {
+        margin: 0 auto;
+    }
+}
+
+// Desktop and up
+@media screen and (max-width: 991.98px) {
+    span.app-logo {
+        margin: 0 15px;
+    }
 }
