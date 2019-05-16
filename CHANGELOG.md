@@ -10,6 +10,7 @@
 - [Line block](https://github.com/catalpainternational/myeqip-portal/pull/103)
 - [Side menu inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/113)
 - [Update site borders color](https://github.com/catalpainternational/myeqip-portal/pull/114)
+- [Responsive card links layout](https://github.com/catalpainternational/myeqip-portal/pull/116)
 
 ## 0.0.3
 
