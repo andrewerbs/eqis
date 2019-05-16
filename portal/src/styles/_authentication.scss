@@ -64,8 +64,9 @@
 }
 
 div.authentication {
+    padding-right: $inline-space-sm;
+    padding-left: $inline-space-sm;
     border-right: 1px solid $gray;
-    line-height: 30px;
     margin: auto 0;
     height: 30px;
 

@@ -2,7 +2,6 @@ header {
     padding: $inline-space-sm;
     height: $top-menu-height;
 
-
     ul {
         margin-bottom: -15px !important; // -15px due to header top padding
         margin-top: -15px !important; // -15px due to header bottom padding
@@ -32,6 +31,8 @@ header:not(.mobile-header) {
     box-shadow: $shadow;
 
     form.search-box {
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
         border-right: 1px solid $gray;
         height: 30px;
 
@@ -44,6 +45,8 @@ header:not(.mobile-header) {
     }
 
     div.burger-menu {
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
         margin: auto 0;
     }
 }
