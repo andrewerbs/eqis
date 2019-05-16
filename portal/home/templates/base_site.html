@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="col-6 col-md-10 d-flex">
-        <nav class="d-lg-flex d-none">
+        <nav class="d-lg-flex d-none flex-grow-1 justify-content-center">
             <ul class="d-flex">
                 {% for top_level_page in menu_tree.children %}
                 <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
