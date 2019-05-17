@@ -3,20 +3,8 @@ p:empty, br:empty {
 }
 
 img {
-    border-radius: $radius;
     object-fit: cover;
     width: 100%;
-
-    & + p {
-        text-align: right;
-        display: block;
-
-        & > a {
-            color: $dark-gray !important;
-            font-size: 0.8em;
-            margin-top: 5px;
-        }
-    }
 }
 
 div.block-Title {
@@ -32,12 +20,29 @@ div.block-RichText div.rich-text {
         color: $green;
     }
 
-    & > :not(:empty) {
-        margin-bottom: $inline-space-lg;
-    }
+    img {
+        max-height: 576px; // for a 1024px wide screen and 16:9 images
+        display: block;
+        height: 100%;
 
-    & > :last-child {
-        margin-bottom: $inline-space-lg;
+        &.right {
+            float: right;
+            width: 50%;
+        }
+
+        &.left {
+            float: left;
+            width: 50%;
+        }
+
+        &.right, &.left {
+            // Clearfix hack
+            & + ::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
     }
 
     // Video (e.g. YouTube) embed
@@ -146,6 +151,25 @@ div.block-Postcard {
         margin-top: $outer-space-lg;
     }
 
+    div.block-RichText div.rich-text {
+        & > :not(:empty), & > :last-child {
+            margin-bottom: $inline-space-lg;
+            margin-top: $inline-space-lg;
+        }
+
+        img {
+            border-radius: $radius;
+
+            &.right {
+                padding-left: $inline-space-sm;
+            }
+
+            &.left {
+                padding-right: $inline-space-sm;
+            }
+        }
+    }
+
     div.block-CardLinks {
         margin-bottom: calc(#{$outer-space-lg} - #{$inline-space-lg});
         margin-top: $outer-space-lg;
@@ -183,9 +207,19 @@ div.block-Postcard {
                 margin-left: #{$outer-space-sm};
             }
 
+            & > :not(:empty), & > :last-child {
+                margin-bottom: $inline-space-sm;
+                margin-top: $inline-space-sm;
+            }
+
             img {
-                margin-left: calc(#{$outer-space-sm} * -1);
-                width: calc(100% + #{$outer-space-sm});
+                &.right {
+                    padding-left: calc(#{$inline-space-sm} / 2);
+                }
+
+                &.left {
+                    padding-right: calc(#{$inline-space-sm} / 2);
+                }
             }
 
             // Instagram embed
