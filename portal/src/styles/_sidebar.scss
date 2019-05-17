@@ -7,6 +7,10 @@ div.sidebar {
         margin-left: -15px;
 
         li {
+            &[aria-expanded="false"] > ul {
+                display: none;
+            }
+
             &[aria-expanded="true"] > a {
                 border-bottom-right-radius: 100px;
                 border-top-right-radius: 100px;
