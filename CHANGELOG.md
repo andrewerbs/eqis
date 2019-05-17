@@ -12,6 +12,7 @@
 - [Update site borders color](https://github.com/catalpainternational/myeqip-portal/pull/114)
 - [Responsive card links layout](https://github.com/catalpainternational/myeqip-portal/pull/116)
 - [Scale images](https://github.com/catalpainternational/myeqip-portal/pull/117)
+- [Update top nav inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/118)
 
 ## 0.0.3
 
