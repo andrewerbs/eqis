@@ -35,11 +35,13 @@ div.block-RichText div.rich-text {
             width: 50%;
         }
 
-        // Clearfix hack
-        & ~ p::after {
-            display: block;
-            content: "";
-            clear: both;
+        &.right, &.left {
+            // Clearfix hack
+            & + ::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
         }
     }
 
@@ -150,8 +152,9 @@ div.block-Postcard {
     }
 
     div.block-RichText div.rich-text {
-        img, & > :not(:empty), & > :last-child {
+        & > :not(:empty), & > :last-child {
             margin-bottom: $inline-space-lg;
+            margin-top: $inline-space-lg;
         }
 
         img {
@@ -204,8 +207,9 @@ div.block-Postcard {
                 margin-left: #{$outer-space-sm};
             }
 
-            img, & > :not(:empty), & > :last-child {
+            & > :not(:empty), & > :last-child {
                 margin-bottom: $inline-space-sm;
+                margin-top: $inline-space-sm;
             }
 
             img {
