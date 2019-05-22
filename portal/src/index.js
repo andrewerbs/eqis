@@ -4,6 +4,7 @@ const MOBILE_HEADER_CSS_CLASS = 'mobile-header';
 const SEARCH_BAR_CSS_CLASS = 'search-bar';
 const BACKGROUND_CSS_CLASS = 'background';
 const TOP_PAGES_CSS_CLASS = 'top-pages';
+const RICH_TEXT_CSS_CLASS = 'rich-text';
 const SIDEBAR_CSS_CLASS = 'sidebar';
 
 export function toggle_sidebar() {
@@ -46,4 +47,8 @@ function hide(element_css_class, to_hide) {
     if (element_css_class === MOBILE_HEADER_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-flex');
 
     document.getElementsByClassName(element_css_class).item(0).classList.add('d-none');
+}
+
+window.onload = function() {
+    document.getElementsByClassName(RICH_TEXT_CSS_CLASS).item(0).classList.add('clearfix');
 }
