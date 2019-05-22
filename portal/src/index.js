@@ -50,5 +50,9 @@ function hide(element_css_class, to_hide) {
 }
 
 window.onload = function() {
-    document.getElementsByClassName(RICH_TEXT_CSS_CLASS).item(0).classList.add('clearfix');
+    var rich_blocks = document.getElementsByClassName(RICH_TEXT_CSS_CLASS);
+
+    for (let rich_block of rich_blocks) {
+        rich_block.classList.add('clearfix');
+    }
 }
