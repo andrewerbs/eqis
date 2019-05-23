@@ -14,6 +14,7 @@
 - [Scale images](https://github.com/catalpainternational/myeqip-portal/pull/117)
 - [Update top nav inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/118)
 - [Collapse side menu](https://github.com/catalpainternational/myeqip-portal/pull/120)
+- [Anchor links styles](https://github.com/catalpainternational/myeqip-portal/pull/125)
 
 ## 0.0.3
 
