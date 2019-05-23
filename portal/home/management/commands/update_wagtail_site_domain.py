@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand, CommandError
 from wagtail.core.models import Site
 
 class Command(BaseCommand):
-    help = 'Closes the specified poll for voting'
+    help = 'Updates the Wagtail site with a user-provided domain.'
 
     def add_arguments(self, parser):
         parser.add_argument('new_domain', type=str)
