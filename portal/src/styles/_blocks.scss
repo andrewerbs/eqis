@@ -16,6 +16,12 @@ div.block-Title {
 }
 
 div.block-RichText div.rich-text {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+
     p > a {
         color: $green;
     }
