@@ -157,16 +157,12 @@ div.block-Postcard {
             margin-top: $inline-space-lg;
         }
 
-        img {
-            border-radius: $radius;
+        img.right {
+            padding-left: $inline-space-sm;
+        }
 
-            &.right {
-                padding-left: $inline-space-sm;
-            }
-
-            &.left {
-                padding-right: $inline-space-sm;
-            }
+        img.left {
+            padding-right: $inline-space-sm;
         }
     }
 
