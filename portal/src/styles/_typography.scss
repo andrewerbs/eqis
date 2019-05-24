@@ -175,3 +175,12 @@ div.login-logout-password-frame {
         font-size: 0.8em;
     }
 }
+
+a {
+    color: $green;
+
+    &:hover {
+        cursor: pointer;
+        color: $green;
+    }
+}

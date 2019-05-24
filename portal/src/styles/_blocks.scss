@@ -16,8 +16,10 @@ div.block-Title {
 }
 
 div.block-RichText div.rich-text {
-    p > a {
-        color: $green;
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
     }
 
     img {
