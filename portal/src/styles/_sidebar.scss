@@ -28,6 +28,12 @@ div.sidebar {
                 font-family: Pyidaungsu-Bold;
                 padding-left: 40px;
                 color: $black;
+
+                &:hover {
+                    border-bottom-right-radius: 100px;
+                    border-top-right-radius: 100px;
+                    background-color: $light-green;
+                }
             }
 
             ul {
@@ -48,6 +54,11 @@ div.sidebar {
                         padding-bottom: 0;
                         padding-top: 0;
                         height: unset;
+
+                        &:hover {
+                            background-color: unset;
+                            color: $green;
+                        }
                     }
 
                     ul {
