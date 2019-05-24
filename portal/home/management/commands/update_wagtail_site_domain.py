@@ -12,7 +12,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         new_domain = options['new_domain']
-        s = Site.objects.all()[0]
+        s = Site.objects.get(default=True)
         s.hostname = new_domain
         s.save()
         self.stdout.write(
