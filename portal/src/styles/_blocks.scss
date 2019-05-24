@@ -13,6 +13,10 @@ div.block-Title {
     justify-content: center;
     display: flex;
     height: 343px;
+
+    p {
+        margin-bottom: calc(#{$inline-space-sm} / 2);
+    }
 }
 
 div.block-RichText div.rich-text {
