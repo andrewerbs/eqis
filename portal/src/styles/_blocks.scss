@@ -22,10 +22,6 @@ div.block-RichText div.rich-text {
         clear: both;
     }
 
-    p > a {
-        color: $green;
-    }
-
     img {
         max-height: 576px; // for a 1024px wide screen and 16:9 images
         display: block;
