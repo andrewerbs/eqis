@@ -39,7 +39,7 @@ html {
 
         input {
             border-radius: $radius;
-            color: $dark-gray;
+            color: $black;
 
             &::-webkit-input-placeholder { color: $dark-gray; } /* Chrome/Opera/Safari */
             &:-ms-input-placeholder { color: $dark-gray; } /* IE 10+ */
