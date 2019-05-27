@@ -17,6 +17,7 @@
 - [Fix rich text floating layout](https://github.com/catalpainternational/myeqip-portal/pull/123)
 - [Anchor links styling](https://github.com/catalpainternational/myeqip-portal/pull/125)
 - [Responsive font size](https://github.com/catalpainternational/myeqip-portal/pull/128)
+- [UI changes/fixes](https://github.com/catalpainternational/myeqip-portal/pull/131)
 
 ## 0.0.3
 
