@@ -5,9 +5,8 @@
 
 {% block content %}
 
-{% get_site_root as site_root %}
-{% are_same_page site_root self as side_menu_is_hidden %}
-{% get_accordion_menu site_root self as menu_tree %}
+{% on_home_or_search_page self as side_menu_is_hidden %}
+{% get_accordion_menu self as menu_tree %}
 
 <header class="align-items-center d-flex fixed-top row">
     <div class="col-6 col-md-2">
@@ -15,8 +14,8 @@
             <span class="app-logo"></span>
         </a>
     </div>
-    <div class="col-6 col-md-10 d-flex flex-row text-center text-md-left">
-        <nav class="d-none col-lg-6 d-lg-flex">
+    <div class="col-6 col-md-10 d-flex justify-content-end">
+        <nav class="d-lg-flex d-none flex-grow-1 justify-content-center">
             <ul class="d-flex">
                 {% for top_level_page in menu_tree.children %}
                 <li class="header-item" aria-expanded="{{ top_level_page.active | lower }}">
@@ -26,12 +25,12 @@
             </ul>
         </nav>
 
-        <form class="align-items-center justify-content-center col-6 d-flex col-md-2 offset-md-8 col-lg-2 offset-lg-0 search-box" action="{% url 'search' %}" method="get">
+        <form class="align-items-center justify-content-center d-flex search-box" action="{% url 'search' %}" method="get">
             <span class="magnifier" onclick="myeqip.toggle_search_bar()"></span>
             <input class="d-none d-lg-inline-block" type="text" name="query" placeholder="search">
         </form>
 
-        <div class="authentication d-none col-lg-2 d-lg-block text-center">
+        <div class="align-items-center authentication d-lg-flex d-none">
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
@@ -39,7 +38,7 @@
             {% endif %}
         </div>
 
-        <form class="d-none col-lg-2 d-lg-block language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <form class="align-items-center d-lg-flex d-none language-selector" action="{% url 'set_language' %}" method="post">{% csrf_token %}
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
@@ -50,7 +49,7 @@
             {% endfor %}
         </form>
 
-        <div class="burger-menu col-6 col-md-2 d-flex d-lg-none justify-content-center">
+        <div class="burger-menu d-flex d-lg-none justify-content-center">
             <span class="burger d-flex" onclick="myeqip.toggle_sidebar()"></span>
         </div>
     </div>
@@ -72,7 +71,7 @@
 </header>
 
 <div class="body row">
-    <div class="col-10 col-md-4 col-lg-2 d-none {% if not side_menu_is_hidden %}d-lg-block{% endif %} sidebar">
+    <div class="{% if not side_menu_is_hidden %}col-10 col-md-4 col-lg-2 d-lg-block{% endif %} d-none sidebar">
         <ul>
             {% for top_level_page in menu_tree.children %}
 
@@ -105,9 +104,8 @@
             {% endif %}
             {% endfor %}
         </ul>
-
-        <div class="col-10 col-md-4 d-flex d-lg-none fixed-bottom widgets">
-            <div class="authentication col-6 text-center">
+        <div class="{% if side_menu_is_hidden %}col-12 col-md-12{% endif %} col-10 col-md-4 d-flex d-lg-none fixed-bottom widgets">
+            <div class="align-items-center authentication col-6 d-flex justify-content-center text-center">
                 {% if user.is_authenticated %}
                 <a href="{% url 'logout' %}">logout</a>
                 {% else %}
@@ -115,7 +113,7 @@
                 {% endif %}
             </div>
 
-            <form class="col-6 language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <form class="align-items-center col-6 d-flex justify-content-center language-selector text-center" action="{% url 'set_language' %}" method="post">{% csrf_token %}
                 {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
@@ -127,7 +125,7 @@
             </form>
         </div>
     </div>
-    <div class="col-12 {% if not side_menu_is_hidden %}col-lg-10{% endif %} content">
+    <div class="col-12 {% if not side_menu_is_hidden %}not-home col-lg-10{% endif %} content">
         {% block page %}
         {% endblock page %}
     </div>
@@ -137,11 +135,13 @@
 
 <footer class="align-items-center d-flex row">
     <div class="col-12 col-md-2">
-        <span class="ministry-logo"></span>
+        <a href="https://www.moe.edu.mm/" target="_blank">
+            <span class="ministry-logo"></span>
+        </a>
     </div>
     <div class="col-12 col-md-10 text-center">
         <ul>
-            <li class="footer-item">Designed with <span class="love"></span> by Catalpa.</li>
+            <li class="footer-item">Ministry of Education</li>
         </ul>
     </div>
 </footer>

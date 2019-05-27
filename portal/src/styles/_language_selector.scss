@@ -1,4 +1,6 @@
 form.language-selector {
+    padding-right: $inline-space-sm;
+    padding-left: $inline-space-sm;
     margin: auto 0;
 
     input[type="radio"] {
@@ -13,6 +15,11 @@ form.language-selector {
         text-transform: uppercase;
         margin-bottom: 0;
         color: $black;
+
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        }
     }
 
     span:last-of-type {

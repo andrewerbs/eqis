@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## 0.1.0
+
+### Interface
+
+- [Hide blank side menu](https://github.com/catalpainternational/myeqip-portal/pull/95)
+- [WebPage and Blocks have help texts](https://github.com/catalpainternational/myeqip-portal/pull/99)
+- [Ministry logo is a link](https://github.com/catalpainternational/myeqip-portal/pull/101)
+- [Line block](https://github.com/catalpainternational/myeqip-portal/pull/103)
+- [Side menu inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/113)
+- [Update site borders color](https://github.com/catalpainternational/myeqip-portal/pull/114)
+- [Responsive card links layout](https://github.com/catalpainternational/myeqip-portal/pull/116)
+- [Scale images](https://github.com/catalpainternational/myeqip-portal/pull/117)
+- [Update top nav inline spacing](https://github.com/catalpainternational/myeqip-portal/pull/118)
+- [Collapse side menu](https://github.com/catalpainternational/myeqip-portal/pull/120)
+- [Fix rich text floating layout](https://github.com/catalpainternational/myeqip-portal/pull/123)
+- [Anchor links styling](https://github.com/catalpainternational/myeqip-portal/pull/125)
+- [Responsive font size](https://github.com/catalpainternational/myeqip-portal/pull/128)
+- [UI changes/fixes](https://github.com/catalpainternational/myeqip-portal/pull/131)
+
 ## 0.0.3
 
 ### Interface

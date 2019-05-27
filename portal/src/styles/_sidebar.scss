@@ -1,6 +1,5 @@
 div.sidebar {
     background-color: $white;
-    padding-top: 25px;
     overflow: auto;
 
     ul {
@@ -8,19 +7,33 @@ div.sidebar {
         margin-left: -15px;
 
         li {
-            padding: $inline-space-sm 0;
-
-            a {
-                padding-left: 40px;
-                color: $black;
-                height: 40px;
+            &[aria-expanded="false"] > ul {
+                display: none;
             }
 
             &[aria-expanded="true"] > a {
                 border-bottom-right-radius: 100px;
                 border-top-right-radius: 100px;
                 background-color: $light-green;
-                color: $dark-green;
+            }
+
+            & > a {
+                padding-bottom: 5px;
+                padding-top: 8px;
+                min-height: 40px;
+            }
+
+            a {
+                margin-bottom: calc(#{$inline-space-sm} / 2);
+                font-family: Pyidaungsu-Bold;
+                padding-left: 40px;
+                color: $black;
+
+                &:hover {
+                    border-bottom-right-radius: 100px;
+                    border-top-right-radius: 100px;
+                    background-color: $light-green;
+                }
             }
 
             ul {
@@ -28,26 +41,28 @@ div.sidebar {
                 margin-left: 0;
 
                 li {
-                    padding: 10px 0;
-
-                    a {
-                        padding-left: 10px;
-                        font-size: .9em;
-                        height: unset;
-                    }
-
                     &[aria-expanded="true"] > a {
                         border-left: 3px solid $green;
                         background-color: unset;
+                        padding-left: 10px;
                         color: $green;
+                    }
+
+                    a {
+                        font-family: Pyidaungsu-Regular;
+                        padding-left: 13px;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        height: unset;
+
+                        &:hover {
+                            background-color: unset;
+                            color: $green;
+                        }
                     }
 
                     ul {
                         padding-left: 10px;
-
-                        li a {
-                            font-size: .8em;
-                        }
                     }
                 }
             }
@@ -70,6 +85,7 @@ div.sidebar {
     div.sidebar {
         // subtract ($top-menu-height) 3 times due to header, header mobile and widgets height.
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height} - #{$top-menu-height});
+        padding-top: $outer-space-sm;
         z-index: 2;
     }
 
@@ -85,6 +101,7 @@ div.sidebar {
 // Landscape tablet and up
 @media screen and (min-width: 992px) {
     div.sidebar {
-        border-right: 1px solid $dark-gray;
+        border-right: 1px solid $gray;
+        padding-top: $outer-space-lg;
     }
 }

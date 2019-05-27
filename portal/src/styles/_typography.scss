@@ -10,6 +10,90 @@
          url("../fonts/Pyidaungsu-2.5.3_Bold.ttf") format("truetype");
 }
 
+// Extra small screens
+@media screen and (max-width: 575.98px) {
+    html body {
+        font-size: 18px;
+
+        header {
+            font-size: 0.9em;
+        }
+
+        div.sidebar {
+            font-size: 0.9em;
+        }
+
+        footer {
+            font-size: 0.8em;
+        }
+    }
+}
+
+// Small screens
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    html body {
+        font-size: 20px;
+
+        header {
+            font-size: 0.8em;
+        }
+
+        div.sidebar {
+            font-size: 0.8em;
+        }
+
+        footer {
+            font-size: 0.7em;
+        }
+    }
+}
+
+// Medium screens
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    html body {
+        font-size: 22px;
+
+        header {
+            font-size: 0.8em;
+        }
+
+        div.sidebar {
+            font-size: 0.8em;
+        }
+
+        footer {
+            font-size: 0.7em;
+        }
+
+        div.block-RichText div.rich-text p {
+            text-align: justify;
+        }
+    }
+}
+
+// Large screens
+@media screen and (min-width: 992px) {
+    html body {
+        font-size: 24px;
+
+        header {
+            font-size: 0.7em;
+        }
+
+        div.sidebar {
+            font-size: 0.7em;
+        }
+
+        footer {
+            font-size: 0.6em;
+        }
+
+        div.block-RichText div.rich-text p {
+            text-align: justify;
+        }
+    }
+}
+
 h1 {
     font-family: Pyidaungsu-Bold;
     font-size: 2.3em;
@@ -58,6 +142,49 @@ p {
     }
 
     &.text-sm {
+        font-size: 0.7em;
+    }
+}
+
+.button-primary {
+    font-size: 0.8em;
+}
+
+div.sidebar {
+    ul li {
+        a {
+            font-size: 1em;
+        }
+
+        ul li {
+            a {
+                font-size: 0.95em;
+            }
+
+            ul li a {
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+div.block-Quote {
+    p:first-child {
+        font-size: 1.4em;
+    }
+}
+
+div.login-logout-password-frame {
+    p, a, ul {
         font-size: 0.8em;
+    }
+}
+
+a {
+    color: $green;
+
+    &:hover {
+        cursor: pointer;
+        color: $green;
     }
 }

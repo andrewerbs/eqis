@@ -2,7 +2,6 @@ header {
     padding: $inline-space-sm;
     height: $top-menu-height;
 
-
     ul {
         margin-bottom: -15px !important; // -15px due to header top padding
         margin-top: -15px !important; // -15px due to header bottom padding
@@ -15,12 +14,17 @@ header {
 
             &[aria-expanded="true"] a {
                 border-bottom: 3px solid $green;
-                color: $green;
+                padding-bottom: 0;
             }
 
             a {
+                padding-bottom: 3px;
                 color: $black;
                 height: 100%;
+
+                &:hover {
+                    color: $green;
+                }
             }
         }
     }
@@ -32,18 +36,25 @@ header:not(.mobile-header) {
     box-shadow: $shadow;
 
     form.search-box {
-        border-right: 1px solid $dark-gray;
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
+        border-right: 1px solid $gray;
         height: 30px;
 
         input[type="text"] {
-            width: calc(100% - 5px - 15px - 5px);
+            padding-right: calc(#{$inline-space-sm} / 2);
+            padding-left: calc(#{$inline-space-sm} / 2);
+            background-color: $light-gray;
             margin-left: 5px;
             height: 30px;
+            width: 225px;
             border: 0;
         }
     }
 
     div.burger-menu {
+        padding-right: $inline-space-sm;
+        padding-left: $inline-space-sm;
         margin: auto 0;
     }
 }
