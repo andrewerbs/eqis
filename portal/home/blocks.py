@@ -59,6 +59,7 @@ class TitleBlock(StructBlock):
     small_title = CharBlock(
         label=_TitleStrings.small_title_label,
         help_text=_TitleStrings.small_title_help_text,
+        required=False,
         max_length=255,
     )
 
