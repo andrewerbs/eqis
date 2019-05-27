@@ -39,7 +39,7 @@ html {
 
         input {
             border-radius: $radius;
-            color: $dark-gray;
+            color: $black;
 
             &::-webkit-input-placeholder { color: $dark-gray; } /* Chrome/Opera/Safari */
             &:-ms-input-placeholder { color: $dark-gray; } /* IE 10+ */
@@ -86,5 +86,12 @@ html {
             padding-right: $outer-space-lg;
             padding-left: $outer-space-lg;
         }
+    }
+}
+
+// Extra large screens
+@media screen and (min-width: 1200px) {
+    html body div.body div.content.not-home > div:not(.block-Title) {
+        max-width: 80%;
     }
 }
