@@ -2,6 +2,9 @@
 
 ## 0.1.1
 
+### Interface
+
+- [Scrollable top level pages menu](https://github.com/catalpainternational/myeqip-portal/pull/139)
 
 ## 0.1.0
 
