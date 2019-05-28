@@ -75,8 +75,7 @@ div.sidebar {
     }
 }
 
-// Portrait tablets and down
-@media screen and (max-width: 991.98px) {
+@include media-breakpoint-down(md) {
     div.sidebar, div.background {
         position: fixed;
         top: 120px;
@@ -98,8 +97,7 @@ div.sidebar {
     }
 }
 
-// Landscape tablet and up
-@media screen and (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     div.sidebar {
         border-right: 1px solid $gray;
         padding-top: $outer-space-lg;

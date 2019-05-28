@@ -148,8 +148,7 @@ div.block-Postcard {
     }
 }
 
-// Portrait tablets and up
-@media screen and (min-width: 768px) {
+@include media-breakpoint-up(md) {
     div.block-Postcard, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
@@ -184,8 +183,7 @@ div.block-Postcard {
     }
 }
 
-// Landscape phones and down
-@media screen and (max-width: 767.98px) {
+@include media-breakpoint-down(sm) {
     div.block-Postcard, div.block-RichText, div.block-Quote {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
@@ -238,15 +236,13 @@ div.block-Postcard {
     }
 }
 
-// Landscape phones and tablets
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
+@include media-breakpoint-only(sm) {
     div.block-CardLinks {
         margin-bottom: calc(#{$outer-space-sm} - #{$inline-space-sm});
     }
 }
 
-// Portrait phones
-@media screen and (max-width: 575.98px) {
+@include media-breakpoint-down(xs) {
     div.block-CardLinks {
         margin-bottom: $outer-space-sm;
 

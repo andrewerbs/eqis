@@ -4,6 +4,7 @@
 
 ### Interface
 
+- [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
 - [Scrollable top level pages menu](https://github.com/catalpainternational/myeqip-portal/pull/139)
 
 ## 0.1.0
