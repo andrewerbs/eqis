@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: My-EQIP Portal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-16 02:26+0000\n"
+"POT-Creation-Date: 2019-05-28 08:29+0000\n"
 "PO-Revision-Date: 2019-05-13 01:22+0000\n"
 "Last-Translator: b'  <alessandro@catalpa.io>'\n"
 "Language-Team: Catalpa International\n"
@@ -43,7 +43,7 @@ msgstr " မြန်မာဘာ ascascas"
 msgid "The Postcard's title sits above the \"description\"."
 msgstr " မြန်မာဘာ"
 
-#: home/blocks_ui_text.py:18
+#: home/blocks_ui_text.py:18 home/blocks_ui_text.py:34
 msgid "Image"
 msgstr " မြန်မာဘာ"
 
@@ -73,9 +73,14 @@ msgstr ""
 " မြန်မာဘာ"
 
 #: home/blocks_ui_text.py:29
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    'This shows above the Big Title. It has smaller text.\n"
+#| "    "
 msgid ""
 "\n"
-"    'This shows above the Big Title. It has smaller text.\n"
+"    This shows above the Big Title. It has smaller text.\n"
 "    "
 msgstr ""
 "\n"
@@ -89,11 +94,15 @@ msgstr " မြန်မာဘာ"
 msgid "The Small Title"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks_ui_text.py:38
+#: home/blocks_ui_text.py:35
+msgid "A banner size image."
+msgstr ""
+
+#: home/blocks_ui_text.py:40
 msgid "Choose a page"
 msgstr " မြန်မာဘာ"
 
-#: home/blocks_ui_text.py:39
+#: home/blocks_ui_text.py:41
 msgid ""
 "\n"
 "    The CardLink will link to this page. The card displays the page's hero\n"
@@ -181,17 +190,26 @@ msgid "Line"
 msgstr ""
 
 #: home/models_ui_text.py:43
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    A title that displays full-width. The WebPage's body should start "
+#| "with this\n"
+#| "    title. The \"Small Title\" shows above the \"Big Title\".\n"
+#| "    "
 msgid ""
 "\n"
 "    A title that displays full-width. The WebPage's body should start with "
 "this\n"
-"    title. The \"Small Title\" shows above the \"Big Title\".\n"
+"    title. The \"Small Title\" shows above the \"Big Title\". A default "
+"green\n"
+"    background will be used if no image is chosen.\n"
 "    "
 msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:47
+#: home/models_ui_text.py:48
 msgid ""
 "\n"
 "    Text that allows rich-formatted content: headers; bold and italic text;\n"
@@ -202,7 +220,7 @@ msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:52
+#: home/models_ui_text.py:53
 msgid ""
 "\n"
 "    A card, resembling a postcard, that shows an image, a title, and a "
@@ -215,7 +233,7 @@ msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:57
+#: home/models_ui_text.py:58
 msgid ""
 "\n"
 "    A quotation displayed in full width. The quotation shows its "
@@ -226,7 +244,7 @@ msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:61
+#: home/models_ui_text.py:62
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -247,7 +265,7 @@ msgstr ""
 "\n"
 " မြန်မာဘာ"
 
-#: home/models_ui_text.py:66
+#: home/models_ui_text.py:67
 msgid ""
 "\n"
 "    A full-width line that separates blocks of content and that shows as a\n"
@@ -255,7 +273,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: home/models_ui_text.py:73
+#: home/models_ui_text.py:74
 #, fuzzy
 #| msgid "Content - English"
 msgid ""
@@ -265,7 +283,7 @@ msgstr ""
 "\n"
 "a မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:76
+#: home/models_ui_text.py:77
 #, fuzzy
 #| msgid "Content - Myanmar"
 msgid ""
@@ -275,7 +293,7 @@ msgstr ""
 "\n"
 "b မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:79
+#: home/models_ui_text.py:80
 #, fuzzy
 #| msgid "Promote"
 msgid ""
@@ -285,7 +303,7 @@ msgstr ""
 "\n"
 "c မြန်မာဘာ\n"
 
-#: home/models_ui_text.py:82
+#: home/models_ui_text.py:83
 #, fuzzy
 #| msgid "Settings"
 msgid ""
