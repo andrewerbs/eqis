@@ -35,15 +35,15 @@ function is_visible(element_css_class) {
 
 function show(element_css_class, to_show, to_hide) {
     if (element_css_class === MOBILE_HEADER_CSS_CLASS) {
-        document.getElementsByClassName(to_hide).item(0).classList.remove('d-flex');
-        document.getElementsByClassName(to_show).item(0).classList.add('d-flex');
+        document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
+        document.getElementsByClassName(to_show).item(0).classList.add('d-block');
     }
 
     document.getElementsByClassName(element_css_class).item(0).classList.remove('d-none');
 }
 
 function hide(element_css_class, to_hide) {
-    if (element_css_class === MOBILE_HEADER_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-flex');
+    if (element_css_class === MOBILE_HEADER_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
 
     document.getElementsByClassName(element_css_class).item(0).classList.add('d-none');
 }

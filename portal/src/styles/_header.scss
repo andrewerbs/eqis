@@ -5,8 +5,11 @@ header {
     ul {
         margin-bottom: -15px !important; // -15px due to header top padding
         margin-top: -15px !important; // -15px due to header bottom padding
+        white-space: nowrap;
+        overflow-x: auto;
 
         li.header-item {
+            height: $top-menu-height;
             display: inline-block;
             white-space: nowrap;
             margin-right: 15px;
@@ -34,6 +37,10 @@ header:not(.mobile-header) {
     padding: $inline-space-sm;
     background-color: $white;
     box-shadow: $shadow;
+
+    nav {
+        width: calc(100% - 275px - 75px - 75px); // subtract search bar, log in/out button and language switch width
+    }
 
     form.search-box {
         padding-right: $inline-space-sm;
