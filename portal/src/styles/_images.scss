@@ -40,15 +40,13 @@ span.love {
     width: 15px;
 }
 
-// Tablets and down
-@media screen and (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     span.app-logo {
         margin: 0 auto;
     }
 }
 
-// Desktop and up
-@media screen and (max-width: 991.98px) {
+@include media-breakpoint-down(md) {
     span.app-logo {
         margin: 0 15px;
     }

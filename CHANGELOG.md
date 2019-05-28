@@ -2,6 +2,9 @@
 
 ## 0.1.1
 
+### Interface
+
+- [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
 
 ## 0.1.0
 

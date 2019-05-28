@@ -65,8 +65,7 @@ html {
     }
 }
 
-// Landscape phones and down
-@media screen and (max-width: 767.98px) {
+@include media-breakpoint-down(sm) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-mobile});
 
@@ -77,8 +76,7 @@ html {
     }
 }
 
-// Portrait tablets and up
-@media screen and (min-width: 768px) {
+@include media-breakpoint-up(md) {
     html body div.body {
         min-height: calc(100% - #{$bottom-menu-height-desktop});
 
@@ -89,8 +87,7 @@ html {
     }
 }
 
-// Extra large screens
-@media screen and (min-width: 1200px) {
+@include media-breakpoint-up(xl) {
     html body div.body div.content.not-home > div:not(.block-Title) {
         max-width: 80%;
     }
