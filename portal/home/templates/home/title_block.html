@@ -3,18 +3,15 @@
 {% if self.image %}
 {% image self.image height-543 %}
 <div class="d-flex flex-column-reverse position-absolute">
-    {% if self.big_title %}
-    <h1>{{ self.big_title }}</h1>
-    {% endif %}
-    {% if self.small_title %}
-    <p>{{ self.small_title }}</p>
-    {% endif %}
-</div>
-{% else %}
+{% endif %}
+
 {% if self.big_title %}
 <h1>{{ self.big_title }}</h1>
 {% endif %}
 {% if self.small_title %}
 <p>{{ self.small_title }}</p>
 {% endif %}
+
+{% if self.image %}
+</div>
 {% endif %}
