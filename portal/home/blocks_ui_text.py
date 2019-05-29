@@ -32,7 +32,7 @@ class _TitleStrings:
     big_title_label = _('The Big Title')
     small_title_label = _('The Small Title')
     image_label = _('Image')
-    image_help_text = _('A banner size image.')
+    image_help_text = _('A screen-width image.')
 
 
 # CardLinkBlock
