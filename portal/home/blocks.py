@@ -54,6 +54,7 @@ class TitleBlock(StructBlock):
     big_title = CharBlock(
         label=_TitleStrings.big_title_label,
         help_text=_TitleStrings.big_title_help_text,
+        required=False,
         max_length=255,
     )
     small_title = CharBlock(
@@ -61,6 +62,11 @@ class TitleBlock(StructBlock):
         help_text=_TitleStrings.small_title_help_text,
         required=False,
         max_length=255,
+    )
+    image = ImageChooserBlock(
+        label=_TitleStrings.image_label,
+        help_text=_TitleStrings.image_help_text,
+        required=False,
     )
 
     class Meta:
