@@ -5,6 +5,7 @@
 ### Interface
 
 - [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
+- [Mobile widgets were hidden on Safari](https://github.com/catalpainternational/myeqip-portal/pull/142)
 
 ## 0.1.0
 
