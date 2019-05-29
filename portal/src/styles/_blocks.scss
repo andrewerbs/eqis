@@ -15,6 +15,11 @@ div.block-Title {
 
     img {
         height: 100%;
+
+        &:not(:only-child) {
+            -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+        }
     }
 
     p {
