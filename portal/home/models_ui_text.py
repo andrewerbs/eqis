@@ -41,8 +41,9 @@ class _BlockNames:
 # Streamfield blocks' `help_text`s.
 class _StreamfieldHelpTexts:
     title_block = _('''
-    A title that displays full-width. The WebPage's body should start with this
-    title. The "Small Title" shows above the "Big Title".
+    A title that displays full-width. The WebPage's body should start with
+    a title block. The title shows on a green background, or on a provided
+    background image. The "Small Title" shows above the "Big Title".
     ''')
     rich_text = _('''
     Text that allows rich-formatted content: headers; bold and italic text;
