@@ -12,7 +12,6 @@ div.block-Title {
     flex-direction: column-reverse;
     justify-content: center;
     display: flex;
-    height: 343px;
 
     img {
         height: 100%;
@@ -184,6 +183,7 @@ div.block-Postcard {
         margin-bottom: $outer-space-lg;
         padding-right: $outer-space-lg;
         padding-left: $outer-space-lg;
+        height: 576px;
 
         img {
             margin-left: calc(#{$outer-space-lg} * -1);
@@ -242,6 +242,7 @@ div.block-Postcard {
         margin-bottom: $outer-space-sm;
         padding-right: $outer-space-sm;
         padding-left: $outer-space-sm;
+        height: 343px;
 
         img {
             margin-left: calc(#{$outer-space-sm} * -1);
