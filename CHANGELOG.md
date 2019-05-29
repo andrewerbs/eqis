@@ -5,6 +5,7 @@
 ### Interface
 
 - [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
+- [Scrollable top level pages menu](https://github.com/catalpainternational/myeqip-portal/pull/139)
 - [Mobile widgets were hidden on Safari](https://github.com/catalpainternational/myeqip-portal/pull/142)
 - [Title block supports a banner image](https://github.com/catalpainternational/myeqip-portal/pull/144)
 
