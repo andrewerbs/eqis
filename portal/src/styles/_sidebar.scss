@@ -68,11 +68,11 @@ div.sidebar {
             }
         }
     }
+}
 
-    div.widgets {
-        background-color: $light-gray;
-        height: $top-menu-height;
-    }
+div.widgets {
+    background-color: $light-gray;
+    height: $top-menu-height;
 }
 
 @include media-breakpoint-down(md) {
