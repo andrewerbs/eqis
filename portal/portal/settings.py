@@ -27,11 +27,8 @@ SECRET_KEY = 'Not a secret.'
 GA_TAG = ''
 
 # Application definition
-
-INSTALLED_APPS = [
-    'home',
+_WAGTAIL_APPS = [
     'search',
-
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -44,20 +41,25 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
     'wagtail.contrib.postgres_search',
-
-    'modelcluster',
-    'taggit',
-
+]
+_DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+]
+_THIRD_PARTY_APPS = [
+    'modelcluster',
+    'taggit',
     'debug_toolbar',
     'rosetta',
 ]
+
+INSTALLED_APPS = [
+    'home',
+] + _WAGTAIL_APPS + _DJANGO_APPS + _THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -153,6 +155,7 @@ USE_TZ = True
 
 # Rosetta
 ROSETTA_UWSGI_AUTO_RELOAD = False
+ROSETTA_EXCLUDED_APPLICATIONS = _WAGTAIL_APPS + _DJANGO_APPS + _THIRD_PARTY_APPS
 
 
 # Static files (CSS, JavaScript, Images)
