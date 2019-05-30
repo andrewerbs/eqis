@@ -4,6 +4,8 @@
 
 ### Interface
 
+- [Adds ChartBlock](https://github.com/catalpainternational/myeqip-portal/pull/127)
+- [Superset chart styling](https://github.com/catalpainternational/myeqip-portal/pull/135)
 - [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
 - [Scrollable top level pages menu](https://github.com/catalpainternational/myeqip-portal/pull/139)
 - [Mobile widgets were hidden on Safari](https://github.com/catalpainternational/myeqip-portal/pull/142)

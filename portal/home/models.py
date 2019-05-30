@@ -11,8 +11,8 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 from .blocks import (
-    CardLinkBlock, LineBlock, PostcardBlock, QuoteWithAttributionBlock,
-    TitleBlock
+    CardLinkBlock, ChartBlock, LineBlock, PostcardBlock,
+    QuoteWithAttributionBlock, TitleBlock,
 )
 from .models_ui_text import (
     _english_panel, _myanmar_panel, _promote_panel, _settings_panel,
@@ -74,7 +74,7 @@ class WebPage(Page):
                 label=_BlockNames.quote,
                 help_text=_StreamfieldHelpTexts.quote,
             ),
-         ),
+        ),
         (
             'RichText',
             RichTextBlock(
@@ -95,7 +95,14 @@ class WebPage(Page):
             LineBlock(
                 label=_BlockNames.line,
                 help_text=_StreamfieldHelpTexts.line_block,
-            )
+            ),
+        ),
+        (
+            'Chart',
+            ChartBlock(
+                label=_BlockNames.chart,
+                help_text=_StreamfieldHelpTexts.chart_block,
+            ),
         ),
     ]
 

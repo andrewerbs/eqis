@@ -170,6 +170,13 @@ div.block-Quote {
     }
 }
 
+div.block-Chart {
+    div.rich-text p {
+        color: $dark-gray;
+        font-size: 0.7em;
+    }
+}
+
 div.login-logout-password-frame {
     p, a, ul {
         font-size: 0.8em;

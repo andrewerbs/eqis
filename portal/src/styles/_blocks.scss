@@ -7,6 +7,18 @@ img {
     width: 100%;
 }
 
+div.block-RichText div.rich-text, div.block-Chart {
+    div.responsive-object {
+        position: relative;
+
+        iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
 div.block-Title {
     background-color: $lightest-green;
     flex-direction: column-reverse;
@@ -56,17 +68,6 @@ div.block-RichText div.rich-text {
                 content: "";
                 clear: both;
             }
-        }
-    }
-
-    // Video (e.g. YouTube) embed
-    div.responsive-object {
-        position: relative;
-
-        iframe {
-            position: absolute;
-            height: 100%;
-            width: 100%;
         }
     }
 }
@@ -156,8 +157,14 @@ div.block-Postcard {
     }
 }
 
+div.block-Chart {
+    div.responsive-object {
+        padding-bottom: $ratio-16-9;
+    }
+}
+
 @include media-breakpoint-up(md) {
-    div.block-Postcard, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
     }
@@ -195,10 +202,16 @@ div.block-Postcard {
             width: calc(100% + #{$outer-space-lg} * 2);
         }
     }
+
+    div.block-Chart {
+        h4 {
+            margin-bottom: $inline-space-lg;
+        }
+    }
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
     }
@@ -252,6 +265,12 @@ div.block-Postcard {
         img {
             margin-left: calc(#{$outer-space-sm} * -1);
             width: calc(100% + #{$outer-space-sm} * 2);
+        }
+    }
+
+    div.block-Chart {
+        h4 {
+            margin-bottom: $inline-space-sm;
         }
     }
 }

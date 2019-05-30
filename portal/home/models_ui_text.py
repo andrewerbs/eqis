@@ -36,6 +36,7 @@ class _BlockNames:
     rich_text = _('RichText')
     title = _('Title')
     line = _('Line')
+    chart = _('Chart')
 
 
 # Streamfield blocks' `help_text`s.
@@ -65,8 +66,12 @@ class _StreamfieldHelpTexts:
     Many CardLinks can display in a responsive grid.
     ''')
     line_block = _('''
-    A full-width line that separates blocks of content and that shows as a
-    green line in the web page.
+    A full-width line that separates blocks of content and shows as a green
+    line on the web page.
+    ''')
+    chart_block = _('''
+    A Superset chart from MyEQIP's superset instance. The drop-down menu
+    lists available charts. The selected chart displays in the web page.
     ''')
 
 

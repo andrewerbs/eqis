@@ -42,3 +42,11 @@ class _CardLinkStrings:
     The CardLink will link to this page. The card displays the page's hero
     image and description.
     ''')
+
+
+#ChartBlock
+class _ChartBlockStrings:
+    title_label = _('Title')
+    title_help_text = _("The chart's title.")
+    description_label = _('Description')
+    description_help_text = _("Describes the chart.")
