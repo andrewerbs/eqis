@@ -11,6 +11,11 @@
 - [Mobile widgets were hidden on Safari](https://github.com/catalpainternational/myeqip-portal/pull/142)
 - [Title block supports a banner image](https://github.com/catalpainternational/myeqip-portal/pull/144)
 
+### Code
+
+* [MyEQIP adds a `Content-Security-Policy`](https://github.com/catalpainternational/myeqip-portal/pull/134)
+* [Rosetta excludes Third-party Apps](https://github.com/catalpainternational/myeqip-portal/pull/143)
+
 ## 0.1.0
 
 ### Interface
