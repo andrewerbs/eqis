@@ -28,6 +28,9 @@
 - [Responsive font size](https://github.com/catalpainternational/myeqip-portal/pull/128)
 - [UI changes/fixes](https://github.com/catalpainternational/myeqip-portal/pull/131)
 
+### Code
+- [Adds a Content-Security-Policy](https://github.com/catalpainternational/myeqip-portal/pull/134).
+
 ## 0.0.3
 
 ### Interface

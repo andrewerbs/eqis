@@ -73,6 +73,7 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'csp.middleware.CSPMiddleware',
 ]
 
 
@@ -195,6 +196,43 @@ WAGTAILSEARCH_BACKENDS = {
         'BACKEND': 'wagtail.contrib.postgres_search.backend',
     },
 }
+
+# Content-Security-Policy
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = (
+    "'self'",
+    "'unsafe-eval'",
+    "'unsafe-inline'",
+    'https://www.googletagmanager.com',
+    'https://www.google-analytics.com',
+    'https://platform.twitter.com',
+    'https://cdn.syndication.twimg.com',
+    'http://www.instagram.com',
+    'https://connect.facebook.net'
+)
+CSP_IMG_SRC = (
+    "'self'",
+    'data:',
+    'https://www.google-analytics.com',
+    'https://syndication.twitter.com',
+    'https://platform.twitter.com',
+    'https://pbs.twimg.com',
+)
+CSP_STYLE_SRC = (
+    "'self'",
+    "'unsafe-inline'",
+    'https://platform.twitter.com',
+)
+CSP_FRAME_SRC = (
+    'https://superset-myeqip.catalpa.build',
+    'https://www.youtube.com',
+    'https://platform.twitter.com',
+    'https://syndication.twitter.com',
+    'https://www.instagram.com',
+    'https://player.vimeo.com',
+    'https://staticxx.facebook.com',
+    'https://www.facebook.com',
+)
 
 # Import local_settings.
 try:
