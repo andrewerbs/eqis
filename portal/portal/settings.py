@@ -176,6 +176,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'dist'),
+    os.path.join(PROJECT_DIR, 'src/images'),
 )
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
@@ -220,6 +221,7 @@ CSP_IMG_SRC = (
     'https://syndication.twitter.com',
     'https://platform.twitter.com',
     'https://pbs.twimg.com',
+    'http://www.gravatar.com'
 )
 CSP_STYLE_SRC = (
     "'self'",
