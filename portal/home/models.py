@@ -11,7 +11,8 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 from .blocks import (
-    CardLinkBlock, PostcardBlock, QuoteWithAttributionBlock, TitleBlock, LineBlock
+    CardLinkBlock, ChartBlock, LineBlock, PostcardBlock,
+    QuoteWithAttributionBlock, TitleBlock,
 )
 from .models_ui_text import (
     _english_panel, _myanmar_panel, _promote_panel, _settings_panel,
@@ -46,8 +47,9 @@ class TranslatedField:
 class WebPage(Page):
 
     # Values that help Streamfield Blocks.
-    _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic',
-                           'ol', 'ul', 'link', 'document-link', 'image', 'embed']
+    _rich_text_features = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold',
+                           'italic', 'ol', 'ul', 'link',
+                           'document-link', 'image', 'embed']
     _block_list = [
         (
             'CardLinks',
@@ -72,7 +74,7 @@ class WebPage(Page):
                 label=_BlockNames.quote,
                 help_text=_StreamfieldHelpTexts.quote,
             ),
-         ),
+        ),
         (
             'RichText',
             RichTextBlock(
@@ -93,7 +95,14 @@ class WebPage(Page):
             LineBlock(
                 label=_BlockNames.line,
                 help_text=_StreamfieldHelpTexts.line_block,
-            )
+            ),
+        ),
+        (
+            'Chart',
+            ChartBlock(
+                label=_BlockNames.chart,
+                help_text=_StreamfieldHelpTexts.chart_block,
+            ),
         ),
     ]
 

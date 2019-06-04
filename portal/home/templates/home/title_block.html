@@ -1,4 +1,19 @@
-<h1>{{self.big_title}}</h1>
+{% load wagtailimages_tags %}
+
+{% if self.image %}
+{% image self.image height-543 %}
+{% if self.big_title or self.small_title %}
+<div class="d-flex flex-column-reverse position-absolute">
+{% endif %}
+{% endif %}
+
+{% if self.big_title %}
+<h1 class="{% if self.image %}text-white{% endif %}">{{ self.big_title }}</h1>
+{% endif %}
 {% if self.small_title %}
-<p>{{self.small_title}}</p>
+<p class="{% if self.image %}text-white{% endif %}">{{ self.small_title }}</p>
+{% endif %}
+
+{% if self.image %}
+</div>
 {% endif %}

@@ -17,27 +17,28 @@
         {% endwith %}
         {% endblock %}
     </title>
+    {% block meta_description %}
     <meta name="description" content="" />
+    {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# Global javascript #}
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
 
     {# Global stylesheets #}
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
 </head>
 
-<body class="{% block body_class %}{% endblock %}">
+<body>
     {% wagtailuserbar %}
 
     {% block content %}
     {% endblock content %}
 
-    {# Global javascript #}
-    <script type="text/javascript" src="{% static 'main.js' %}"></script>
-
-    {# Google Analytics #}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-
     {% get_google_analytics_tag as GA_TAG %}
     {% if GA_TAG != '' %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 

@@ -1,0 +1,18 @@
+{% if self.title %}
+<h4>{{self.title}}</h4>
+{% endif %}
+{% with self.choice_of_chart as superset_chart_url %}
+<div class="responsive-object">
+    <iframe
+        width="600"
+        height="400"
+        seamless
+        frameBorder="0"
+        scrolling="no"
+        src="https://superset-myeqip.catalpa.build{{superset_chart_url}}&standalone=true">
+    </iframe>
+</div>
+{% endwith %}
+{% if self.description %}
+{{self.description}}
+{% endif %}

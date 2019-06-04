@@ -2,7 +2,9 @@
 {% load static %}
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-homepage{% endblock %}
+{% block meta_description %}
+<meta name="description" content="{{ page.description }}" />
+{% endblock %}
 
 {% block page %}
 {{ page.body }}

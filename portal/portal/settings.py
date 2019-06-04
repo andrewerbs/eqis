@@ -27,11 +27,8 @@ SECRET_KEY = 'Not a secret.'
 GA_TAG = ''
 
 # Application definition
-
-INSTALLED_APPS = [
-    'home',
+_WAGTAIL_APPS = [
     'search',
-
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -44,20 +41,25 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
     'wagtail.contrib.postgres_search',
-
-    'modelcluster',
-    'taggit',
-
+]
+_DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+]
+_THIRD_PARTY_APPS = [
+    'modelcluster',
+    'taggit',
     'debug_toolbar',
     'rosetta',
 ]
+
+INSTALLED_APPS = [
+    'home',
+] + _WAGTAIL_APPS + _DJANGO_APPS + _THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,6 +75,7 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'csp.middleware.CSPMiddleware',
 ]
 
 
@@ -152,6 +155,7 @@ USE_TZ = True
 
 # Rosetta
 ROSETTA_UWSGI_AUTO_RELOAD = False
+ROSETTA_EXCLUDED_APPLICATIONS = _WAGTAIL_APPS + _DJANGO_APPS + _THIRD_PARTY_APPS
 
 
 # Static files (CSS, JavaScript, Images)
@@ -172,6 +176,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'dist'),
+    os.path.join(PROJECT_DIR, 'src/images'),
 )
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
@@ -195,6 +200,44 @@ WAGTAILSEARCH_BACKENDS = {
         'BACKEND': 'wagtail.contrib.postgres_search.backend',
     },
 }
+
+# Content-Security-Policy
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = (
+    "'self'",
+    "'unsafe-eval'",
+    "'unsafe-inline'",
+    'https://www.googletagmanager.com',
+    'https://www.google-analytics.com',
+    'https://platform.twitter.com',
+    'https://cdn.syndication.twimg.com',
+    'http://www.instagram.com',
+    'https://connect.facebook.net'
+)
+CSP_IMG_SRC = (
+    "'self'",
+    'data:',
+    'https://www.google-analytics.com',
+    'https://syndication.twitter.com',
+    'https://platform.twitter.com',
+    'https://pbs.twimg.com',
+    'http://www.gravatar.com'
+)
+CSP_STYLE_SRC = (
+    "'self'",
+    "'unsafe-inline'",
+    'https://platform.twitter.com',
+)
+CSP_FRAME_SRC = (
+    'https://superset-myeqip.catalpa.build',
+    'https://www.youtube.com',
+    'https://platform.twitter.com',
+    'https://syndication.twitter.com',
+    'https://www.instagram.com',
+    'https://player.vimeo.com',
+    'https://staticxx.facebook.com',
+    'https://www.facebook.com',
+)
 
 # Import local_settings.
 try:

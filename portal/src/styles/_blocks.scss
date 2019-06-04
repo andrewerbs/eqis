@@ -7,12 +7,32 @@ img {
     width: 100%;
 }
 
+div.block-RichText div.rich-text, div.block-Chart {
+    div.responsive-object {
+        position: relative;
+
+        iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
 div.block-Title {
+    background-color: $lightest-green;
     flex-direction: column-reverse;
-    background-color: $light-gray;
     justify-content: center;
     display: flex;
-    height: 343px;
+
+    img {
+        height: 100%;
+
+        &:not(:only-child) {
+            -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+        }
+    }
 
     p {
         margin-bottom: calc(#{$inline-space-sm} / 2);
@@ -48,17 +68,6 @@ div.block-RichText div.rich-text {
                 content: "";
                 clear: both;
             }
-        }
-    }
-
-    // Video (e.g. YouTube) embed
-    div.responsive-object {
-        position: relative;
-
-        iframe {
-            position: absolute;
-            height: 100%;
-            width: 100%;
         }
     }
 }
@@ -148,9 +157,14 @@ div.block-Postcard {
     }
 }
 
-// Portrait tablets and up
-@media screen and (min-width: 768px) {
-    div.block-Postcard, div.block-RichText, div.block-Quote {
+div.block-Chart {
+    div.responsive-object {
+        padding-bottom: $ratio-16-9;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
     }
@@ -181,12 +195,23 @@ div.block-Postcard {
         margin-bottom: $outer-space-lg;
         padding-right: $outer-space-lg;
         padding-left: $outer-space-lg;
+        height: 576px;
+
+        img {
+            margin-left: calc(#{$outer-space-lg} * -1);
+            width: calc(100% + #{$outer-space-lg} * 2);
+        }
+    }
+
+    div.block-Chart {
+        h4 {
+            margin-bottom: $inline-space-lg;
+        }
     }
 }
 
-// Landscape phones and down
-@media screen and (max-width: 767.98px) {
-    div.block-Postcard, div.block-RichText, div.block-Quote {
+@include media-breakpoint-down(sm) {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
     }
@@ -235,18 +260,28 @@ div.block-Postcard {
         margin-bottom: $outer-space-sm;
         padding-right: $outer-space-sm;
         padding-left: $outer-space-sm;
+        height: 343px;
+
+        img {
+            margin-left: calc(#{$outer-space-sm} * -1);
+            width: calc(100% + #{$outer-space-sm} * 2);
+        }
+    }
+
+    div.block-Chart {
+        h4 {
+            margin-bottom: $inline-space-sm;
+        }
     }
 }
 
-// Landscape phones and tablets
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
+@include media-breakpoint-only(sm) {
     div.block-CardLinks {
         margin-bottom: calc(#{$outer-space-sm} - #{$inline-space-sm});
     }
 }
 
-// Portrait phones
-@media screen and (max-width: 575.98px) {
+@include media-breakpoint-down(xs) {
     div.block-CardLinks {
         margin-bottom: $outer-space-sm;
 

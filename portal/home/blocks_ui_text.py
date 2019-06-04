@@ -21,22 +21,32 @@ class _PostcardStrings:
     description_help_text = _('Text that accompanies the image.')
 
 
-#TitleBlock
+# TitleBlock
 class _TitleStrings:
     big_title_help_text = _('''
     This shows below the Small Title. It has bigger text.
     ''')
     small_title_help_text = _('''
-    'This shows above the Big Title. It has smaller text.
+    This shows above the Big Title. It has smaller text.
     ''')
     big_title_label = _('The Big Title')
     small_title_label = _('The Small Title')
+    image_label = _('Image')
+    image_help_text = _('A screen-width image.')
 
 
-#CardLinkBlock
+# CardLinkBlock
 class _CardLinkStrings:
     page_chooser_label = _('Choose a page')
     page_chooser_help_text = _('''
     The CardLink will link to this page. The card displays the page's hero
     image and description.
     ''')
+
+
+#ChartBlock
+class _ChartBlockStrings:
+    title_label = _('Title')
+    title_help_text = _("The chart's title.")
+    description_label = _('Description')
+    description_help_text = _("Describes the chart.")

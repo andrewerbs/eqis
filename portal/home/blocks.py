@@ -1,16 +1,17 @@
 from wagtail.core.blocks import (
-    BlockQuoteBlock, CharBlock, PageChooserBlock, RichTextBlock, StaticBlock,
-    StructBlock
+    BlockQuoteBlock, CharBlock, ChoiceBlock, PageChooserBlock, RichTextBlock,
+    StaticBlock, StructBlock
 )
 from wagtail.images.blocks import ImageChooserBlock
 
 from .blocks_ui_text import (
-    _PostcardStrings, _TitleStrings, _CardLinkStrings, _QuoteStrings
+    _CardLinkStrings, _ChartBlockStrings, _PostcardStrings, _QuoteStrings,
+    _TitleStrings,
 )
 
+from .superset_helpers import get_superset_chart_choices
 
 class QuoteWithAttributionBlock(StructBlock):
-
     quote = BlockQuoteBlock(
         label=_QuoteStrings.quote_label,
         help_text=_QuoteStrings.quote_help_text,
@@ -27,7 +28,6 @@ class QuoteWithAttributionBlock(StructBlock):
 
 
 class PostcardBlock(StructBlock):
-
     _rich_text_features = ['bold', 'italic', 'link']
 
     title = CharBlock(
@@ -54,6 +54,7 @@ class TitleBlock(StructBlock):
     big_title = CharBlock(
         label=_TitleStrings.big_title_label,
         help_text=_TitleStrings.big_title_help_text,
+        required=False,
         max_length=255,
     )
     small_title = CharBlock(
@@ -61,6 +62,11 @@ class TitleBlock(StructBlock):
         help_text=_TitleStrings.small_title_help_text,
         required=False,
         max_length=255,
+    )
+    image = ImageChooserBlock(
+        label=_TitleStrings.image_label,
+        help_text=_TitleStrings.image_help_text,
+        required=False,
     )
 
     class Meta:
@@ -82,3 +88,26 @@ class CardLinkBlock(StructBlock):
 class LineBlock(StaticBlock):
     class Meta:
         template = 'home/line_block.html'
+
+
+class ChartBlock(StructBlock):
+    _rich_text_features = ['bold', 'italic', 'link']
+
+    title = CharBlock(
+        label=_ChartBlockStrings.title_label,
+        max_length=255,
+        required=False,
+        help_text=_ChartBlockStrings.title_help_text,
+    )
+    description = RichTextBlock(
+        label=_ChartBlockStrings.description_label,
+        features=_rich_text_features,
+        help_text=_ChartBlockStrings.description_help_text,
+        required=False,
+    )
+    choice_of_chart = ChoiceBlock(
+        choices=get_superset_chart_choices,
+    )
+
+    class Meta:
+        template = 'home/chart_block.html'

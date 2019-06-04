@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 0.1.1
+
+### Interface
+
+- [Adds ChartBlock](https://github.com/catalpainternational/myeqip-portal/pull/127)
+- [Superset chart styling](https://github.com/catalpainternational/myeqip-portal/pull/135)
+- [Use Bootstrap media breakpoints](https://github.com/catalpainternational/myeqip-portal/pull/137)
+- [Scrollable top level pages menu](https://github.com/catalpainternational/myeqip-portal/pull/139)
+- [Mobile widgets were hidden on Safari](https://github.com/catalpainternational/myeqip-portal/pull/142)
+- [Title block supports a banner image](https://github.com/catalpainternational/myeqip-portal/pull/144)
+
+### Code
+
+* [MyEQIP adds a `Content-Security-Policy`](https://github.com/catalpainternational/myeqip-portal/pull/134)
+* [Rosetta excludes Third-party Apps](https://github.com/catalpainternational/myeqip-portal/pull/143)
+
 ## 0.1.0
 
 ### Interface
@@ -18,6 +34,9 @@
 - [Anchor links styling](https://github.com/catalpainternational/myeqip-portal/pull/125)
 - [Responsive font size](https://github.com/catalpainternational/myeqip-portal/pull/128)
 - [UI changes/fixes](https://github.com/catalpainternational/myeqip-portal/pull/131)
+
+### Code
+- [Adds a Content-Security-Policy](https://github.com/catalpainternational/myeqip-portal/pull/134).
 
 ## 0.0.3
 

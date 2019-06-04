@@ -39,15 +39,13 @@ div.search-results {
     }
 }
 
-// Portrait mobile
-@media screen and (max-width: 575.98px) {
+@include media-breakpoint-down(xs) {
     div.search-results {
         margin-bottom: $outer-space-sm;
     }
 }
 
-// Landscape mobile and up
-@media screen and (min-width: 576px) {
+@include media-breakpoint-up(sm) {
     div.search-results {
         margin-bottom: $outer-space-lg;
     }
