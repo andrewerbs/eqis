@@ -4,6 +4,7 @@
 
 ### Interface
 
+- [Private(logged in user) pages now show styled login](https://github.com/catalpainternational/myeqip-portal/pull/153)
 
 ## 0.1.1
 
