@@ -194,6 +194,7 @@ BASE_URL = 'http://example.com'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
 
 WAGTAILSEARCH_BACKENDS = {
     'default': {
