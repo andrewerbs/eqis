@@ -4,6 +4,7 @@
 
 ### Interface
 
+- [Cardlinks respect image focal point](https://github.com/catalpainternational/myeqip-portal/pull/152)
 
 ## 0.1.1
 
