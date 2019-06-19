@@ -89,7 +89,8 @@ html {
 
 @include media-breakpoint-up(xl) {
     html body div.body div.content:not(.not-home) > div:not(.block-Title) {
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     html body div.body div.content > div:not(.block-Title) {
