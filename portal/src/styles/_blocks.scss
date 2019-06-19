@@ -100,7 +100,6 @@ div.block-CardLinks {
                 background-color: $white;
                 border-radius: $radius;
                 box-shadow: $shadow;
-                display: block;
                 height: 100%;
 
                 div.responsive-card {
@@ -121,8 +120,7 @@ div.block-CardLinks {
                         }
 
                         div.default-background {
-                            background-color: $light-green;
-                            border-radius: $radius;
+                            background-color: $lightest-green;
                             height: 100%;
                         }
                     }
