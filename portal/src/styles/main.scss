@@ -110,4 +110,12 @@ html {
             width: 1024px;
         }
     }
+
+    html body div.body div.content:not(.not-home) > div.block-Quote {
+        p {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1024px;
+        }
+    }
 }
