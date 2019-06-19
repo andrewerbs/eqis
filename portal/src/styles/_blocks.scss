@@ -141,17 +141,6 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
-    margin-right: calc((#{$inline-space-sm} * -1) / 2);
-    margin-left: calc((#{$inline-space-sm} * -1) / 2);
-    padding: $inline-space-sm;
-    background-color: $white;
-    border-radius: $radius;
-    box-shadow: $shadow;
-
-    p {
-        margin-bottom: 0;
-    }
-
     img {
         height: 100%;
     }
