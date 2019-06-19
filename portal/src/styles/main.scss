@@ -89,12 +89,12 @@ html {
 }
 
 @include media-breakpoint-up(xl) {
-    html body div.body div.content:not(.not-home) > div:not(.block-Title) {
+    html body div.body div.content:not(.not-home) > div:not(.block-Title):not(.block-Quote) {
         margin-right: auto;
         margin-left: auto;
     }
 
-    html body div.body div.content > div:not(.block-Title) {
+    html body div.body div.content > div:not(.block-Title):not(.block-Quote) {
         max-width: 1024px;
     }
 
