@@ -88,7 +88,11 @@ html {
 }
 
 @include media-breakpoint-up(xl) {
-    html body div.body div.content.not-home > div:not(.block-Title) {
-        max-width: 80%;
+    html body div.body div.content:not(.not-home) > div:not(.block-Title) {
+        margin: 0 auto;
+    }
+
+    html body div.body div.content > div:not(.block-Title) {
+        max-width: 1024px;
     }
 }
