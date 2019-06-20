@@ -1,13 +1,13 @@
 {% load wagtailimages_tags %}
 
 <div class="row">
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-8">
         {% if self.title %}
-        <h4>{{self.title}}</h4>
+        <h3>{{self.title}}</h3>
         {% endif %}
         {{self.description}}
     </div>
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-4">
         {% image self.image fill-320x200 %}
     </div>
 </div>

@@ -3,7 +3,7 @@
 
 
 {% if self.page %}
-<a href="{% pageurl self.page %}">
+<a class="d-flex flex-column" href="{% pageurl self.page %}">
     <div class="responsive-card">
         <div>
             {% if self.page.hero_image %}
@@ -13,7 +13,9 @@
             {% endif %}
         </div>
     </div>
-    <h4>{{self.page.translated_title}}</h4>
-    <p>{{self.page.description}}</p>
+    <div class="d-flex flex-column h-100 justify-content-center">
+        <h4>{{self.page.translated_title}}</h4>
+        <p class="text-sm">{{self.page.description}}</p>
+    </div>
 </a>
 {% endif %}

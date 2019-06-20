@@ -29,8 +29,8 @@ div.block-Title {
         height: 100%;
 
         &:not(:only-child) {
-            -webkit-filter: brightness(70%);
-            filter: brightness(70%);
+            -webkit-filter: brightness(85%);
+            filter: brightness(85%);
         }
     }
 
@@ -73,16 +73,19 @@ div.block-RichText div.rich-text {
 }
 
 div.block-Quote {
+    background-color: $lightest-green;
+
     p {
         text-align: center;
     }
 
     p:first-child {
-        margin-bottom: 10px;
+        margin-bottom: $inline-space-sm;
     }
 
     p:last-child {
         color: $dark-gray !important;
+        margin-bottom: 0;
     }
 }
 
@@ -100,7 +103,6 @@ div.block-CardLinks {
                 background-color: $white;
                 border-radius: $radius;
                 box-shadow: $shadow;
-                display: block;
                 height: 100%;
 
                 div.responsive-card {
@@ -121,8 +123,7 @@ div.block-CardLinks {
                         }
 
                         div.default-background {
-                            background-color: $light-green;
-                            border-radius: $radius;
+                            background-color: $lightest-green;
                             height: 100%;
                         }
                     }
@@ -141,17 +142,6 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
-    margin-right: calc((#{$inline-space-sm} * -1) / 2);
-    margin-left: calc((#{$inline-space-sm} * -1) / 2);
-    padding: $inline-space-sm;
-    background-color: $white;
-    border-radius: $radius;
-    box-shadow: $shadow;
-
-    p {
-        margin-bottom: 0;
-    }
-
     img {
         height: 100%;
     }
@@ -201,6 +191,15 @@ div.block-Chart {
             margin-left: calc(#{$outer-space-lg} * -1);
             width: calc(100% + #{$outer-space-lg} * 2);
         }
+    }
+
+    div.block-Quote {
+        padding-bottom: calc(#{$outer-space-lg} * 2);
+        margin-right: calc(#{$outer-space-lg} * -1);
+        margin-left: calc(#{$outer-space-lg} * -1);
+        padding-top: calc(#{$outer-space-lg} * 2);
+        padding-right: $outer-space-lg;
+        padding-left: $outer-space-lg;
     }
 
     div.block-Chart {
@@ -266,6 +265,15 @@ div.block-Chart {
             margin-left: calc(#{$outer-space-sm} * -1);
             width: calc(100% + #{$outer-space-sm} * 2);
         }
+    }
+
+    div.block-Quote {
+        padding-bottom: calc(#{$outer-space-sm} * 2);
+        margin-right: calc(#{$outer-space-sm} * -1);
+        margin-left: calc(#{$outer-space-sm} * -1);
+        padding-top: calc(#{$outer-space-sm} * 2);
+        padding-right: $outer-space-sm;
+        padding-left: $outer-space-sm;
     }
 
     div.block-Chart {
