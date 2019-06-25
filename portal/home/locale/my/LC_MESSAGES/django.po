@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-30 04:35+0000\n"
-"PO-Revision-Date: 2019-05-30 04:47+0000\n"
-"Last-Translator: b'A R <alessandro@catalpa.io>'\n"
+"PO-Revision-Date: 2019-06-10 10:11+0000\n"
+"Last-Translator: b'Sing Pu <singpu@myeqip.org>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -21,45 +21,45 @@ msgstr ""
 
 #: home/blocks_ui_text.py:8
 msgid "Quote Text"
-msgstr "မြန်မာ"
+msgstr "ကိုးကားချက်"
 
 #: home/blocks_ui_text.py:9
 msgid "The quote's body text."
-msgstr "မြန်မာ"
+msgstr "ကိုးကားချက် စာသား"
 
 #: home/blocks_ui_text.py:10
 msgid "Attribution"
-msgstr "မြန်မာ"
+msgstr "ကိုးကားမှု အညွှန်း"
 
 #: home/blocks_ui_text.py:11
 msgid "Whom or what the text quotes."
-msgstr "မြန်မာ"
+msgstr "ကိုးကားထားသည့်အရာ သို့မဟုတ် လူ"
 
 #: home/blocks_ui_text.py:16 home/blocks_ui_text.py:49
 #: home/models_ui_text.py:8 home/models_ui_text.py:37
 msgid "Title"
-msgstr "မြန်မာ"
+msgstr "ခေါင်းစဥ်"
 
 #: home/blocks_ui_text.py:17
 msgid "The Postcard's title sits above the \"description\"."
-msgstr "မြန်မာ"
+msgstr "\"ဖော်ပြချက်\" အပေါ်တွင်ဖော်ပြထားသည့် ပို့စကတ်ခေါင်းစဥ်"
 
 #: home/blocks_ui_text.py:18 home/blocks_ui_text.py:34
 msgid "Image"
-msgstr "မြန်မာ"
+msgstr "ပုံ"
 
 #: home/blocks_ui_text.py:19
 msgid "The description accompanies this image."
-msgstr "မြန်မာ"
+msgstr "ပုံနှင့်လိုက်ဖက်သော ဖော်ပြချက်"
 
 #: home/blocks_ui_text.py:20 home/blocks_ui_text.py:51
 #: home/models_ui_text.py:9
 msgid "Description"
-msgstr "မြန်မာ"
+msgstr "ဖော်ပြချက်"
 
 #: home/blocks_ui_text.py:21
 msgid "Text that accompanies the image."
-msgstr "မြန်မာ"
+msgstr "ပုံနှင့်လိုက်ဖက်သည့် စာသား"
 
 #: home/blocks_ui_text.py:26
 msgid ""
@@ -68,7 +68,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ခေါင်းစဥ်အသေးအောက်တွင်ဖော်ပြရန်။ စာသားပိုကြီးသည်။"
 
 #: home/blocks_ui_text.py:29
 msgid ""
@@ -77,23 +77,23 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ခေါင်းစဥ်အကြီးအပေါ်တွင်ဖော်ပြရန်။ စာသားပိုသေးသည်။"
 
 #: home/blocks_ui_text.py:32
 msgid "The Big Title"
-msgstr "မြန်မာ"
+msgstr "ခေါင်းစဥ်အကြီး"
 
 #: home/blocks_ui_text.py:33
 msgid "The Small Title"
-msgstr "မြန်မာ"
+msgstr "ခေါင်းစဥ်အသေး"
 
 #: home/blocks_ui_text.py:35
 msgid "A screen-width image."
-msgstr "မြန်မာ"
+msgstr "မျက်နှာပြင်ပြည့်ပုံရိပ်"
 
 #: home/blocks_ui_text.py:40
 msgid "Choose a page"
-msgstr "မြန်မာ"
+msgstr "စာမျက်နှာရွေးချယ်ပါ။"
 
 #: home/blocks_ui_text.py:41
 msgid ""
@@ -103,23 +103,23 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ယခုစာမျက်နှာသည် Cardlink နှင့်ချိတ်ဆက်ထားသည်။ ကတ်ဒ်တွင် စာမျက်နှာ၏ ပုံ အကြောင်းဖော်ပြချက်အားဖော်ပြထားမည်။"
 
 #: home/blocks_ui_text.py:50
 msgid "The chart's title."
-msgstr "မြန်မာ"
+msgstr "ဇယားခေါင်းစဥ်"
 
 #: home/blocks_ui_text.py:52
 msgid "Describes the chart."
-msgstr "မြန်မာ"
+msgstr "ဇယားအားဖော်ပြပါ။"
 
 #: home/models_ui_text.py:10
 msgid "Hero Image"
-msgstr "မြန်မာ"
+msgstr "အဓိကပုံ"
 
 #: home/models_ui_text.py:11
 msgid "Body"
-msgstr "မြန်မာ"
+msgstr "စာကိုယ်"
 
 #: home/models_ui_text.py:16
 msgid ""
@@ -128,7 +128,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ဘရောက်ဇာခေါင်းစီး၊ Cardlink နှင့် ရှာဖွေရန် နေရာများအား ခေါင်းစဥ်နေရာတွင် ဖော်ပြထားမည်။"
 
 #: home/models_ui_text.py:19
 msgid ""
@@ -137,7 +137,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ဝက်ဂ်ဆိုက်စာမျက်နှာ အတိုချုံးဖော်ပြချက်။ Cardlink တွင်ဖော်ပြချက်အား ဖော်ပြထားမည်။"
 
 #: home/models_ui_text.py:22
 msgid ""
@@ -146,7 +146,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"Cardlink နှင့် စာမျက်နှာချိတ်ဆက်သွားလျှင်၊ ယခုပုံအားဖော်ပြမည်ဖြစ်သည်။"
 
 #: home/models_ui_text.py:25
 msgid ""
@@ -156,31 +156,31 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ဝက်ဂ်ဆိုက်စာမျက်နှာအကြောင်းအရာများ၊ စာမျက်နှာတွင် အကြောင်းအရာများအား \"blocks\" အဖြစ်ညွှန်းဆိုထားပြီး အကြောင်းအရာ blocks များသည် ခေါင်းစဥ်၊ စာသား၊ ပို့စကတ်ဒ်၊ Cardlink သို့ ကိုးကားချက်များ ဖြစ်သည်။ "
 
 #: home/models_ui_text.py:33
 msgid "CardLinks"
-msgstr "မြန်မာ"
+msgstr "Cardlink"
 
 #: home/models_ui_text.py:34
 msgid "Postcard"
-msgstr "မြန်မာ"
+msgstr "ပို့စကတ်ဒ်"
 
 #: home/models_ui_text.py:35
 msgid "Quote"
-msgstr "မြန်မာ"
+msgstr "ကိုးကားချက်"
 
 #: home/models_ui_text.py:36
 msgid "RichText"
-msgstr "မြန်မာ"
+msgstr "စာသား"
 
 #: home/models_ui_text.py:38
 msgid "Line"
-msgstr "မြန်မာ"
+msgstr "လိုင်း "
 
 #: home/models_ui_text.py:39
 msgid "Chart"
-msgstr "မြန်မာ"
+msgstr "ဇယား"
 
 #: home/models_ui_text.py:44
 msgid ""
@@ -191,7 +191,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"မျက်နှာပြင်ပြည့်ဖော်ပြထားသောခေါင်းစဥ်။ ဝက်ဂ်ဆိုက် စာကိုယ်သည် အဆိုပါ block ခေါင်းစဥ်ဖြင့်စသင့်သည်။ ခေါင်းစဥ်အား နောက်ခံအစိမ်းရောင် သို့မဟုတ် နောက်ခံပုံအပေါ်တွင် ဖော်ပြထားရမည်။ \"ခေါင်းစဥ်အသေး\"အား \"ခေါင်းစဥ်အကြီး\" အပေါ်တွင်ဖော်ပြထားမည်။ "
 
 #: home/models_ui_text.py:49
 msgid ""
@@ -202,7 +202,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"rich-format အားခွင့်ပြုထားသော စာသားအကြောင်းအရာ၊ ခေါင်းစီး၊ စာသားအထူ၊ တစ်စောင်း၊ နံပါတ်နှင့် အစဥ်လိုက်ဇယားများ၊ လင့်များ၊ ပုံများ၊ စာရွက်စာတမ်းများနှင့် ဝက်ဂ်ဆိုက်အကြောင်းအရာများ"
 
 #: home/models_ui_text.py:54
 msgid ""
@@ -213,7 +213,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ပုံတစ်ပုံ၊ ခေါင်းစဥ်တစ်ခုနှင့် စာတိုတစ်ခုခုအား ဖော်ပြထားသည့် ကတ်ဒ်၊ ပို့စကတ်ဒ်။ ပုံ သည် ကတ်ဒ်၊ ခေါင်းစဥ်အား တစ်ဝက်အပြည့်ကာထားရမည်ဖြစ်ပြီး စာသားများသည် ကျန်တစ်ဝက်အား ဖုံးကာထားရမည်။ "
 
 #: home/models_ui_text.py:59
 msgid ""
@@ -223,7 +223,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"မျက်နှာပြင်အပြည့်ဖော်ပြထားသော ကိုးကားချက်။ ကိုးကာချက်၏ ကိုးကားအညွှန်းအား ဖော်ပြထားရမည်။ "
 
 #: home/models_ui_text.py:63
 msgid ""
@@ -234,7 +234,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"ဝက်ဂ်ဆိုက်နှင့်ချိတ်ဆက်ထားသည့် လင့်ဒ်။ ဝက်ဂ်ဆိုက် ပုံ၊ ခေါင်းစဥ်နှင့် ဖော်ပြချက်များနှင့် ချိတ်ဆက်ထားသည့်ကတ်ဒ်များ လင့်ဒ်တွင်ဖော်ပြထားရမည်။ Cardlink အများစုအား အလျားလိုက်စုဖွဲ့ဖြင့်ဖော်ပြနိုင်သည်။ "
 
 #: home/models_ui_text.py:68
 msgid ""
@@ -244,7 +244,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"အကြောင်းအရာများအား ခွဲခြားမည့် မျက်နှာပြင်ပြည့်လိုင်းနှင့် ဝက်ဂ်ဆိုက်တွင် အစိမ်းရောင် လိုင်းဖြင့်ဖော်ပြရမည်။ "
 
 #: home/models_ui_text.py:72
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"မြန်မာ"
+"My-EQIP ဆူပါဆက်အတိုင်းရေးထားသည့် ဆူပါဆက်။ အောက်ဆွဲချ၍ရသည့် မီနူးဘားတွင် ဇယားအလွတ်များရှိသည်။ ရွေးချယ်ထားသော ဇယားများအား ဝက်ဂ်ဆိုက်တွင်ဖော်ပြထားမည်။ "
 
 #: home/models_ui_text.py:79
 msgid ""
@@ -262,7 +262,7 @@ msgid ""
 "Content - English\n"
 msgstr ""
 "\n"
-"မြန်မာ\n"
+"အင်္ဂလိပ် - အပိုင်း\n"
 
 #: home/models_ui_text.py:82
 msgid ""
@@ -270,7 +270,7 @@ msgid ""
 "Content - Myanmar\n"
 msgstr ""
 "\n"
-"မြန်မာ\n"
+"မြန်မာ - အပိုင်း\n"
 
 #: home/models_ui_text.py:85
 msgid ""
@@ -278,7 +278,7 @@ msgid ""
 "Promote\n"
 msgstr ""
 "\n"
-"မြန်မာ\n"
+"ထင်ရှားမြင်သာစေခြင်း\n"
 
 #: home/models_ui_text.py:88
 msgid ""
@@ -286,4 +286,4 @@ msgid ""
 "Settings\n"
 msgstr ""
 "\n"
-"မြန်မာ\n"
+"အပြင်အဆင်\n"
