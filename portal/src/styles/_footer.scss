@@ -12,8 +12,17 @@ footer {
     }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
     footer div:last-child {
         margin-top: $inline-space-sm;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    footer div:last-child {
+        position: absolute;
+        width: 100%;
     }
 }
