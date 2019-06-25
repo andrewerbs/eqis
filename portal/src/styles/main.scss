@@ -95,7 +95,7 @@ html {
     }
 
     html body div.body div.content > div:not(.block-Title):not(.block-Quote) {
-        max-width: 1024px;
+        max-width: $body-max-width;
     }
 
     html body div.body div.content:not(.not-home) > div.block-Title {
@@ -105,17 +105,17 @@ html {
         }
 
         h1, p {
+            width: $body-max-width;
             margin-right: auto;
             margin-left: auto;
-            width: 1024px;
         }
     }
 
     html body div.body div.content:not(.not-home) > div.block-Quote {
         p {
+            max-width: $body-max-width;
             margin-right: auto;
             margin-left: auto;
-            max-width: 1024px;
         }
     }
 }
