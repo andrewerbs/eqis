@@ -213,6 +213,19 @@ div.block-Chart {
     div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
+
+        div.image-left {
+            p {
+                margin-top: $inline-space-sm;
+                margin-bottom: 0;
+            }
+        }
+
+        div.image-rigth {
+            p {
+                margin-bottom: $inline-space-sm;
+            }
+        }
     }
 
     div.block-CardLinks {

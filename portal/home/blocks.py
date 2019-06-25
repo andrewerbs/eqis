@@ -40,6 +40,14 @@ class PostcardBlock(StructBlock):
         label=_PostcardStrings.image_label,
         help_text=_PostcardStrings.image_help_text,
     )
+    image_disposition = ChoiceBlock(
+        label=_PostcardStrings.image_disposition_label,
+        choices=[
+            ('left', _PostcardStrings.image_disposition_left),
+            ('right', _PostcardStrings.image_disposition_right)
+        ],
+        help_text=_PostcardStrings.image_disposition_help_text,
+    )
     description = RichTextBlock(
         label=_PostcardStrings.description_label,
         features=_rich_text_features,
