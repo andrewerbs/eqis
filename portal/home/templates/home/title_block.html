@@ -14,6 +14,6 @@
 <p class="{% if self.image %}text-white{% endif %}">{{ self.small_title }}</p>
 {% endif %}
 
-{% if self.image %}
+{% if self.image and self.big_title or self.image and self.small_title %}
 </div>
 {% endif %}
