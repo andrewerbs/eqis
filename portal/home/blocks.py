@@ -51,15 +51,15 @@ class PostcardBlock(StructBlock):
 
 
 class TitleBlock(StructBlock):
-    big_title = CharBlock(
-        label=_TitleStrings.big_title_label,
-        help_text=_TitleStrings.big_title_help_text,
-        required=False,
-        max_length=255,
-    )
     small_title = CharBlock(
         label=_TitleStrings.small_title_label,
         help_text=_TitleStrings.small_title_help_text,
+        required=False,
+        max_length=255,
+    )
+    big_title = CharBlock(
+        label=_TitleStrings.big_title_label,
+        help_text=_TitleStrings.big_title_help_text,
         required=False,
         max_length=255,
     )
