@@ -10,6 +10,7 @@
 - [Set content maximum width](https://github.com/catalpainternational/myeqip-portal/pull/161)
 - [General pages redesign](https://github.com/catalpainternational/myeqip-portal/pull/162)
 - [Quote and title blocks alignment](https://github.com/catalpainternational/myeqip-portal/pull/166)
+- [Fix page layout due to title blocks without text](https://github.com/catalpainternational/myeqip-portal/pull/167)
 
 ## 0.1.1
 
