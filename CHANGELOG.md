@@ -4,11 +4,12 @@
 
 ### Interface
 
+- [Cardlinks respect image focal point](https://github.com/catalpainternational/myeqip-portal/pull/152)
 - [Private(logged in user) pages now show styled login](https://github.com/catalpainternational/myeqip-portal/pull/153)
 - [Private(password) pages now show styled login](https://github.com/catalpainternational/myeqip-portal/pull/156)
-- [Cardlinks respect image focal point](https://github.com/catalpainternational/myeqip-portal/pull/152)
-- [General pages redesign](https://github.com/catalpainternational/myeqip-portal/pull/162)
 - [Set content maximum width](https://github.com/catalpainternational/myeqip-portal/pull/161)
+- [General pages redesign](https://github.com/catalpainternational/myeqip-portal/pull/162)
+- [Fix page layout due to title blocks without text](https://github.com/catalpainternational/myeqip-portal/pull/167)
 
 ## 0.1.1
 
