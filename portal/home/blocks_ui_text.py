@@ -56,7 +56,7 @@ class _CardLinkStrings:
     ''')
 
 
-#ChartBlock
+# ChartBlock
 class _ChartBlockStrings:
     title_label = _('Title')
     title_help_text = _("The chart's title.")

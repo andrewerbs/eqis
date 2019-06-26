@@ -11,6 +11,7 @@ from .blocks_ui_text import (
 
 from .superset_helpers import get_superset_chart_choices
 
+
 class QuoteWithAttributionBlock(StructBlock):
     quote = BlockQuoteBlock(
         label=_QuoteStrings.quote_label,
