@@ -41,6 +41,12 @@ class _TitleStrings:
     image_help_text = _('A screen-width image.')
 
 
+# SectionTitleBlock
+class _SectionTitleStrings:
+    section_title_label = _('Title')
+    section_title_help_text = _('The section title.')
+
+
 # CardLinkBlock
 class _CardLinkStrings:
     page_chooser_label = _('Choose a page')

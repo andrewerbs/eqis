@@ -39,6 +39,20 @@ div.block-Title {
     }
 }
 
+div.block-SectionTitle {
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        background-color: $green;
+        margin-right: auto;
+        margin-left: auto;
+        height: 10px;
+        width: 100px;
+    }
+}
+
 div.block-RichText div.rich-text {
     &::after {
         display: block;
@@ -154,7 +168,7 @@ div.block-Chart {
 }
 
 @include media-breakpoint-up(md) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
     }
@@ -193,6 +207,12 @@ div.block-Chart {
         }
     }
 
+    div.block-SectionTitle {
+        h1 {
+            margin-bottom: $inline-space-lg;
+        }
+    }
+
     div.block-Quote {
         padding-bottom: calc(#{$outer-space-lg} * 2);
         margin-right: calc(#{$outer-space-lg} * -1);
@@ -210,7 +230,7 @@ div.block-Chart {
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
 
@@ -277,6 +297,12 @@ div.block-Chart {
         img {
             margin-left: calc(#{$outer-space-sm} * -1);
             width: calc(100% + #{$outer-space-sm} * 2);
+        }
+    }
+
+    div.block-SectionTitle {
+        h1 {
+            margin-bottom: $inline-space-sm;
         }
     }
 

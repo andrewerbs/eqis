@@ -6,7 +6,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 from .blocks_ui_text import (
     _CardLinkStrings, _ChartBlockStrings, _PostcardStrings, _QuoteStrings,
-    _TitleStrings,
+    _TitleStrings, _SectionTitleStrings
 )
 
 from .superset_helpers import get_superset_chart_choices
@@ -79,6 +79,17 @@ class TitleBlock(StructBlock):
 
     class Meta:
         template = 'home/title_block.html'
+
+
+class SectionTitleBlock(StructBlock):
+    title = CharBlock(
+        label=_SectionTitleStrings.section_title_label,
+        help_text=_SectionTitleStrings.section_title_help_text,
+        max_length=255,
+    )
+
+    class Meta:
+        template = 'home/section_title_block.html'
 
 
 class CardLinkBlock(StructBlock):
