@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.2.0
+
+### Interface
+
+- [Reorder title block titles in the CMS](https://github.com/catalpainternational/myeqip-portal/pull/170/commits/4b2d4ba2a168febd43e35c669dad69c2bfa2802c)
+- [CMS managers can decide the disposition of the image in a postcard](https://github.com/catalpainternational/myeqip-portal/pull/170/commits/9c22347e469c10740dcaba9ddc2ccbe202416b68)
+- [New section block](https://github.com/catalpainternational/myeqip-portal/pull/170/commits/77dad5c1a763d64c58a025639d61c3a0672072af)
+
 ## 0.1.2
 
 ### Interface
