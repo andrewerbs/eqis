@@ -34,7 +34,8 @@ class _BlockNames:
     postcard = _('Postcard')
     quote = _('Quote')
     rich_text = _('RichText')
-    title = _('Title')
+    title = _('PageTitle')
+    section_title = _('SectionTitle')
     line = _('Line')
     chart = _('Chart')
 
@@ -43,8 +44,12 @@ class _BlockNames:
 class _StreamfieldHelpTexts:
     title_block = _('''
     A title that displays full-width. The WebPage's body should start with
-    a title block. The title shows on a green background, or on a provided
+    a page title block. The title shows on a green background, or on a provided
     background image. The "Small Title" shows above the "Big Title".
+    ''')
+    section_title_block = _('''
+    A section title that can be used anywhere in the page. The title has a
+    green border line below.
     ''')
     rich_text = _('''
     Text that allows rich-formatted content: headers; bold and italic text;

@@ -39,6 +39,20 @@ div.block-Title {
     }
 }
 
+div.block-SectionTitle {
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        background-color: $green;
+        margin-right: auto;
+        margin-left: auto;
+        height: 10px;
+        width: 100px;
+    }
+}
+
 div.block-RichText div.rich-text {
     &::after {
         display: block;
@@ -154,7 +168,7 @@ div.block-Chart {
 }
 
 @include media-breakpoint-up(md) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
     }
@@ -193,6 +207,12 @@ div.block-Chart {
         }
     }
 
+    div.block-SectionTitle {
+        h1 {
+            margin-bottom: $inline-space-lg;
+        }
+    }
+
     div.block-Quote {
         padding-bottom: calc(#{$outer-space-lg} * 2);
         margin-right: calc(#{$outer-space-lg} * -1);
@@ -203,16 +223,29 @@ div.block-Chart {
     }
 
     div.block-Chart {
-        h4 {
+        h4, div.responsive-object {
             margin-bottom: $inline-space-lg;
         }
     }
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
+
+        div.image-left {
+            p {
+                margin-top: $inline-space-sm;
+                margin-bottom: 0;
+            }
+        }
+
+        div.image-rigth {
+            p {
+                margin-bottom: $inline-space-sm;
+            }
+        }
     }
 
     div.block-CardLinks {
@@ -267,6 +300,12 @@ div.block-Chart {
         }
     }
 
+    div.block-SectionTitle {
+        h1 {
+            margin-bottom: $inline-space-sm;
+        }
+    }
+
     div.block-Quote {
         padding-bottom: calc(#{$outer-space-sm} * 2);
         margin-right: calc(#{$outer-space-sm} * -1);
@@ -277,7 +316,7 @@ div.block-Chart {
     }
 
     div.block-Chart {
-        h4 {
+        h4, div.responsive-object {
             margin-bottom: $inline-space-sm;
         }
     }

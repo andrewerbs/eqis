@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-30 04:35+0000\n"
+"POT-Creation-Date: 2019-06-26 03:01+0000\n"
 "PO-Revision-Date: 2019-06-10 10:11+0000\n"
 "Last-Translator: b'Sing Pu <singpu@myeqip.org>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,8 +35,8 @@ msgstr "ကိုးကားမှု အညွှန်း"
 msgid "Whom or what the text quotes."
 msgstr "ကိုးကားထားသည့်အရာ သို့မဟုတ် လူ"
 
-#: home/blocks_ui_text.py:16 home/blocks_ui_text.py:49
-#: home/models_ui_text.py:8 home/models_ui_text.py:37
+#: home/blocks_ui_text.py:16 home/blocks_ui_text.py:46
+#: home/blocks_ui_text.py:61 home/models_ui_text.py:8
 msgid "Title"
 msgstr "ခေါင်းစဥ်"
 
@@ -44,7 +44,7 @@ msgstr "ခေါင်းစဥ်"
 msgid "The Postcard's title sits above the \"description\"."
 msgstr "\"ဖော်ပြချက်\" အပေါ်တွင်ဖော်ပြထားသည့် ပို့စကတ်ခေါင်းစဥ်"
 
-#: home/blocks_ui_text.py:18 home/blocks_ui_text.py:34
+#: home/blocks_ui_text.py:18 home/blocks_ui_text.py:40
 msgid "Image"
 msgstr "ပုံ"
 
@@ -52,16 +52,35 @@ msgstr "ပုံ"
 msgid "The description accompanies this image."
 msgstr "ပုံနှင့်လိုက်ဖက်သော ဖော်ပြချက်"
 
-#: home/blocks_ui_text.py:20 home/blocks_ui_text.py:51
-#: home/models_ui_text.py:9
+#: home/blocks_ui_text.py:20
+msgid "Image disposition"
+msgstr ""
+
+#: home/blocks_ui_text.py:21
+msgid ""
+"\n"
+"        Disposition of this image in relation with the text that "
+"accompanies.\n"
+"    "
+msgstr ""
+
+#: home/blocks_ui_text.py:24
+msgid "On the right"
+msgstr ""
+
+#: home/blocks_ui_text.py:25
+msgid "On the left"
+msgstr ""
+
+#: home/blocks_ui_text.py:26 home/blocks_ui_text.py:63 home/models_ui_text.py:9
 msgid "Description"
 msgstr "ဖော်ပြချက်"
 
-#: home/blocks_ui_text.py:21
+#: home/blocks_ui_text.py:27
 msgid "Text that accompanies the image."
 msgstr "ပုံနှင့်လိုက်ဖက်သည့် စာသား"
 
-#: home/blocks_ui_text.py:26
+#: home/blocks_ui_text.py:32
 msgid ""
 "\n"
 "    This shows below the Small Title. It has bigger text.\n"
@@ -70,7 +89,7 @@ msgstr ""
 "\n"
 "ခေါင်းစဥ်အသေးအောက်တွင်ဖော်ပြရန်။ စာသားပိုကြီးသည်။"
 
-#: home/blocks_ui_text.py:29
+#: home/blocks_ui_text.py:35
 msgid ""
 "\n"
 "    This shows above the Big Title. It has smaller text.\n"
@@ -79,23 +98,29 @@ msgstr ""
 "\n"
 "ခေါင်းစဥ်အကြီးအပေါ်တွင်ဖော်ပြရန်။ စာသားပိုသေးသည်။"
 
-#: home/blocks_ui_text.py:32
+#: home/blocks_ui_text.py:38
 msgid "The Big Title"
 msgstr "ခေါင်းစဥ်အကြီး"
 
-#: home/blocks_ui_text.py:33
+#: home/blocks_ui_text.py:39
 msgid "The Small Title"
 msgstr "ခေါင်းစဥ်အသေး"
 
-#: home/blocks_ui_text.py:35
+#: home/blocks_ui_text.py:41
 msgid "A screen-width image."
 msgstr "မျက်နှာပြင်ပြည့်ပုံရိပ်"
 
-#: home/blocks_ui_text.py:40
+#: home/blocks_ui_text.py:47
+#, fuzzy
+#| msgid "The chart's title."
+msgid "The section title."
+msgstr "ဇယားခေါင်းစဥ်"
+
+#: home/blocks_ui_text.py:52
 msgid "Choose a page"
 msgstr "စာမျက်နှာရွေးချယ်ပါ။"
 
-#: home/blocks_ui_text.py:41
+#: home/blocks_ui_text.py:53
 msgid ""
 "\n"
 "    The CardLink will link to this page. The card displays the page's hero\n"
@@ -103,13 +128,14 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"ယခုစာမျက်နှာသည် Cardlink နှင့်ချိတ်ဆက်ထားသည်။ ကတ်ဒ်တွင် စာမျက်နှာ၏ ပုံ အကြောင်းဖော်ပြချက်အားဖော်ပြထားမည်။"
+"ယခုစာမျက်နှာသည် Cardlink နှင့်ချိတ်ဆက်ထားသည်။ ကတ်ဒ်တွင် စာမျက်နှာ၏ ပုံ "
+"အကြောင်းဖော်ပြချက်အားဖော်ပြထားမည်။"
 
-#: home/blocks_ui_text.py:50
+#: home/blocks_ui_text.py:62
 msgid "The chart's title."
 msgstr "ဇယားခေါင်းစဥ်"
 
-#: home/blocks_ui_text.py:52
+#: home/blocks_ui_text.py:64
 msgid "Describes the chart."
 msgstr "ဇယားအားဖော်ပြပါ။"
 
@@ -151,12 +177,15 @@ msgstr ""
 #: home/models_ui_text.py:25
 msgid ""
 "\n"
-"    The web page's contents. Pages define content as \"blocks\". Content blocks\n"
+"    The web page's contents. Pages define content as \"blocks\". Content "
+"blocks\n"
 "    are: Titles; RichTexts; Postcards; CardLinks; or Quotes.\n"
 "    "
 msgstr ""
 "\n"
-"ဝက်ဂ်ဆိုက်စာမျက်နှာအကြောင်းအရာများ၊ စာမျက်နှာတွင် အကြောင်းအရာများအား \"blocks\" အဖြစ်ညွှန်းဆိုထားပြီး အကြောင်းအရာ blocks များသည် ခေါင်းစဥ်၊ စာသား၊ ပို့စကတ်ဒ်၊ Cardlink သို့ ကိုးကားချက်များ ဖြစ်သည်။ "
+"ဝက်ဂ်ဆိုက်စာမျက်နှာအကြောင်းအရာများ၊ စာမျက်နှာတွင် အကြောင်းအရာများအား \"blocks\" "
+"အဖြစ်ညွှန်းဆိုထားပြီး အကြောင်းအရာ blocks များသည် ခေါင်းစဥ်၊ စာသား၊ ပို့စကတ်ဒ်၊ Cardlink သို့ "
+"ကိုးကားချက်များ ဖြစ်သည်။ "
 
 #: home/models_ui_text.py:33
 msgid "CardLinks"
@@ -174,26 +203,56 @@ msgstr "ကိုးကားချက်"
 msgid "RichText"
 msgstr "စာသား"
 
+#: home/models_ui_text.py:37
+#, fuzzy
+#| msgid "Title"
+msgid "PageTitle"
+msgstr "ခေါင်းစဥ်"
+
 #: home/models_ui_text.py:38
+msgid "SectionTitle"
+msgstr ""
+
+#: home/models_ui_text.py:39
 msgid "Line"
 msgstr "လိုင်း "
 
-#: home/models_ui_text.py:39
+#: home/models_ui_text.py:40
 msgid "Chart"
 msgstr "ဇယား"
 
-#: home/models_ui_text.py:44
+#: home/models_ui_text.py:45
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    A title that displays full-width. The WebPage's body should start "
+#| "with\n"
+#| "    a title block. The title shows on a green background, or on a "
+#| "provided\n"
+#| "    background image. The \"Small Title\" shows above the \"Big Title\".\n"
+#| "    "
 msgid ""
 "\n"
 "    A title that displays full-width. The WebPage's body should start with\n"
-"    a title block. The title shows on a green background, or on a provided\n"
+"    a page title block. The title shows on a green background, or on a "
+"provided\n"
 "    background image. The \"Small Title\" shows above the \"Big Title\".\n"
 "    "
 msgstr ""
 "\n"
-"မျက်နှာပြင်ပြည့်ဖော်ပြထားသောခေါင်းစဥ်။ ဝက်ဂ်ဆိုက် စာကိုယ်သည် အဆိုပါ block ခေါင်းစဥ်ဖြင့်စသင့်သည်။ ခေါင်းစဥ်အား နောက်ခံအစိမ်းရောင် သို့မဟုတ် နောက်ခံပုံအပေါ်တွင် ဖော်ပြထားရမည်။ \"ခေါင်းစဥ်အသေး\"အား \"ခေါင်းစဥ်အကြီး\" အပေါ်တွင်ဖော်ပြထားမည်။ "
+"မျက်နှာပြင်ပြည့်ဖော်ပြထားသောခေါင်းစဥ်။ ဝက်ဂ်ဆိုက် စာကိုယ်သည် အဆိုပါ block ခေါင်းစဥ်ဖြင့်စသင့်သည်။ "
+"ခေါင်းစဥ်အား နောက်ခံအစိမ်းရောင် သို့မဟုတ် နောက်ခံပုံအပေါ်တွင် ဖော်ပြထားရမည်။ \"ခေါင်းစဥ်အသေး\"အား "
+"\"ခေါင်းစဥ်အကြီး\" အပေါ်တွင်ဖော်ပြထားမည်။ "
 
-#: home/models_ui_text.py:49
+#: home/models_ui_text.py:50
+msgid ""
+"\n"
+"    A section title that can be used anywhere in the page. The title has a\n"
+"    green border line below.\n"
+"    "
+msgstr ""
+
+#: home/models_ui_text.py:54
 msgid ""
 "\n"
 "    Text that allows rich-formatted content: headers; bold and italic text;\n"
@@ -202,41 +261,48 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"rich-format အားခွင့်ပြုထားသော စာသားအကြောင်းအရာ၊ ခေါင်းစီး၊ စာသားအထူ၊ တစ်စောင်း၊ နံပါတ်နှင့် အစဥ်လိုက်ဇယားများ၊ လင့်များ၊ ပုံများ၊ စာရွက်စာတမ်းများနှင့် ဝက်ဂ်ဆိုက်အကြောင်းအရာများ"
-
-#: home/models_ui_text.py:54
-msgid ""
-"\n"
-"    A card, resembling a postcard, that shows an image, a title, and a short\n"
-"    text. The image covers half the card; the title and text cover the other\n"
-"    half.\n"
-"    "
-msgstr ""
-"\n"
-"ပုံတစ်ပုံ၊ ခေါင်းစဥ်တစ်ခုနှင့် စာတိုတစ်ခုခုအား ဖော်ပြထားသည့် ကတ်ဒ်၊ ပို့စကတ်ဒ်။ ပုံ သည် ကတ်ဒ်၊ ခေါင်းစဥ်အား တစ်ဝက်အပြည့်ကာထားရမည်ဖြစ်ပြီး စာသားများသည် ကျန်တစ်ဝက်အား ဖုံးကာထားရမည်။ "
+"rich-format အားခွင့်ပြုထားသော စာသားအကြောင်းအရာ၊ ခေါင်းစီး၊ စာသားအထူ၊ တစ်စောင်း၊ နံပါတ်နှင့် "
+"အစဥ်လိုက်ဇယားများ၊ လင့်များ၊ ပုံများ၊ စာရွက်စာတမ်းများနှင့် ဝက်ဂ်ဆိုက်အကြောင်းအရာများ"
 
 #: home/models_ui_text.py:59
 msgid ""
 "\n"
-"    A quotation displayed in full width. The quotation shows its attribution\n"
+"    A card, resembling a postcard, that shows an image, a title, and a "
+"short\n"
+"    text. The image covers half the card; the title and text cover the "
+"other\n"
+"    half.\n"
+"    "
+msgstr ""
+"\n"
+"ပုံတစ်ပုံ၊ ခေါင်းစဥ်တစ်ခုနှင့် စာတိုတစ်ခုခုအား ဖော်ပြထားသည့် ကတ်ဒ်၊ ပို့စကတ်ဒ်။ ပုံ သည် ကတ်ဒ်၊ ခေါင်းစဥ်အား "
+"တစ်ဝက်အပြည့်ကာထားရမည်ဖြစ်ပြီး စာသားများသည် ကျန်တစ်ဝက်အား ဖုံးကာထားရမည်။ "
+
+#: home/models_ui_text.py:64
+msgid ""
+"\n"
+"    A quotation displayed in full width. The quotation shows its "
+"attribution\n"
 "    below.\n"
 "    "
 msgstr ""
 "\n"
 "မျက်နှာပြင်အပြည့်ဖော်ပြထားသော ကိုးကားချက်။ ကိုးကာချက်၏ ကိုးကားအညွှန်းအား ဖော်ပြထားရမည်။ "
 
-#: home/models_ui_text.py:63
+#: home/models_ui_text.py:68
 msgid ""
 "\n"
-"    A richly styled link to an internal webpage. The link displays as a card\n"
+"    A richly styled link to an internal webpage. The link displays as a "
+"card\n"
 "    that shows the linked-to website's hero image, title, and description.\n"
 "    Many CardLinks can display in a responsive grid.\n"
 "    "
 msgstr ""
 "\n"
-"ဝက်ဂ်ဆိုက်နှင့်ချိတ်ဆက်ထားသည့် လင့်ဒ်။ ဝက်ဂ်ဆိုက် ပုံ၊ ခေါင်းစဥ်နှင့် ဖော်ပြချက်များနှင့် ချိတ်ဆက်ထားသည့်ကတ်ဒ်များ လင့်ဒ်တွင်ဖော်ပြထားရမည်။ Cardlink အများစုအား အလျားလိုက်စုဖွဲ့ဖြင့်ဖော်ပြနိုင်သည်။ "
+"ဝက်ဂ်ဆိုက်နှင့်ချိတ်ဆက်ထားသည့် လင့်ဒ်။ ဝက်ဂ်ဆိုက် ပုံ၊ ခေါင်းစဥ်နှင့် ဖော်ပြချက်များနှင့် ချိတ်ဆက်ထားသည့်ကတ်ဒ်များ "
+"လင့်ဒ်တွင်ဖော်ပြထားရမည်။ Cardlink အများစုအား အလျားလိုက်စုဖွဲ့ဖြင့်ဖော်ပြနိုင်သည်။ "
 
-#: home/models_ui_text.py:68
+#: home/models_ui_text.py:73
 msgid ""
 "\n"
 "    A full-width line that separates blocks of content and shows as a green\n"
@@ -246,7 +312,7 @@ msgstr ""
 "\n"
 "အကြောင်းအရာများအား ခွဲခြားမည့် မျက်နှာပြင်ပြည့်လိုင်းနှင့် ဝက်ဂ်ဆိုက်တွင် အစိမ်းရောင် လိုင်းဖြင့်ဖော်ပြရမည်။ "
 
-#: home/models_ui_text.py:72
+#: home/models_ui_text.py:77
 msgid ""
 "\n"
 "    A Superset chart from MyEQIP's superset instance. The drop-down menu\n"
@@ -254,9 +320,10 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"My-EQIP ဆူပါဆက်အတိုင်းရေးထားသည့် ဆူပါဆက်။ အောက်ဆွဲချ၍ရသည့် မီနူးဘားတွင် ဇယားအလွတ်များရှိသည်။ ရွေးချယ်ထားသော ဇယားများအား ဝက်ဂ်ဆိုက်တွင်ဖော်ပြထားမည်။ "
+"My-EQIP ဆူပါဆက်အတိုင်းရေးထားသည့် ဆူပါဆက်။ အောက်ဆွဲချ၍ရသည့် မီနူးဘားတွင် ဇယားအလွတ်များရှိသည်။ "
+"ရွေးချယ်ထားသော ဇယားများအား ဝက်ဂ်ဆိုက်တွင်ဖော်ပြထားမည်။ "
 
-#: home/models_ui_text.py:79
+#: home/models_ui_text.py:84
 msgid ""
 "\n"
 "Content - English\n"
@@ -264,7 +331,7 @@ msgstr ""
 "\n"
 "အင်္ဂလိပ် - အပိုင်း\n"
 
-#: home/models_ui_text.py:82
+#: home/models_ui_text.py:87
 msgid ""
 "\n"
 "Content - Myanmar\n"
@@ -272,7 +339,7 @@ msgstr ""
 "\n"
 "မြန်မာ - အပိုင်း\n"
 
-#: home/models_ui_text.py:85
+#: home/models_ui_text.py:90
 msgid ""
 "\n"
 "Promote\n"
@@ -280,10 +347,23 @@ msgstr ""
 "\n"
 "ထင်ရှားမြင်သာစေခြင်း\n"
 
-#: home/models_ui_text.py:88
+#: home/models_ui_text.py:93
 msgid ""
 "\n"
 "Settings\n"
 msgstr ""
 "\n"
 "အပြင်အဆင်\n"
+
+#: home/templates/home/password_required.html:4
+#: home/templates/home/password_required.html:9
+msgid "Password required"
+msgstr ""
+
+#: home/templates/home/password_required.html:10
+msgid "You need a password to access this page."
+msgstr ""
+
+#: home/templates/home/password_required.html:14
+msgid "Continue"
+msgstr ""

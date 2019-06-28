@@ -17,6 +17,12 @@ class _PostcardStrings:
     title_help_text = _("The Postcard's title sits above the \"description\".")
     image_label = _('Image')
     image_help_text = _('The description accompanies this image.')
+    image_disposition_label = _('Image disposition')
+    image_disposition_help_text = _('''
+        Disposition of this image in relation with the text that accompanies.
+    ''')
+    image_disposition_right = _('On the right')
+    image_disposition_left = _('On the left')
     description_label = _('Description')
     description_help_text = _('Text that accompanies the image.')
 
@@ -35,6 +41,12 @@ class _TitleStrings:
     image_help_text = _('A screen-width image.')
 
 
+# SectionTitleBlock
+class _SectionTitleStrings:
+    section_title_label = _('Title')
+    section_title_help_text = _('The section title.')
+
+
 # CardLinkBlock
 class _CardLinkStrings:
     page_chooser_label = _('Choose a page')
@@ -44,7 +56,7 @@ class _CardLinkStrings:
     ''')
 
 
-#ChartBlock
+# ChartBlock
 class _ChartBlockStrings:
     title_label = _('Title')
     title_help_text = _("The chart's title.")
