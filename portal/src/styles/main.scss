@@ -74,6 +74,16 @@ html {
             padding-right: $outer-space-sm;
             padding-left: $outer-space-sm;
         }
+
+        div.content:not(.not-home) div.block-Title {
+            div {
+                width: calc(100% - #{$outer-space-sm} - #{$outer-space-sm});
+            }
+
+            h1, p {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -84,6 +94,16 @@ html {
         div.content {
             padding-right: $outer-space-lg;
             padding-left: $outer-space-lg;
+        }
+
+        div.content:not(.not-home) div.block-Title {
+            div {
+                width: calc(100% - #{$outer-space-lg} - #{$outer-space-lg});
+            }
+
+            h1, p {
+                width: 80%;
+            }
         }
     }
 }
@@ -109,13 +129,15 @@ html {
 
         & > div.block-Title {
             div {
+                max-width: $body-max-width;
+                margin-right: auto;
+                margin-left: auto;
                 right: 0;
                 left: 0;
             }
 
             h1, p {
-                margin-right: auto;
-                margin-left: auto;
+                width: 60%;
             }
         }
 
