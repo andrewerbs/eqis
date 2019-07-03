@@ -114,8 +114,14 @@ html {
             max-width: $body-max-width;
         }
 
-        & > div.block-Quote, & > div.block-Title {
+        & > div.block-Title {
             h1, p {
+                width: $body-max-width;
+            }
+        }
+
+        & > div.block-Quote {
+            h2, p {
                 width: $body-max-width;
             }
         }
@@ -142,7 +148,7 @@ html {
         }
 
         & > div.block-Quote {
-            h1, p {
+            h2, p {
                 margin-right: auto;
                 margin-left: auto;
             }
