@@ -154,6 +154,10 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
+    p {
+        margin-bottom: 0;
+    }
+
     img {
         height: 100%;
     }
@@ -228,21 +232,17 @@ div.block-Chart {
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
+    div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
+        margin-bottom: $outer-space-sm;
+        margin-top: $outer-space-sm;
+    }
+
+    div.block-Postcard {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
 
-        div.image-left {
-            p {
-                margin-top: $inline-space-sm;
-                margin-bottom: 0;
-            }
-        }
-
-        div.image-rigth {
-            p {
-                margin-bottom: $inline-space-sm;
-            }
+        div.row div:first-child {
+            margin-bottom: $inline-space-sm;
         }
     }
 
