@@ -94,14 +94,10 @@ html {
             max-width: $body-max-width;
         }
 
-        & > div.block-Title {
+        & > div.block-Quote, & > div.block-Title {
             h1, p {
                 width: $body-max-width;
             }
-        }
-
-        & > div.block-Quote p {
-            max-width: $body-max-width;
         }
     }
 
@@ -123,9 +119,11 @@ html {
             }
         }
 
-        & > div.block-Quote p {
-            margin-right: auto;
-            margin-left: auto;
+        & > div.block-Quote {
+            h1, p {
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
     }
 }

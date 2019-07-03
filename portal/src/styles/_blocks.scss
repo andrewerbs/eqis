@@ -89,16 +89,14 @@ div.block-RichText div.rich-text {
 div.block-Quote {
     background-color: $lightest-green;
 
-    p {
+    h1 {
+        margin-bottom: $inline-space-sm;
         text-align: center;
     }
 
-    p:first-child {
-        margin-bottom: $inline-space-sm;
-    }
-
-    p:last-child {
+    p {
         color: $dark-gray !important;
+        text-align: center;
         margin-bottom: 0;
     }
 }
