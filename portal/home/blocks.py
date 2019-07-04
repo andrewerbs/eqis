@@ -6,10 +6,11 @@ from wagtail.images.blocks import ImageChooserBlock
 
 from .blocks_ui_text import (
     _CardLinkStrings, _ChartBlockStrings, _PostcardStrings, _QuoteStrings,
-    _TitleStrings,
+    _TitleStrings, _SectionTitleStrings
 )
 
 from .superset_helpers import get_superset_chart_choices
+
 
 class QuoteWithAttributionBlock(StructBlock):
     quote = BlockQuoteBlock(
@@ -40,6 +41,14 @@ class PostcardBlock(StructBlock):
         label=_PostcardStrings.image_label,
         help_text=_PostcardStrings.image_help_text,
     )
+    image_disposition = ChoiceBlock(
+        label=_PostcardStrings.image_disposition_label,
+        choices=[
+            ('left', _PostcardStrings.image_disposition_left),
+            ('right', _PostcardStrings.image_disposition_right)
+        ],
+        help_text=_PostcardStrings.image_disposition_help_text,
+    )
     description = RichTextBlock(
         label=_PostcardStrings.description_label,
         features=_rich_text_features,
@@ -51,15 +60,15 @@ class PostcardBlock(StructBlock):
 
 
 class TitleBlock(StructBlock):
-    big_title = CharBlock(
-        label=_TitleStrings.big_title_label,
-        help_text=_TitleStrings.big_title_help_text,
-        required=False,
-        max_length=255,
-    )
     small_title = CharBlock(
         label=_TitleStrings.small_title_label,
         help_text=_TitleStrings.small_title_help_text,
+        required=False,
+        max_length=255,
+    )
+    big_title = CharBlock(
+        label=_TitleStrings.big_title_label,
+        help_text=_TitleStrings.big_title_help_text,
         required=False,
         max_length=255,
     )
@@ -71,6 +80,17 @@ class TitleBlock(StructBlock):
 
     class Meta:
         template = 'home/title_block.html'
+
+
+class SectionTitleBlock(StructBlock):
+    title = CharBlock(
+        label=_SectionTitleStrings.section_title_label,
+        help_text=_SectionTitleStrings.section_title_help_text,
+        max_length=255,
+    )
+
+    class Meta:
+        template = 'home/section_title_block.html'
 
 
 class CardLinkBlock(StructBlock):

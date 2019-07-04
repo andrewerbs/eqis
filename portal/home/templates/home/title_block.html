@@ -3,15 +3,15 @@
 {% if self.image %}
 {% image self.image height-543 %}
 {% if self.big_title or self.small_title %}
-<div class="d-flex flex-column-reverse position-absolute">
+<div class="d-flex flex-column position-absolute">
 {% endif %}
 {% endif %}
 
-{% if self.big_title %}
-<h1 class="{% if self.image %}text-white{% endif %}">{{ self.big_title }}</h1>
-{% endif %}
 {% if self.small_title %}
 <p class="{% if self.image %}text-white{% endif %}">{{ self.small_title }}</p>
+{% endif %}
+{% if self.big_title %}
+<h1 class="{% if self.image %}text-white{% endif %}">{{ self.big_title }}</h1>
 {% endif %}
 
 {% if self.image and self.big_title or self.image and self.small_title %}

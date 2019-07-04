@@ -12,7 +12,7 @@ from wagtail.search import index
 
 from .blocks import (
     CardLinkBlock, ChartBlock, LineBlock, PostcardBlock,
-    QuoteWithAttributionBlock, TitleBlock,
+    QuoteWithAttributionBlock, TitleBlock, SectionTitleBlock
 )
 from .models_ui_text import (
     _english_panel, _myanmar_panel, _promote_panel, _settings_panel,
@@ -88,6 +88,13 @@ class WebPage(Page):
             TitleBlock(
                 label=_BlockNames.title,
                 help_text=_StreamfieldHelpTexts.title_block,
+            ),
+        ),
+        (
+            'SectionTitle',
+            SectionTitleBlock(
+                label=_BlockNames.section_title,
+                help_text=_StreamfieldHelpTexts.section_title_block,
             ),
         ),
         (

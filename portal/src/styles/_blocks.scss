@@ -39,11 +39,29 @@ div.block-Title {
     }
 }
 
+div.block-SectionTitle {
+    h2 {
+        text-align: center;
+    }
+
+    div {
+        background-color: $green;
+        margin-right: auto;
+        margin-left: auto;
+        height: 10px;
+        width: 100px;
+    }
+}
+
 div.block-RichText div.rich-text {
     &::after {
         display: block;
         content: "";
         clear: both;
+    }
+
+    li {
+        margin-left: 1em;
     }
 
     img {
@@ -75,16 +93,14 @@ div.block-RichText div.rich-text {
 div.block-Quote {
     background-color: $lightest-green;
 
-    p {
+    h2 {
+        margin-bottom: $inline-space-sm;
         text-align: center;
     }
 
-    p:first-child {
-        margin-bottom: $inline-space-sm;
-    }
-
-    p:last-child {
+    p {
         color: $dark-gray !important;
+        text-align: center;
         margin-bottom: 0;
     }
 }
@@ -142,6 +158,10 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
+    p {
+        margin-bottom: 0;
+    }
+
     img {
         height: 100%;
     }
@@ -154,7 +174,7 @@ div.block-Chart {
 }
 
 @include media-breakpoint-up(md) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
     }
@@ -193,6 +213,12 @@ div.block-Chart {
         }
     }
 
+    div.block-SectionTitle {
+        h2 {
+            margin-bottom: $inline-space-lg;
+        }
+    }
+
     div.block-Quote {
         padding-bottom: calc(#{$outer-space-lg} * 2);
         margin-right: calc(#{$outer-space-lg} * -1);
@@ -203,16 +229,25 @@ div.block-Chart {
     }
 
     div.block-Chart {
-        h4 {
+        h4, div.responsive-object {
             margin-bottom: $inline-space-lg;
         }
     }
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart {
+    div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
+    }
+
+    div.block-Postcard {
+        margin-bottom: $outer-space-sm;
+        margin-top: $outer-space-sm;
+
+        div.row div:first-child {
+            margin-bottom: $inline-space-sm;
+        }
     }
 
     div.block-CardLinks {
@@ -267,6 +302,12 @@ div.block-Chart {
         }
     }
 
+    div.block-SectionTitle {
+        h2 {
+            margin-bottom: $inline-space-sm;
+        }
+    }
+
     div.block-Quote {
         padding-bottom: calc(#{$outer-space-sm} * 2);
         margin-right: calc(#{$outer-space-sm} * -1);
@@ -277,7 +318,7 @@ div.block-Chart {
     }
 
     div.block-Chart {
-        h4 {
+        h4, div.responsive-object {
             margin-bottom: $inline-space-sm;
         }
     }
