@@ -29,7 +29,6 @@ html {
         height: 100%;
 
         ul, ol {
-            list-style-position: inside;
             padding: 0;
             margin: 0;
         }
@@ -61,6 +60,44 @@ html {
             div.content {
                 overflow: auto;
                 height: 100%;
+
+                & > div:not(.block-Title):not(.block-Quote) {
+                    max-width: $body-max-width;
+                }
+
+                & > div.block-Title {
+                    h1, p {
+                        max-width: $body-max-width;
+                    }
+                }
+
+                & > div.block-Quote {
+                    h2, p {
+                        max-width: $body-max-width;
+                    }
+                }
+            }
+
+            div.content:not(.not-home) {
+                & > div:not(.block-Title):not(.block-Quote) {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+
+                & > div.block-Title div {
+                    max-width: $body-max-width;
+                    margin-right: auto;
+                    margin-left: auto;
+                    right: 0;
+                    left: 0;
+                }
+
+                & > div.block-Quote {
+                    h2, p {
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                }
             }
         }
     }
@@ -74,6 +111,22 @@ html {
             padding-right: $outer-space-sm;
             padding-left: $outer-space-sm;
         }
+
+        div.content:not(.not-home) div.block-Title {
+            div {
+                width: calc(100% - #{$outer-space-sm} - #{$outer-space-sm});
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    html body div.body div.content:not(.not-home) {
+        div.block-Title {
+            h1, p {
+                width: 80%;
+            }
+        }
     }
 }
 
@@ -85,47 +138,21 @@ html {
             padding-right: $outer-space-lg;
             padding-left: $outer-space-lg;
         }
+
+        div.content:not(.not-home) div.block-Title {
+            div {
+                width: calc(100% - #{$outer-space-lg} - #{$outer-space-lg});
+            }
+        }
     }
 }
 
-@include media-breakpoint-up(xl) {
-    html body div.body div.content {
-        & > div:not(.block-Title):not(.block-Quote) {
-            max-width: $body-max-width;
-        }
-
-        & > div.block-Title {
-            h1, p {
-                width: $body-max-width;
-            }
-        }
-
-        & > div.block-Quote p {
-            max-width: $body-max-width;
-        }
-    }
-
+@include media-breakpoint-up(lg) {
     html body div.body div.content:not(.not-home) {
-        & > div:not(.block-Title):not(.block-Quote) {
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        & > div.block-Title {
-            div {
-                right: 0;
-                left: 0;
-            }
-
+        div.block-Title {
             h1, p {
-                margin-right: auto;
-                margin-left: auto;
+                width: 60%;
             }
-        }
-
-        & > div.block-Quote p {
-            margin-right: auto;
-            margin-left: auto;
         }
     }
 }

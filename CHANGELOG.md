@@ -9,6 +9,7 @@
 - [Reorder title block titles in the CMS](https://github.com/catalpainternational/myeqip-portal/pull/170/commits/4b2d4ba2a168febd43e35c669dad69c2bfa2802c)
 - [New section block](https://github.com/catalpainternational/myeqip-portal/pull/170/commits/77dad5c1a763d64c58a025639d61c3a0672072af)
 - [Top menu items are uppercase](https://github.com/catalpainternational/myeqip-portal/pull/172/commits/75c571bc6739b5e7fc0ec43d41eff90780e103d1)
+- [Minor styling details](https://github.com/catalpainternational/myeqip-portal/pull/174)
 
 ## 0.1.2
 

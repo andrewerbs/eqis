@@ -40,7 +40,7 @@ div.block-Title {
 }
 
 div.block-SectionTitle {
-    h1 {
+    h2 {
         text-align: center;
     }
 
@@ -58,6 +58,10 @@ div.block-RichText div.rich-text {
         display: block;
         content: "";
         clear: both;
+    }
+
+    li {
+        margin-left: 1em;
     }
 
     img {
@@ -89,16 +93,14 @@ div.block-RichText div.rich-text {
 div.block-Quote {
     background-color: $lightest-green;
 
-    p {
+    h2 {
+        margin-bottom: $inline-space-sm;
         text-align: center;
     }
 
-    p:first-child {
-        margin-bottom: $inline-space-sm;
-    }
-
-    p:last-child {
+    p {
         color: $dark-gray !important;
+        text-align: center;
         margin-bottom: 0;
     }
 }
@@ -156,6 +158,10 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
+    p {
+        margin-bottom: 0;
+    }
+
     img {
         height: 100%;
     }
@@ -208,7 +214,7 @@ div.block-Chart {
     }
 
     div.block-SectionTitle {
-        h1 {
+        h2 {
             margin-bottom: $inline-space-lg;
         }
     }
@@ -230,21 +236,17 @@ div.block-Chart {
 }
 
 @include media-breakpoint-down(sm) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
+    div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
+        margin-bottom: $outer-space-sm;
+        margin-top: $outer-space-sm;
+    }
+
+    div.block-Postcard {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
 
-        div.image-left {
-            p {
-                margin-top: $inline-space-sm;
-                margin-bottom: 0;
-            }
-        }
-
-        div.image-rigth {
-            p {
-                margin-bottom: $inline-space-sm;
-            }
+        div.row div:first-child {
+            margin-bottom: $inline-space-sm;
         }
     }
 
@@ -301,7 +303,7 @@ div.block-Chart {
     }
 
     div.block-SectionTitle {
-        h1 {
+        h2 {
             margin-bottom: $inline-space-sm;
         }
     }
