@@ -61,6 +61,44 @@ html {
             div.content {
                 overflow: auto;
                 height: 100%;
+
+                & > div:not(.block-Title):not(.block-Quote) {
+                    max-width: $body-max-width;
+                }
+
+                & > div.block-Title {
+                    h1, p {
+                        max-width: $body-max-width;
+                    }
+                }
+
+                & > div.block-Quote {
+                    h2, p {
+                        max-width: $body-max-width;
+                    }
+                }
+            }
+
+            div.content:not(.not-home) {
+                & > div:not(.block-Title):not(.block-Quote) {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+
+                & > div.block-Title div {
+                    max-width: $body-max-width;
+                    margin-right: auto;
+                    margin-left: auto;
+                    right: 0;
+                    left: 0;
+                }
+
+                & > div.block-Quote {
+                    h2, p {
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                }
             }
         }
     }
@@ -79,9 +117,15 @@ html {
             div {
                 width: calc(100% - #{$outer-space-sm} - #{$outer-space-sm});
             }
+        }
+    }
+}
 
+@include media-breakpoint-only(md) {
+    html body div.body div.content:not(.not-home) {
+        div.block-Title {
             h1, p {
-                width: 100%;
+                width: 80%;
             }
         }
     }
@@ -100,57 +144,15 @@ html {
             div {
                 width: calc(100% - #{$outer-space-lg} - #{$outer-space-lg});
             }
-
-            h1, p {
-                width: 80%;
-            }
         }
     }
 }
 
-@include media-breakpoint-up(xl) {
-    html body div.body div.content {
-        & > div:not(.block-Title):not(.block-Quote) {
-            max-width: $body-max-width;
-        }
-
-        & > div.block-Title {
-            h1, p {
-                width: $body-max-width;
-            }
-        }
-
-        & > div.block-Quote {
-            h2, p {
-                width: $body-max-width;
-            }
-        }
-    }
-
+@include media-breakpoint-up(lg) {
     html body div.body div.content:not(.not-home) {
-        & > div:not(.block-Title):not(.block-Quote) {
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        & > div.block-Title {
-            div {
-                max-width: $body-max-width;
-                margin-right: auto;
-                margin-left: auto;
-                right: 0;
-                left: 0;
-            }
-
+        div.block-Title {
             h1, p {
                 width: 60%;
-            }
-        }
-
-        & > div.block-Quote {
-            h2, p {
-                margin-right: auto;
-                margin-left: auto;
             }
         }
     }
