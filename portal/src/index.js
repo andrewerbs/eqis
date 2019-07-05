@@ -1,6 +1,5 @@
 import './styles/main.scss';
 
-const MOBILE_HEADER_CSS_CLASS = 'mobile-header';
 const SEARCH_BAR_CSS_CLASS = 'search-bar';
 const BACKGROUND_CSS_CLASS = 'background';
 const TOP_PAGES_CSS_CLASS = 'top-pages';
@@ -32,11 +31,12 @@ export function toggle_search_bar() {
         show(BACKGROUND_CSS_CLASS);
         hide(SIDEBAR_CSS_CLASS);
         hide(WIDGETS_CSS_CLASS);
+        focus(SEARCH_BAR_CSS_CLASS);
     }
 }
 
-function is_visible(element_css_class) {
-    return window.getComputedStyle(document.getElementsByClassName(element_css_class).item(0)).display !== 'none';
+function is_visible(element) {
+    return window.getComputedStyle(document.getElementsByClassName(element).item(0)).display !== 'none';
 }
 
 function show(to_show) {
@@ -49,4 +49,8 @@ function hide(to_hide) {
     if (to_hide === TOP_PAGES_CSS_CLASS || to_hide === SEARCH_BAR_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
     else if (to_hide === WIDGETS_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-flex');
     else document.getElementsByClassName(to_hide).item(0).classList.add('d-none');
+}
+
+function focus(element) {
+    document.getElementsByClassName(element).item(0).getElementsByTagName('input').item(0).focus();
 }
