@@ -25,10 +25,9 @@
             </ul>
         </nav>
 
-        <form class="align-items-center justify-content-center d-flex search-box" action="{% url 'search' %}" method="get">
+        <div class="align-items-center justify-content-center d-flex search-box">
             <span class="magnifier" onclick="myeqip.toggle_search_bar()"></span>
-            <input class="d-none d-lg-inline-block" type="text" name="query" placeholder="search">
-        </form>
+        </div>
 
         <div class="align-items-center authentication d-lg-flex d-none">
             {% if user.is_authenticated %}
