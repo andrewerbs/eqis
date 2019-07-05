@@ -9,12 +9,13 @@ const WIDGETS_CSS_CLASS = 'widgets';
 
 export function toggle_sidebar() {
     if (is_visible(SIDEBAR_CSS_CLASS)) {
-        hide(MOBILE_HEADER_CSS_CLASS, TOP_PAGES_CSS_CLASS);
+        hide(TOP_PAGES_CSS_CLASS);
         hide(BACKGROUND_CSS_CLASS);
         hide(SIDEBAR_CSS_CLASS);
         hide(WIDGETS_CSS_CLASS);
     } else {
-        show(MOBILE_HEADER_CSS_CLASS, TOP_PAGES_CSS_CLASS, SEARCH_BAR_CSS_CLASS);
+        show(TOP_PAGES_CSS_CLASS);
+        hide(SEARCH_BAR_CSS_CLASS);
         show(BACKGROUND_CSS_CLASS);
         show(SIDEBAR_CSS_CLASS);
         show(WIDGETS_CSS_CLASS);
@@ -23,10 +24,11 @@ export function toggle_sidebar() {
 
 export function toggle_search_bar() {
     if (is_visible(SEARCH_BAR_CSS_CLASS)) {
-        hide(MOBILE_HEADER_CSS_CLASS, SEARCH_BAR_CSS_CLASS);
+        hide(SEARCH_BAR_CSS_CLASS);
         hide(BACKGROUND_CSS_CLASS);
     } else {
-        show(MOBILE_HEADER_CSS_CLASS, SEARCH_BAR_CSS_CLASS, TOP_PAGES_CSS_CLASS);
+        show(SEARCH_BAR_CSS_CLASS);
+        hide(TOP_PAGES_CSS_CLASS);
         show(BACKGROUND_CSS_CLASS);
         hide(SIDEBAR_CSS_CLASS);
         hide(WIDGETS_CSS_CLASS);
@@ -34,22 +36,17 @@ export function toggle_search_bar() {
 }
 
 function is_visible(element_css_class) {
-    return window.getComputedStyle(document.getElementsByClassName(element_css_class).item(0)).display !== "none";
+    return window.getComputedStyle(document.getElementsByClassName(element_css_class).item(0)).display !== 'none';
 }
 
-function show(element_css_class, to_show, to_hide) {
-    if (element_css_class === WIDGETS_CSS_CLASS) document.getElementsByClassName(element_css_class).item(0).classList.add('d-flex');
-    else if (element_css_class === MOBILE_HEADER_CSS_CLASS) {
-        document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
-        document.getElementsByClassName(to_show).item(0).classList.add('d-block');
-    }
-
-    document.getElementsByClassName(element_css_class).item(0).classList.remove('d-none');
+function show(to_show) {
+    if (to_show === WIDGETS_CSS_CLASS) document.getElementsByClassName(to_show).item(0).classList.add('d-flex');
+    else if (to_show === SIDEBAR_CSS_CLASS || to_show === BACKGROUND_CSS_CLASS) document.getElementsByClassName(to_show).item(0).classList.remove('d-none');
+    else document.getElementsByClassName(to_show).item(0).classList.add('d-block');
 }
 
-function hide(element_css_class, to_hide) {
-    if (element_css_class === MOBILE_HEADER_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
-    else if (element_css_class === WIDGETS_CSS_CLASS) document.getElementsByClassName(element_css_class).item(0).classList.remove('d-flex');
-
-    document.getElementsByClassName(element_css_class).item(0).classList.add('d-none');
+function hide(to_hide) {
+    if (to_hide === TOP_PAGES_CSS_CLASS || to_hide === SEARCH_BAR_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-block');
+    else if (to_hide === WIDGETS_CSS_CLASS) document.getElementsByClassName(to_hide).item(0).classList.remove('d-flex');
+    else document.getElementsByClassName(to_hide).item(0).classList.add('d-none');
 }
