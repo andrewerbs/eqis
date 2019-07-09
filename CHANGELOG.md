@@ -5,6 +5,7 @@
 ### Interface
 
 - [Square postcard images](https://github.com/catalpainternational/myeqip-portal/pull/176)
+- [New search bar](https://github.com/catalpainternational/myeqip-portal/pull/177)
 
 ## 0.2.0
 

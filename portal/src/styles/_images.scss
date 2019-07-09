@@ -22,6 +22,10 @@ span.magnifier {
     margin-top: -2px;
     height: 15px;
     width: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 span.burger {

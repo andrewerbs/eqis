@@ -46,25 +46,14 @@ header:not(.mobile-header) {
     box-shadow: $shadow;
 
     nav {
-        width: calc(100% - 275px - 75px - 75px); // subtract search bar, log in/out button and language switch width
+        width: calc(100% - 46px - 76px - 75px); // subtract magnifying glass, logout button and language switch
     }
 
-    form.search-box {
+    div.search-box {
         padding-right: $inline-space-sm;
         padding-left: $inline-space-sm;
         border-right: 1px solid $gray;
         height: 30px;
-
-        input[type="text"] {
-            padding-right: calc(#{$inline-space-sm} / 2);
-            padding-left: calc(#{$inline-space-sm} / 2);
-            background-color: $light-gray;
-            line-height: normal;
-            margin-left: 5px;
-            height: 30px;
-            width: 225px;
-            border: 0;
-        }
     }
 
     div.burger-menu {
@@ -75,20 +64,49 @@ header:not(.mobile-header) {
 }
 
 header.mobile-header {
-    background-color: $light-gray;
     padding: $inline-space-sm 0;
     position: fixed;
-    width: 100%;
-    z-index: 1;
-
-    nav {
-        width: 100%;
-    }
 
     input {
         padding-right: $inline-space-sm;
         padding-left: $inline-space-sm;
+        height: 30px;
         width: 100%;
         border: 0;
+    }
+}
+
+header.mobile-header.top-pages {
+    background-color: $light-gray;
+    z-index: 1029;
+}
+
+header.mobile-header.search-bar {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-color: $white;
+    box-shadow: $shadow;
+    z-index: 1030;
+    top: 59px; // top menu height - 1px to overlap the main header's shadow.
+
+    input {
+        background-color: #F5F4F4;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    header.mobile-header {
+        width: 100%;
+
+        nav {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    header.mobile-header {
+        right: $inline-space-sm;
+        width: 400px;
     }
 }
