@@ -79,7 +79,7 @@ html {
             }
 
             div.content:not(.not-home) {
-                & > div:not(.block-Title):not(.block-Quote) {
+                & > div:not(.block-Title):not(.block-Quote):not(.block-RichText) {
                     margin-right: auto;
                     margin-left: auto;
                 }
@@ -139,9 +139,14 @@ html {
             padding-left: $outer-space-lg;
         }
 
-        div.content:not(.not-home) div.block-Title {
-            div {
+        div.content:not(.not-home) {
+            div.block-Title div {
                 width: calc(100% - #{$outer-space-lg} - #{$outer-space-lg});
+            }
+
+            div.block-RichText {
+                margin-right: auto;
+                margin-left: auto;
             }
         }
     }
