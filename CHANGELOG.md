@@ -4,7 +4,7 @@
 
 ### Interface
 
-- 
+- [Square postcard images](https://github.com/catalpainternational/myeqip-portal/pull/176)
 
 ## 0.2.0
 
