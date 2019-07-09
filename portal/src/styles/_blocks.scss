@@ -158,12 +158,33 @@ div.block-CardLinks {
 }
 
 div.block-Postcard {
-    p {
-        margin-bottom: 0;
+    // Clearfix hack
+    div.rich-text::after {
+        display: block;
+        content: "";
+        clear: both;
     }
 
-    img {
-        height: 100%;
+    div.responsive-image {
+        padding-bottom: $ratio-1-1;
+        position: relative;
+        height: 0;
+
+        & > div {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }
 
@@ -174,9 +195,26 @@ div.block-Chart {
 }
 
 @include media-breakpoint-up(md) {
-    div.block-Postcard, div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
+    div.block-RichText, div.block-Quote, div.block-Chart, div.block-SectionTitle {
         margin-bottom: $outer-space-lg;
         margin-top: $outer-space-lg;
+    }
+
+    div.block-Postcard {
+        margin-bottom: $outer-space-lg;
+        margin-top: $outer-space-lg;
+
+        div.float-left, div.float-right {
+            width: 40%;
+        }
+
+        div.float-left {
+            margin-right: $inline-space-sm;
+        }
+
+        div.float-right {
+            margin-left: $inline-space-sm;
+        }
     }
 
     div.block-RichText div.rich-text {
@@ -245,8 +283,9 @@ div.block-Chart {
         margin-bottom: $outer-space-sm;
         margin-top: $outer-space-sm;
 
-        div.row div:first-child {
+        div.float-left, div.float-right {
             margin-bottom: $inline-space-sm;
+            width: 100%;
         }
     }
 

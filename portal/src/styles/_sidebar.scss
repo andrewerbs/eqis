@@ -79,7 +79,6 @@ div.widgets {
 @include media-breakpoint-down(md) {
     div.sidebar, div.background {
         position: fixed;
-        top: 120px;
     }
 
     div.sidebar {
@@ -87,6 +86,7 @@ div.widgets {
         height: calc(100% - #{$top-menu-height} - #{$top-menu-height} - #{$top-menu-height});
         padding-top: $outer-space-sm;
         z-index: 2;
+        top: 120px;
     }
 
     div.background {
@@ -95,6 +95,7 @@ div.widgets {
         height: 100%;
         z-index: 1;
         right: 0;
+        top: 115px;
     }
 }
 

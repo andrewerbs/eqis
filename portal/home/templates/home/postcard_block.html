@@ -1,27 +1,13 @@
 {% load wagtailimages_tags %}
 
-{% if self.image_disposition == 'right' %}
-<div class="row">
-    <div class="col-12 col-md-6 col-xl-7">
-        {% if self.title %}
-        <h3>{{self.title}}</h3>
-        {% endif %}
-        {{self.description}}
-    </div>
-    <div class="col-12 col-md-6 col-xl-5">
-        {% image self.image fill-320x200 %}
+<div class="float-{{ self.image_disposition }}">
+    <div class="responsive-image">
+        <div>
+            {% image self.image fill-400x400 %}
+        </div>
     </div>
 </div>
-{% else %}
-<div class="row">
-    <div class="col-12 col-md-6 col-xl-5">
-        {% image self.image fill-320x200 %}
-    </div>
-    <div class="col-12 col-md-6 col-xl-7">
-        {% if self.title %}
-        <h3>{{self.title}}</h3>
-        {% endif %}
-        {{self.description}}
-    </div>
-</div>
+{% if self.title %}
+<h3>{{ self.title }}</h3>
 {% endif %}
+{{ self.description }}
