@@ -62,3 +62,4 @@ class _ChartBlockStrings:
     title_help_text = _("The chart's title.")
     description_label = _('Description')
     description_help_text = _("Describes the chart.")
+    superset_connection_error = _("Could not connect to Superset. Please refresh the page and try again.")
