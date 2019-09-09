@@ -1,5 +1,5 @@
 span.ministry-logo {
-    background-image: url(../images/ministry_logo.svg);
+    background-image: url("../images/ministry_logo.svg");
     background-repeat: no-repeat;
     display: block;
     margin: 0 auto;
@@ -8,7 +8,7 @@ span.ministry-logo {
 }
 
 span.app-logo {
-    background-image: url(../images/app_logo.svg);
+    background-image: url("../images/app_logo.svg");
     background-repeat: no-repeat;
     display: block;
     height: 25px;
@@ -16,7 +16,7 @@ span.app-logo {
 }
 
 span.magnifier {
-    background-image: url(../images/magnifier.svg);
+    background-image: url("../images/magnifier.svg");
     background-repeat: no-repeat;
     display: inline-block;
     margin-top: -2px;
@@ -29,14 +29,14 @@ span.magnifier {
 }
 
 span.burger {
-    background-image: url(../images/burger.svg);
+    background-image: url("../images/burger.svg");
     background-repeat: no-repeat;
     height: 18px;
     width: 28px;
 }
 
 span.love {
-    background-image: url(../images/love.svg);
+    background-image: url("../images/love.svg");
     background-repeat: no-repeat;
     vertical-align: middle;
     display: inline-block;
