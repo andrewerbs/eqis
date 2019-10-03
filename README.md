@@ -1,4 +1,4 @@
-# myeqip-portal
+# eqis-platform
 
 The official web portal for the Myanmar Education Quality Improvement Program, built on [Wagtail](www.wagtail.io).
 
