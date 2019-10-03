@@ -4,7 +4,7 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
 
 ## Set up the Back-end
 
-1. Clone the "myeqip-portal" repository:
+1. Clone the "eqis" repository:
 
    ```bash
    git clone git@github.com:andrewerbs/eqis.git
