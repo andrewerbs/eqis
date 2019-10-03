@@ -7,7 +7,7 @@ The official web portal for the Myanmar Education Quality Improvement Program, b
 1. Clone the "myeqip-portal" repository:
 
    ```bash
-   git clone git@github.com:catalpainternational/myeqip-portal.git
+   git clone git@github.com:andrewerbs/eqis.git
    ```
 
 2. Create a Python virtual envionment. myeqip-portal uses Python 3.6.7:
